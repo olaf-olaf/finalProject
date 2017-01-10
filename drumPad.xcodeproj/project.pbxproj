@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FC156BEFD99336A936E2FB /* Pods_drumPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */; };
+		1EC068FB97D8A3666F1841BC /* Pods_drumPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */; };
+		52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619218898C57C8EA247EDA0B /* Pods_drumPad.framework */; };
 		EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F71E23B62D00464F65 /* AppDelegate.swift */; };
 		EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F91E23B62D00464F65 /* ViewController.swift */; };
 		EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB93FB1E23B62D00464F65 /* Main.storyboard */; };
@@ -34,6 +37,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B2BEABFE35C609792C19326 /* Pods-drumPadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadTests/Pods-drumPadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		619218898C57C8EA247EDA0B /* Pods_drumPad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drumPad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		703485A78739FA4EB25D0721 /* Pods-drumPadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadTests/Pods-drumPadTests.release.xcconfig"; sourceTree = "<group>"; };
+		71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drumPadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AE5785E787DC45F2BEEE6BF /* Pods-drumPad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumPad/Pods-drumPad.debug.xcconfig"; sourceTree = "<group>"; };
+		A5D10E6E3CEA7560DC663221 /* Pods-drumPad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPad.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPad/Pods-drumPad.release.xcconfig"; sourceTree = "<group>"; };
+		AB69CDCCD45D09DD43478C62 /* Pods-drumPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drumPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		EDAB93F41E23B62D00464F65 /* drumPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB93F71E23B62D00464F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB93F91E23B62D00464F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FC156BEFD99336A936E2FB /* Pods_drumPadTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EC068FB97D8A3666F1841BC /* Pods_drumPadUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183915A6616E03237602127B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7AE5785E787DC45F2BEEE6BF /* Pods-drumPad.debug.xcconfig */,
+				A5D10E6E3CEA7560DC663221 /* Pods-drumPad.release.xcconfig */,
+				1B2BEABFE35C609792C19326 /* Pods-drumPadTests.debug.xcconfig */,
+				703485A78739FA4EB25D0721 /* Pods-drumPadTests.release.xcconfig */,
+				AB69CDCCD45D09DD43478C62 /* Pods-drumPadUITests.debug.xcconfig */,
+				DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C1DF86356955C802F0F033C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				619218898C57C8EA247EDA0B /* Pods_drumPad.framework */,
+				AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */,
+				71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EDAB93EB1E23B62C00464F65 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				EDAB940B1E23B62D00464F65 /* drumPadTests */,
 				EDAB94161E23B62D00464F65 /* drumPadUITests */,
 				EDAB93F51E23B62D00464F65 /* Products */,
+				183915A6616E03237602127B /* Pods */,
+				C1DF86356955C802F0F033C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDAB941C1E23B62D00464F65 /* Build configuration list for PBXNativeTarget "drumPad" */;
 			buildPhases = (
+				737A2FDCE05F0779D8C00F48 /* [CP] Check Pods Manifest.lock */,
 				EDAB93F01E23B62C00464F65 /* Sources */,
 				EDAB93F11E23B62C00464F65 /* Frameworks */,
 				EDAB93F21E23B62C00464F65 /* Resources */,
+				2D8AE354A837C80A3E025466 /* [CP] Embed Pods Frameworks */,
+				55BA023C858ADA4806D154A8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDAB941F1E23B62D00464F65 /* Build configuration list for PBXNativeTarget "drumPadTests" */;
 			buildPhases = (
+				B5904706188292FEEE621CFB /* [CP] Check Pods Manifest.lock */,
 				EDAB94041E23B62D00464F65 /* Sources */,
 				EDAB94051E23B62D00464F65 /* Frameworks */,
 				EDAB94061E23B62D00464F65 /* Resources */,
+				96EACAA14222E99F9674686A /* [CP] Embed Pods Frameworks */,
+				2EFA64685CC65CA90973A712 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EDAB94221E23B62D00464F65 /* Build configuration list for PBXNativeTarget "drumPadUITests" */;
 			buildPhases = (
+				BE94B61A3E3C24496EB81EBE /* [CP] Check Pods Manifest.lock */,
 				EDAB940F1E23B62D00464F65 /* Sources */,
 				EDAB94101E23B62D00464F65 /* Frameworks */,
 				EDAB94111E23B62D00464F65 /* Resources */,
+				60A0364B09EED91AB4553004 /* [CP] Embed Pods Frameworks */,
+				6BD349895625517C58DF5C46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +302,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8AE354A837C80A3E025466 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPad/Pods-drumPad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2EFA64685CC65CA90973A712 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPadTests/Pods-drumPadTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55BA023C858ADA4806D154A8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPad/Pods-drumPad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60A0364B09EED91AB4553004 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6BD349895625517C58DF5C46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		737A2FDCE05F0779D8C00F48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		96EACAA14222E99F9674686A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-drumPadTests/Pods-drumPadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5904706188292FEEE621CFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE94B61A3E3C24496EB81EBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EDAB93F01E23B62C00464F65 /* Sources */ = {
@@ -410,6 +597,7 @@
 		};
 		EDAB941D1E23B62D00464F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AE5785E787DC45F2BEEE6BF /* Pods-drumPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = drumPad/Info.plist;
@@ -422,6 +610,7 @@
 		};
 		EDAB941E1E23B62D00464F65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5D10E6E3CEA7560DC663221 /* Pods-drumPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = drumPad/Info.plist;
@@ -434,6 +623,7 @@
 		};
 		EDAB94201E23B62D00464F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B2BEABFE35C609792C19326 /* Pods-drumPadTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -448,6 +638,7 @@
 		};
 		EDAB94211E23B62D00464F65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 703485A78739FA4EB25D0721 /* Pods-drumPadTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -462,6 +653,7 @@
 		};
 		EDAB94231E23B62D00464F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB69CDCCD45D09DD43478C62 /* Pods-drumPadUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = drumPadUITests/Info.plist;
@@ -475,6 +667,7 @@
 		};
 		EDAB94241E23B62D00464F65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = drumPadUITests/Info.plist;
