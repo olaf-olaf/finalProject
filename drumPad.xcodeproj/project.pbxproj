@@ -23,6 +23,7 @@
 		EDBBBDE31E2658C200374767 /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDDF1E2658C200374767 /* 808Kick.wav */; };
 		EDBBBDE41E2658C200374767 /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDE01E2658C200374767 /* 808Snare.wav */; };
 		EDBBBDE51E2658C200374767 /* 808Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDE11E2658C200374767 /* 808Tom.wav */; };
+		EDBE552F1E268BB9004156A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBE552E1E268BB9004156A8 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		EDBBBDDF1E2658C200374767 /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808Kick.wav; sourceTree = "<group>"; };
 		EDBBBDE01E2658C200374767 /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808Snare.wav; sourceTree = "<group>"; };
 		EDBBBDE11E2658C200374767 /* 808Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808Tom.wav; sourceTree = "<group>"; };
+		EDBE552E1E268BB9004156A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDBE552F1E268BB9004156A8 /* AVFoundation.framework in Frameworks */,
 				52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +120,7 @@
 		C1DF86356955C802F0F033C0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EDBE552E1E268BB9004156A8 /* AVFoundation.framework */,
 				619218898C57C8EA247EDA0B /* Pods_drumPad.framework */,
 				AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */,
 				71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */,

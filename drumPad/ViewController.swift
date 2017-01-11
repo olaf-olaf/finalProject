@@ -8,8 +8,13 @@
 
 import UIKit
 import AudioKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var hiHat: AVAudioPlayer!
+    
+    
     
     @IBOutlet weak var kickPad: UIButton!
     @IBOutlet weak var tomPad: UIButton!
@@ -23,6 +28,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 //        let mixloop = try! AKAudioFile(readFileName: "808Kick.wav")
 //        let player = try! AKAudioPlayer(file: mixloop)
 //        player.looping = true
@@ -80,6 +87,17 @@ class ViewController: UIViewController {
     @IBAction func hiHatPadPressed(_ sender: Any) {
         if hiHatPad.isTouchInside{
             print ("HIHAT!")
+            let path = Bundle.main.path(forResource: "808HiHat", ofType: "wav")!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                let sound = try AVAudioPlayer(contentsOf: url)
+                hiHat = sound
+                sound.play()
+            } catch {
+                print ("LOADING FAILED")
+            }
+
         }
     }
 }
