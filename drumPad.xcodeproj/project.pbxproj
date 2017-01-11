@@ -260,6 +260,7 @@
 				TargetAttributes = {
 					EDAB93F31E23B62C00464F65 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = ZMMZLA89E4;
 						ProvisioningStyle = Automatic;
 					};
 					EDAB94071E23B62D00464F65 = {
@@ -624,6 +625,7 @@
 			baseConfigurationReference = 7AE5785E787DC45F2BEEE6BF /* Pods-drumPad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZMMZLA89E4;
 				INFOPLIST_FILE = drumPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.drumPad;
@@ -637,6 +639,7 @@
 			baseConfigurationReference = A5D10E6E3CEA7560DC663221 /* Pods-drumPad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = ZMMZLA89E4;
 				INFOPLIST_FILE = drumPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.mprog.drumPad;

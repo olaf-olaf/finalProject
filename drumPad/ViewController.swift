@@ -23,6 +23,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let mixloop = try! AKAudioFile(readFileName: "808Kick.wav")
+//        let player = try! AKAudioPlayer(file: mixloop)
+//        player.looping = true
+//        AudioKit.output = player
+//        AudioKit.start()
+//        player.play()
         // Do any additional setup after loading the view, typically from a nib.
         
         
@@ -38,12 +44,15 @@ class ViewController: UIViewController {
     
     @IBAction func kickPadPressed(_ sender: Any) {
         if kickPad.isTouchInside{
+            AudioKit.stop()
             print ("KICK!")
             let mixloop = try! AKAudioFile(readFileName: "808Kick.wav")
             let player = try! AKAudioPlayer(file: mixloop)
             AudioKit.output = player
             AudioKit.start()
             player.play()
+            
+    
             
 //            AudioKit.output = Kick.play(fileName: "808Kick.wav")
             //AudioKit.start()
@@ -59,6 +68,12 @@ class ViewController: UIViewController {
     @IBAction func snarePadPressed(_ sender: Any) {
         if snarePad.isTouchInside{
             print ("SNARE!")
+            AudioKit.stop()
+            let mixloop = try! AKAudioFile(readFileName: "808Snare.wav")
+            let player = try! AKAudioPlayer(file: mixloop)
+            AudioKit.output = player
+            AudioKit.start()
+            player.play()
         }
     }
     
