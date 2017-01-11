@@ -1,0 +1,6 @@
+framework module Pods_drumPadTests {
+  umbrella header "Pods-drumPadTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
