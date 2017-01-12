@@ -10,6 +10,12 @@
 		00FC156BEFD99336A936E2FB /* Pods_drumPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */; };
 		1EC068FB97D8A3666F1841BC /* Pods_drumPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */; };
 		52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619218898C57C8EA247EDA0B /* Pods_drumPad.framework */; };
+		ED19C9A71E278177003C3044 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9A61E278177003C3044 /* AudioController.swift */; };
+		ED19C9AC1E279F37003C3044 /* 909Clap.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9A81E279F37003C3044 /* 909Clap.WAV */; };
+		ED19C9AD1E279F37003C3044 /* 909Kick.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9A91E279F37003C3044 /* 909Kick.WAV */; };
+		ED19C9AE1E279F37003C3044 /* 909Snare.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9AA1E279F37003C3044 /* 909Snare.WAV */; };
+		ED19C9AF1E279F37003C3044 /* 909Tom.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9AB1E279F37003C3044 /* 909Tom.WAV */; };
+		ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */; };
 		EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F71E23B62D00464F65 /* AppDelegate.swift */; };
 		EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F91E23B62D00464F65 /* ViewController.swift */; };
 		EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB93FB1E23B62D00464F65 /* Main.storyboard */; };
@@ -18,7 +24,6 @@
 		EDAB940D1E23B62D00464F65 /* drumPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB940C1E23B62D00464F65 /* drumPadTests.swift */; };
 		EDAB94181E23B62D00464F65 /* drumPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB94171E23B62D00464F65 /* drumPadUITests.swift */; };
 		EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBBBDDA1E263E8100374767 /* FxController.swift */; };
-		EDBBBDDD1E26560000374767 /* DrumPadClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBBBDDC1E26560000374767 /* DrumPadClass.swift */; };
 		EDBBBDE21E2658C200374767 /* 808HiHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDDE1E2658C200374767 /* 808HiHat.wav */; };
 		EDBBBDE31E2658C200374767 /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDDF1E2658C200374767 /* 808Kick.wav */; };
 		EDBBBDE41E2658C200374767 /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDBBBDE01E2658C200374767 /* 808Snare.wav */; };
@@ -53,6 +58,12 @@
 		AB69CDCCD45D09DD43478C62 /* Pods-drumPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drumPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED19C9A61E278177003C3044 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		ED19C9A81E279F37003C3044 /* 909Clap.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Clap.WAV; path = ../../../iossamples/909Clap.WAV; sourceTree = "<group>"; };
+		ED19C9A91E279F37003C3044 /* 909Kick.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Kick.WAV; path = ../../../iossamples/909Kick.WAV; sourceTree = "<group>"; };
+		ED19C9AA1E279F37003C3044 /* 909Snare.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Snare.WAV; path = ../../../iossamples/909Snare.WAV; sourceTree = "<group>"; };
+		ED19C9AB1E279F37003C3044 /* 909Tom.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Tom.WAV; path = ../../../iossamples/909Tom.WAV; sourceTree = "<group>"; };
+		ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxMixerParameters.swift; sourceTree = "<group>"; };
 		EDAB93F41E23B62D00464F65 /* drumPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB93F71E23B62D00464F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB93F91E23B62D00464F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +78,6 @@
 		EDAB94171E23B62D00464F65 /* drumPadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = drumPadUITests.swift; sourceTree = "<group>"; };
 		EDAB94191E23B62D00464F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBBBDDA1E263E8100374767 /* FxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxController.swift; sourceTree = "<group>"; };
-		EDBBBDDC1E26560000374767 /* DrumPadClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrumPadClass.swift; sourceTree = "<group>"; };
 		EDBBBDDE1E2658C200374767 /* 808HiHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808HiHat.wav; sourceTree = "<group>"; };
 		EDBBBDDF1E2658C200374767 /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808Kick.wav; sourceTree = "<group>"; };
 		EDBBBDE01E2658C200374767 /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 808Snare.wav; sourceTree = "<group>"; };
@@ -155,16 +165,21 @@
 			children = (
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
+				ED19C9A61E278177003C3044 /* AudioController.swift */,
 				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
 				EDBBBDDA1E263E8100374767 /* FxController.swift */,
 				EDAB93FE1E23B62D00464F65 /* Assets.xcassets */,
 				EDBBBDDE1E2658C200374767 /* 808HiHat.wav */,
 				EDBBBDDF1E2658C200374767 /* 808Kick.wav */,
+				ED19C9A81E279F37003C3044 /* 909Clap.WAV */,
+				ED19C9A91E279F37003C3044 /* 909Kick.WAV */,
+				ED19C9AA1E279F37003C3044 /* 909Snare.WAV */,
+				ED19C9AB1E279F37003C3044 /* 909Tom.WAV */,
 				EDBBBDE01E2658C200374767 /* 808Snare.wav */,
 				EDBBBDE11E2658C200374767 /* 808Tom.wav */,
 				EDAB94001E23B62D00464F65 /* LaunchScreen.storyboard */,
 				EDAB94031E23B62D00464F65 /* Info.plist */,
-				EDBBBDDC1E26560000374767 /* DrumPadClass.swift */,
+				ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */,
 			);
 			path = drumPad;
 			sourceTree = "<group>";
@@ -304,11 +319,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED19C9AD1E279F37003C3044 /* 909Kick.WAV in Resources */,
 				EDAB94021E23B62D00464F65 /* LaunchScreen.storyboard in Resources */,
+				ED19C9AC1E279F37003C3044 /* 909Clap.WAV in Resources */,
 				EDBBBDE51E2658C200374767 /* 808Tom.wav in Resources */,
 				EDBBBDE31E2658C200374767 /* 808Kick.wav in Resources */,
 				EDAB93FF1E23B62D00464F65 /* Assets.xcassets in Resources */,
+				ED19C9AF1E279F37003C3044 /* 909Tom.WAV in Resources */,
 				EDBBBDE41E2658C200374767 /* 808Snare.wav in Resources */,
+				ED19C9AE1E279F37003C3044 /* 909Snare.WAV in Resources */,
 				EDBBBDE21E2658C200374767 /* 808HiHat.wav in Resources */,
 				EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */,
 			);
@@ -473,10 +492,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDBBBDDD1E26560000374767 /* DrumPadClass.swift in Sources */,
+				ED19C9A71E278177003C3044 /* AudioController.swift in Sources */,
 				EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */,
 				EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */,
 				EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */,
+				ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

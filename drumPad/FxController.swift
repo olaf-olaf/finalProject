@@ -9,12 +9,16 @@
 import UIKit
 
 class FxController: UIViewController {
+    
+    @IBOutlet weak var enterFx: UIButton!
+    
 
-    @IBOutlet weak var delaySlider: UISlider!{
+    @IBOutlet weak var ringSlider: UISlider!{
         didSet{
-            delaySlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
+            ringSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
         }
     }
+
     @IBOutlet weak var distortionSlider: UISlider!{
         didSet{
             distortionSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
@@ -27,10 +31,11 @@ class FxController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ringSlider.value = Float(AudioController.sharedInstance.FxMixControls.ringMix)
+        reverbSlider.value = Float(AudioController.sharedInstance.FxMixControls.reverbMix)
+        distortionSlider.value = Float(AudioController.sharedInstance.FxMixControls.distortionMix)
         // Do any additional setup after loading the view.
     }
 
@@ -50,4 +55,11 @@ class FxController: UIViewController {
     }
     */
 
+    @IBAction func setFx(_ sender: Any) {
+        if enterFx.isTouchInside {
+            AudioController.sharedInstance.setReverbDryWet(level: reverbSlider.value)
+            AudioController.sharedInstance.setDistortionDryWet(level: distortionSlider.value)
+            AudioController.sharedInstance.setRingModulaterDryWet(level: ringSlider.value)
+        }
+    }
 }
