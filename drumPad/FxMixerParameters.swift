@@ -15,8 +15,5 @@ class Fxparameters {
     var ringMix = 0.0
     
     init () {
-        
     }
-    
-    
 }

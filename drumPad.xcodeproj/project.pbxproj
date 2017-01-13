@@ -16,6 +16,8 @@
 		ED19C9AE1E279F37003C3044 /* 909Snare.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9AA1E279F37003C3044 /* 909Snare.WAV */; };
 		ED19C9AF1E279F37003C3044 /* 909Tom.WAV in Resources */ = {isa = PBXBuildFile; fileRef = ED19C9AB1E279F37003C3044 /* 909Tom.WAV */; };
 		ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */; };
+		ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */; };
+		ED6465B01E2923E200E046B2 /* AudioMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */; };
 		EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F71E23B62D00464F65 /* AppDelegate.swift */; };
 		EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F91E23B62D00464F65 /* ViewController.swift */; };
 		EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB93FB1E23B62D00464F65 /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		ED19C9AA1E279F37003C3044 /* 909Snare.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Snare.WAV; path = ../../../iossamples/909Snare.WAV; sourceTree = "<group>"; };
 		ED19C9AB1E279F37003C3044 /* 909Tom.WAV */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Tom.WAV; path = ../../../iossamples/909Tom.WAV; sourceTree = "<group>"; };
 		ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxMixerParameters.swift; sourceTree = "<group>"; };
+		ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerViewController.swift; sourceTree = "<group>"; };
+		ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerParameters.swift; sourceTree = "<group>"; };
 		EDAB93F41E23B62D00464F65 /* drumPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB93F71E23B62D00464F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB93F91E23B62D00464F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,8 +170,11 @@
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
 				ED19C9A61E278177003C3044 /* AudioController.swift */,
+				ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */,
 				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
+				ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */,
 				EDBBBDDA1E263E8100374767 /* FxController.swift */,
+				ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */,
 				EDAB93FE1E23B62D00464F65 /* Assets.xcassets */,
 				EDBBBDDE1E2658C200374767 /* 808HiHat.wav */,
 				EDBBBDDF1E2658C200374767 /* 808Kick.wav */,
@@ -179,7 +186,6 @@
 				EDBBBDE11E2658C200374767 /* 808Tom.wav */,
 				EDAB94001E23B62D00464F65 /* LaunchScreen.storyboard */,
 				EDAB94031E23B62D00464F65 /* Info.plist */,
-				ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */,
 			);
 			path = drumPad;
 			sourceTree = "<group>";
@@ -497,6 +503,8 @@
 				EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */,
 				EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */,
 				ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */,
+				ED6465B01E2923E200E046B2 /* AudioMixerParameters.swift in Sources */,
+				ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

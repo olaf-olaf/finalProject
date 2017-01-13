@@ -12,7 +12,6 @@ class FxController: UIViewController {
     
     @IBOutlet weak var enterFx: UIButton!
     
-
     @IBOutlet weak var ringSlider: UISlider!{
         didSet{
             ringSlider.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
@@ -44,17 +43,6 @@ class FxController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     @IBAction func setFx(_ sender: Any) {
         if enterFx.isTouchInside {
             AudioController.sharedInstance.setReverbDryWet(level: reverbSlider.value)

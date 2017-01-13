@@ -4,7 +4,6 @@
 //
 //  Created by Olaf Kroon on 12/01/17.
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
-//
 
 import Foundation
 import AudioKit
@@ -13,8 +12,8 @@ class AudioController {
     
     static let sharedInstance = AudioController()
     
-    
     let FxMixControls = Fxparameters()
+    //let AudioMixControls = AudioParameters()
     
     let kickFile = try! AKAudioFile(readFileName: "808Kick.wav")
     let snareFile = try! AKAudioFile(readFileName: "808Snare.wav")
@@ -34,9 +33,13 @@ class AudioController {
     // Start audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
         kickPlayer = try! AKAudioPlayer(file: kickFile)
+        kickPlayer.volume = 0.5
         snarePlayer = try! AKAudioPlayer(file: snareFile)
+        snarePlayer.volume = 0.5
         hatPlayer = try! AKAudioPlayer(file: hatFile)
+        hatPlayer.volume = 0.5
         tomPlayer = try! AKAudioPlayer(file: tomFile)
+        tomPlayer.volume = 0.5
         mixer = AKMixer(kickPlayer, snarePlayer, hatPlayer, tomPlayer)
         ringModulator = AKRingModulator(mixer)
         ringModulator.mix = 0
@@ -68,19 +71,27 @@ class AudioController {
     
     func setReverbDryWet(level: Float) {
         reverb.dryWetMix = Double(level)
-        AudioController.sharedInstance.FxMixControls.reverbMix = Double(level)
+        FxMixControls.reverbMix = Double(level)
     }
     
     func setDistortionDryWet(level: Float) {
-    distortion.finalMix = Double(level)
-        AudioController.sharedInstance.FxMixControls.distortionMix = Double(level)
+        distortion.finalMix = Double(level)
+        FxMixControls.distortionMix = Double(level)
     }
     
     func setRingModulaterDryWet (level: Float) {
         ringModulator.mix = Double(level)
-        AudioController.sharedInstance.FxMixControls.ringMix = Double(level)
+        FxMixControls.ringMix = Double(level)
     }
-
     
-
+    func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){
+        kickPlayer.volume = Double(kickVolume)
+        kickPlayer.pan = Double (Kickpan)
+        snarePlayer.volume = Double(snareVolume)
+        snarePlayer.pan = Double(snarePan)
+        tomPlayer.volume = Double(tomVolume)
+        tomPlayer.pan = Double(tomPan)
+        hatPlayer.volume = Double(hatVolume)
+        hatPlayer.pan = Double(hatPan)
+    }
 }
