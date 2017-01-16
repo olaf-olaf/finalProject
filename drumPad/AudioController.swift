@@ -12,8 +12,8 @@ class AudioController {
     
     static let sharedInstance = AudioController()
     
+    // VERVANG DEZE KLASSE ALLE DATA STAAT AL IN AUDIOKIT
     let FxMixControls = Fxparameters()
-    //let AudioMixControls = AudioParameters()
     
     let kickFile = try! AKAudioFile(readFileName: "808Kick.wav")
     let snareFile = try! AKAudioFile(readFileName: "808Snare.wav")
@@ -30,7 +30,7 @@ class AudioController {
     var ringModulator: AKRingModulator
 
 
-    // Start audiokit within the initialisation of a singleton to prevent latency and crashes.
+    // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
         kickPlayer = try! AKAudioPlayer(file: kickFile)
         kickPlayer.volume = 0.5
@@ -69,6 +69,8 @@ class AudioController {
         }
     }
     
+    
+    // HIER 1 FUNCTIE VAN MAKEN zoals mixAudio()
     func setReverbDryWet(level: Float) {
         reverb.dryWetMix = Double(level)
         FxMixControls.reverbMix = Double(level)

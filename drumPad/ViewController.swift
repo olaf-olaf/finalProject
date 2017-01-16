@@ -8,10 +8,12 @@
 
 import UIKit
 import AudioKit
-import AVFoundation
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nextKit: UIButton!
+    @IBOutlet weak var previousKit: UIButton!
+    @IBOutlet weak var kitDisplay: UILabel!
     @IBOutlet weak var kickPad: UIButton!
     @IBOutlet weak var tomPad: UIButton!
     @IBOutlet weak var hiHatPad: UIButton!
@@ -21,14 +23,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Call the the sharedinstance so the first hit won't have latency issues.
+        
         AudioController.sharedInstance
+        kitDisplay.text = ShowKitLed.sharedInstance.displayKit
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func kickPadPressed(_ sender: Any) {
         if kickPad.isTouchInside{

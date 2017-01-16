@@ -107,6 +107,9 @@
                     <connections>
                         <outlet property="hiHatPad" destination="vyW-hg-AxR" id="qHV-KQ-8t8"/>
                         <outlet property="kickPad" destination="SDh-q2-L5w" id="2yI-Lj-cZb"/>
+                        <outlet property="kitDisplay" destination="x8u-hb-l3S" id="nvX-uQ-E5P"/>
+                        <outlet property="nextKit" destination="IPe-CA-tfe" id="tIp-ML-S5A"/>
+                        <outlet property="previousKit" destination="lxc-FP-c2i" id="8bz-CL-8yy"/>
                         <outlet property="snarePad" destination="F5b-bl-iaa" id="LMa-tH-kDq"/>
                         <outlet property="tomPad" destination="E7z-AI-b8z" id="v1w-TE-YK2"/>
                     </connections>
