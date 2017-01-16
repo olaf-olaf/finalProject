@@ -32,10 +32,9 @@ class FxController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ringSlider.value = Float(AudioController.sharedInstance.FxMixControls.ringMix)
-        reverbSlider.value = Float(AudioController.sharedInstance.FxMixControls.reverbMix)
-        distortionSlider.value = Float(AudioController.sharedInstance.FxMixControls.distortionMix)
-        // Do any additional setup after loading the view.
+        ringSlider.value = Float(AudioController.sharedInstance.ringModulator.mix)
+        reverbSlider.value = Float(AudioController.sharedInstance.reverb.dryWetMix)
+        distortionSlider.value = Float(AudioController.sharedInstance.distortion.finalMix)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,9 +44,7 @@ class FxController: UIViewController {
     
     @IBAction func setFx(_ sender: Any) {
         if enterFx.isTouchInside {
-            AudioController.sharedInstance.setReverbDryWet(level: reverbSlider.value)
-            AudioController.sharedInstance.setDistortionDryWet(level: distortionSlider.value)
-            AudioController.sharedInstance.setRingModulaterDryWet(level: ringSlider.value)
+            AudioController.sharedInstance.mixFx(reverbLevel: reverbSlider.value , distortionLevel: distortionSlider.value, ringLevel: ringSlider.value)
         }
     }
 }

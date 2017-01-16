@@ -25,9 +25,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Call the the sharedinstance so the first hit won't have latency issues.
-        
-        //AudioController.sharedInstance
-        kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+        AudioController.sharedInstance
+        kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,22 +36,21 @@ class ViewController: UIViewController {
     
     @IBAction func setNextDisplay(_ sender: Any) {
         if nextKit.isTouchInside {
-            ShowKitLed.sharedInstance.displayNext()
-            kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+            AudioController.sharedInstance.LEDKitSelector.displayNext()
+            kitDisplay.text =  AudioController.sharedInstance.LEDKitSelector.displayKit
             AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
         }
     }
     
     @IBAction func setPreviousDisplay(_ sender: Any) {
         if previousKit.isTouchInside {
-            ShowKitLed.sharedInstance.displayPrevious()
-            kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+            AudioController.sharedInstance.LEDKitSelector.displayPrevious()
+            kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
             AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
         }
     }
     
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
-        print ("KICK")
         AudioController.sharedInstance.kickPlayer.play()
     }
     

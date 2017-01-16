@@ -12,7 +12,6 @@
 		52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619218898C57C8EA247EDA0B /* Pods_drumPad.framework */; };
 		ED065DDB1E2CF6E400D30D9B /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */; };
 		ED19C9A71E278177003C3044 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9A61E278177003C3044 /* AudioController.swift */; };
-		ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */; };
 		ED26413C1E2CDF9400A790FB /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641381E2CDF9400A790FB /* 808Snare.wav */; };
 		ED26413D1E2CDF9400A790FB /* 808Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641391E2CDF9400A790FB /* 808Tom.wav */; };
 		ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26413E1E2CDFA400A790FB /* 909Hat.wav */; };
@@ -26,7 +25,6 @@
 		ED2641501E2CE17400A790FB /* 808Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26414F1E2CE17400A790FB /* 808Hat.wav */; };
 		ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */; };
 		ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */; };
-		ED6465B01E2923E200E046B2 /* AudioMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */; };
 		EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F71E23B62D00464F65 /* AppDelegate.swift */; };
 		EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F91E23B62D00464F65 /* ViewController.swift */; };
 		EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB93FB1E23B62D00464F65 /* Main.storyboard */; };
@@ -71,7 +69,6 @@
 		DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Kick.wav; path = ../../../iossamples/808/808Kick.wav; sourceTree = "<group>"; };
 		ED19C9A61E278177003C3044 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
-		ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxMixerParameters.swift; sourceTree = "<group>"; };
 		ED2641381E2CDF9400A790FB /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Snare.wav; path = ../../../iossamples/808/808Snare.wav; sourceTree = "<group>"; };
 		ED2641391E2CDF9400A790FB /* 808Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Tom.wav; path = ../../../iossamples/808/808Tom.wav; sourceTree = "<group>"; };
 		ED26413E1E2CDFA400A790FB /* 909Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Hat.wav; path = ../../../iossamples/909/909Hat.wav; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 		ED26414F1E2CE17400A790FB /* 808Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Hat.wav; path = ../../../iossamples/808/808Hat.wav; sourceTree = "<group>"; };
 		ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKitLed.swift; sourceTree = "<group>"; };
 		ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerViewController.swift; sourceTree = "<group>"; };
-		ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerParameters.swift; sourceTree = "<group>"; };
 		EDAB93F41E23B62D00464F65 /* drumPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB93F71E23B62D00464F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB93F91E23B62D00464F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -211,12 +207,10 @@
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
 				ED19C9A61E278177003C3044 /* AudioController.swift */,
-				ED6465AF1E2923E200E046B2 /* AudioMixerParameters.swift */,
 				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
 				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
 				ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */,
 				EDBBBDDA1E263E8100374767 /* FxController.swift */,
-				ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */,
 				EDAB93FE1E23B62D00464F65 /* Assets.xcassets */,
 				ED2B25AA1E2B98B900364598 /* samples */,
 				EDAB94001E23B62D00464F65 /* LaunchScreen.storyboard */,
@@ -546,8 +540,6 @@
 				EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */,
 				EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */,
 				EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */,
-				ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */,
-				ED6465B01E2923E200E046B2 /* AudioMixerParameters.swift in Sources */,
 				ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,9 +11,8 @@ import AudioKit
 class AudioController {
     
     static let sharedInstance = AudioController()
-    
-    // VERVANG DEZE KLASSE ALLE DATA STAAT AL IN AUDIOKIT
-    let FxMixControls = Fxparameters()
+
+    let LEDKitSelector = ShowKitLed()
     
     let kickFile = try! AKAudioFile(readFileName: "808Kick.wav")
     let snareFile = try! AKAudioFile(readFileName: "808Snare.wav")
@@ -70,21 +69,12 @@ class AudioController {
     }
     
     
-    // HIER 1 FUNCTIE VAN MAKEN zoals mixAudio()
-    func setReverbDryWet(level: Float) {
-        reverb.dryWetMix = Double(level)
-        FxMixControls.reverbMix = Double(level)
+    func mixFx(reverbLevel: Float, distortionLevel: Float, ringLevel: Float){
+        reverb.dryWetMix = Double(reverbLevel)
+        distortion.finalMix = Double(distortionLevel)
+        ringModulator.mix = Double(ringLevel)
     }
-    
-    func setDistortionDryWet(level: Float) {
-        distortion.finalMix = Double(level)
-        FxMixControls.distortionMix = Double(level)
-    }
-    
-    func setRingModulaterDryWet (level: Float) {
-        ringModulator.mix = Double(level)
-        FxMixControls.ringMix = Double(level)
-    }
+
     
     func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){
         kickPlayer.volume = Double(kickVolume)

@@ -8,15 +8,12 @@
 
 import Foundation
 
-//GEWOON EEN INSTANCE MAKEN IN DE AL BESTAANDE SINGLETON
 class ShowKitLed {
-    
-    static let sharedInstance = ShowKitLed()
     let drumKits = ["808", "Funk", "Jazz","909"]
     var index = 0
-    
     var displayKit: String
-    private init () {
+    
+    init () {
         
         displayKit = drumKits[0]
     }
