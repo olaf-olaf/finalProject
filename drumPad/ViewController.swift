@@ -10,6 +10,8 @@ import UIKit
 import AudioKit
 
 class ViewController: UIViewController {
+   
+ 
     
     @IBOutlet weak var nextKit: UIButton!
     @IBOutlet weak var previousKit: UIButton!
@@ -45,31 +47,25 @@ class ViewController: UIViewController {
         if previousKit.isTouchInside {
             ShowKitLed.sharedInstance.displayPrevious()
             kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+            AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
         }
     }
     
-    @IBAction func kickPadPressed(_ sender: Any) {
-        if kickPad.isTouchInside{
-            AudioController.sharedInstance.kickPlayer.play()
-        }
+    @IBAction func kickPadTouchDown(_ sender: UIButton) {
+        print ("KICK")
+        AudioController.sharedInstance.kickPlayer.play()
     }
     
-    @IBAction func tomPadPressed(_ sender: Any) {
-        if tomPad.isTouchInside{
-            AudioController.sharedInstance.tomPlayer.play()
-        }
-    }
-   
-    @IBAction func snarePadPressed(_ sender: Any) {
-        if snarePad.isTouchInside{
-            AudioController.sharedInstance.snarePlayer.play()
-        }
+    @IBAction func snarePadTouchDown(_ sender: UIButton) {
+        AudioController.sharedInstance.snarePlayer.play()
     }
     
-    @IBAction func hiHatPadPressed(_ sender: Any) {
-        if hiHatPad.isTouchInside{
-            AudioController.sharedInstance.hatPlayer.play()
-        }
+    @IBAction func tomPadTouchDown(_ sender: UIButton) {
+         AudioController.sharedInstance.tomPlayer.play()
+    }
+    
+    @IBAction func hatPadTouchDown(_ sender: UIButton) {
+        AudioController.sharedInstance.hatPlayer.play()
     }
 }
 

@@ -17,7 +17,7 @@ class AudioController {
     
     let kickFile = try! AKAudioFile(readFileName: "808Kick.wav")
     let snareFile = try! AKAudioFile(readFileName: "808Snare.wav")
-    let hatFile = try! AKAudioFile(readFileName: "808HiHat.wav")
+    let hatFile = try! AKAudioFile(readFileName: "808Hat.wav")
     let tomFile = try! AKAudioFile(readFileName: "808Tom.wav")
     
     var kickPlayer: AKAudioPlayer

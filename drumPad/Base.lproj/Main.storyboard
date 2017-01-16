@@ -27,7 +27,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Snare"/>
                                 <connections>
-                                    <action selector="snarePadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Y5-Eo-bdJ"/>
+                                    <action selector="snarePadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="PR6-PT-hvh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7z-AI-b8z">
@@ -36,7 +36,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Tom"/>
                                 <connections>
-                                    <action selector="tomPadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yDa-ya-GhA"/>
+                                    <action selector="tomPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1tl-IC-ESu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDh-q2-L5w">
@@ -45,7 +45,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <state key="normal" title="Kick"/>
                                 <connections>
-                                    <action selector="kickPadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNr-mb-mfy"/>
+                                    <action selector="kickPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5vh-hv-isN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyW-hg-AxR">
@@ -54,7 +54,7 @@
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Hi Hat"/>
                                 <connections>
-                                    <action selector="hiHatPadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idr-uZ-1OX"/>
+                                    <action selector="hatPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="V1E-av-tao"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-Ea-DZ3">

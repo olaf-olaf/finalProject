@@ -10,9 +10,9 @@
 		00FC156BEFD99336A936E2FB /* Pods_drumPadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */; };
 		1EC068FB97D8A3666F1841BC /* Pods_drumPadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71E65F3F8D71AA0B15AA8006 /* Pods_drumPadUITests.framework */; };
 		52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619218898C57C8EA247EDA0B /* Pods_drumPad.framework */; };
+		ED065DDB1E2CF6E400D30D9B /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */; };
 		ED19C9A71E278177003C3044 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9A61E278177003C3044 /* AudioController.swift */; };
 		ED19C9B11E27D1B3003C3044 /* FxMixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */; };
-		ED26413B1E2CDF9400A790FB /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641371E2CDF9400A790FB /* 808Kick.wav */; };
 		ED26413C1E2CDF9400A790FB /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641381E2CDF9400A790FB /* 808Snare.wav */; };
 		ED26413D1E2CDF9400A790FB /* 808Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641391E2CDF9400A790FB /* 808Tom.wav */; };
 		ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26413E1E2CDFA400A790FB /* 909Hat.wav */; };
@@ -36,6 +36,10 @@
 		EDAB94181E23B62D00464F65 /* drumPadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB94171E23B62D00464F65 /* drumPadUITests.swift */; };
 		EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBBBDDA1E263E8100374767 /* FxController.swift */; };
 		EDBE552F1E268BB9004156A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBE552E1E268BB9004156A8 /* AVFoundation.framework */; };
+		EDD4BF531E2CEE5D002494B6 /* FunkHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */; };
+		EDD4BF551E2CEE5D002494B6 /* FunkSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */; };
+		EDF800AE1E2CF0670080241B /* FunkKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AC1E2CF0670080241B /* FunkKick.wav */; };
+		EDF800AF1E2CF0670080241B /* FunkTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AD1E2CF0670080241B /* FunkTom.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +69,9 @@
 		AB69CDCCD45D09DD43478C62 /* Pods-drumPadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB770D5A1DEA4435662243F2 /* Pods_drumPadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_drumPadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.release.xcconfig"; sourceTree = "<group>"; };
+		ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Kick.wav; path = ../../../iossamples/808/808Kick.wav; sourceTree = "<group>"; };
 		ED19C9A61E278177003C3044 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		ED19C9B01E27D1B3003C3044 /* FxMixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxMixerParameters.swift; sourceTree = "<group>"; };
-		ED2641371E2CDF9400A790FB /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Kick.wav; path = ../../../iossamples/808/808Kick.wav; sourceTree = "<group>"; };
 		ED2641381E2CDF9400A790FB /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Snare.wav; path = ../../../iossamples/808/808Snare.wav; sourceTree = "<group>"; };
 		ED2641391E2CDF9400A790FB /* 808Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Tom.wav; path = ../../../iossamples/808/808Tom.wav; sourceTree = "<group>"; };
 		ED26413E1E2CDFA400A790FB /* 909Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Hat.wav; path = ../../../iossamples/909/909Hat.wav; sourceTree = "<group>"; };
@@ -97,6 +101,10 @@
 		EDAB94191E23B62D00464F65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EDBBBDDA1E263E8100374767 /* FxController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FxController.swift; sourceTree = "<group>"; };
 		EDBE552E1E268BB9004156A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkHat.wav; path = ../../../iossamples/funk/FunkHat.wav; sourceTree = "<group>"; };
+		EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkSnare.wav; path = ../../../iossamples/funk/FunkSnare.wav; sourceTree = "<group>"; };
+		EDF800AC1E2CF0670080241B /* FunkKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkKick.wav; path = ../../../iossamples/funk/FunkKick.wav; sourceTree = "<group>"; };
+		EDF800AD1E2CF0670080241B /* FunkTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkTom.wav; path = ../../../iossamples/funk/FunkTom.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,18 +163,22 @@
 		ED2B25AA1E2B98B900364598 /* samples */ = {
 			isa = PBXGroup;
 			children = (
-				ED2641461E2CDFBA00A790FB /* JazzHat.wav */,
-				ED2641471E2CDFBA00A790FB /* JazzKick.wav */,
-				ED2641481E2CDFBA00A790FB /* JazzSnare.wav */,
-				ED2641491E2CDFBA00A790FB /* JazzTom.wav */,
-				ED2641371E2CDF9400A790FB /* 808Kick.wav */,
-				ED2641381E2CDF9400A790FB /* 808Snare.wav */,
+				EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */,
+				EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */,
+				EDF800AC1E2CF0670080241B /* FunkKick.wav */,
+				EDF800AD1E2CF0670080241B /* FunkTom.wav */,
 				ED26414F1E2CE17400A790FB /* 808Hat.wav */,
+				ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */,
 				ED2641391E2CDF9400A790FB /* 808Tom.wav */,
+				ED2641381E2CDF9400A790FB /* 808Snare.wav */,
+				ED2641461E2CDFBA00A790FB /* JazzHat.wav */,
+				ED2641491E2CDFBA00A790FB /* JazzTom.wav */,
+				ED2641481E2CDFBA00A790FB /* JazzSnare.wav */,
+				ED2641471E2CDFBA00A790FB /* JazzKick.wav */,
 				ED26413E1E2CDFA400A790FB /* 909Hat.wav */,
-				ED26413F1E2CDFA400A790FB /* 909Kick.wav */,
-				ED2641401E2CDFA400A790FB /* 909Snare.wav */,
 				ED2641411E2CDFA400A790FB /* 909Tom.wav */,
+				ED2641401E2CDFA400A790FB /* 909Snare.wav */,
+				ED26413F1E2CDFA400A790FB /* 909Kick.wav */,
 			);
 			name = samples;
 			sourceTree = "<group>";
@@ -350,13 +362,17 @@
 			files = (
 				EDAB94021E23B62D00464F65 /* LaunchScreen.storyboard in Resources */,
 				ED26413D1E2CDF9400A790FB /* 808Tom.wav in Resources */,
-				ED26413B1E2CDF9400A790FB /* 808Kick.wav in Resources */,
+				EDF800AE1E2CF0670080241B /* FunkKick.wav in Resources */,
 				ED2641431E2CDFA400A790FB /* 909Kick.wav in Resources */,
 				EDAB93FF1E23B62D00464F65 /* Assets.xcassets in Resources */,
 				ED2641441E2CDFA400A790FB /* 909Snare.wav in Resources */,
 				ED26413C1E2CDF9400A790FB /* 808Snare.wav in Resources */,
 				ED26414A1E2CDFBA00A790FB /* JazzHat.wav in Resources */,
+				ED065DDB1E2CF6E400D30D9B /* 808Kick.wav in Resources */,
+				EDD4BF551E2CEE5D002494B6 /* FunkSnare.wav in Resources */,
+				EDD4BF531E2CEE5D002494B6 /* FunkHat.wav in Resources */,
 				ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */,
+				EDF800AF1E2CF0670080241B /* FunkTom.wav in Resources */,
 				ED26414D1E2CDFBA00A790FB /* JazzTom.wav in Resources */,
 				ED2641501E2CE17400A790FB /* 808Hat.wav in Resources */,
 				ED2641451E2CDFA400A790FB /* 909Tom.wav in Resources */,
