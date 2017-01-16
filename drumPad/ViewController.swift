@@ -24,13 +24,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Call the the sharedinstance so the first hit won't have latency issues.
         
-        AudioController.sharedInstance
+        //AudioController.sharedInstance
         kitDisplay.text = ShowKitLed.sharedInstance.displayKit
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+               // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func setNextDisplay(_ sender: Any) {
+        if nextKit.isTouchInside {
+            ShowKitLed.sharedInstance.displayNext()
+            kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+            AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
+        }
+    }
+    
+    @IBAction func setPreviousDisplay(_ sender: Any) {
+        if previousKit.isTouchInside {
+            ShowKitLed.sharedInstance.displayPrevious()
+            kitDisplay.text = ShowKitLed.sharedInstance.displayKit
+        }
     }
     
     @IBAction func kickPadPressed(_ sender: Any) {

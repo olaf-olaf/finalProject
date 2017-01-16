@@ -55,7 +55,7 @@ class AudioController {
     func replaceKit(kitName: String) {
         let newKickFile = try! AKAudioFile(readFileName: kitName+"Kick.wav")
         let newSnareFile = try! AKAudioFile(readFileName: kitName+"Snare.wav")
-        let newHatFile = try! AKAudioFile(readFileName: kitName+"HiHat.wav")
+        let newHatFile = try! AKAudioFile(readFileName: kitName+"Hat.wav")
         let newTomFile = try! AKAudioFile(readFileName: kitName+"Tom.wav")
         
         do {

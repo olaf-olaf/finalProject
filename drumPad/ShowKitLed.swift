@@ -23,9 +23,7 @@ class ShowKitLed {
     }
     
     func displayNext() {
-        
         if index == drumKits.count - 1 {
-            print (index, " == ", drumKits.count - 1 )
             index = 0
         } else {
             self.index += 1
@@ -34,7 +32,6 @@ class ShowKitLed {
     }
     
     func displayPrevious() {
-        
         if index == 0 {
             index = drumKits.count - 1
         } else {
@@ -42,7 +39,5 @@ class ShowKitLed {
         }
         displayKit = drumKits[index]
     }
-        
-        
 }
     
