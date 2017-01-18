@@ -9,6 +9,7 @@
 import UIKit
 import AudioKit
 
+
 class ViewController: UIViewController {
     
     
@@ -73,6 +74,7 @@ class ViewController: UIViewController {
     @IBAction func hatPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.hatPlayer.play()
     }
+    
     @IBAction func setMetronomeTempo(_ sender: UISlider) {
         print ("TEMPO", metronomeTempoSlider.value)
         AudioController.sharedInstance.setMetronomeTempo(bpm: metronomeTempoSlider.value)

@@ -10,6 +10,9 @@ import UIKit
 
 class AudioMixerViewController: UIViewController {
     
+    var snareKnob: Knob!
+    
+    @IBOutlet weak var snareKnobPlaceholder: UIView!
     @IBOutlet weak var enterMixSettings: UIButton!
     @IBOutlet weak var hatMixer: UISlider! {
         didSet{
@@ -39,6 +42,13 @@ class AudioMixerViewController: UIViewController {
         snareMixer.value = Float(AudioController.sharedInstance.snarePlayer.volume)
         tomMixer.value = Float(AudioController.sharedInstance.tomPlayer.volume)
         hatMixer.value = Float(AudioController.sharedInstance.hatPlayer.volume)
+        
+        snareKnob = Knob(frame: snareKnobPlaceholder.bounds)
+        snareKnobPlaceholder.addSubview(snareKnob)
+        snareKnob.lineWidth = 4.0
+        snareKnob.pointerLength = 12.0
+        
+        
 
         // Do any additional setup after loading the view.
     }
@@ -51,6 +61,7 @@ class AudioMixerViewController: UIViewController {
     @IBAction func setMixSettings(_ sender: Any) {
         if enterMixSettings.isTouchInside{
             AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: 0.0, snarePan: 0.0 , tomPan: 0.0, hatPan: 0.0)
+            print("KNOB", snareKnob.value)
         }
     }
 

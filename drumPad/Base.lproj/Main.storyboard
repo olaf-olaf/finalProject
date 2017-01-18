@@ -222,19 +222,19 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QGN-pB-CDu">
-                                <rect key="frame" x="-63" y="318" width="379" height="31"/>
+                                <rect key="frame" x="-63" y="204" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rev-yV-4QM">
-                                <rect key="frame" x="-153" y="318" width="379" height="31"/>
+                                <rect key="frame" x="-153" y="204" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-C3-Wr6">
-                                <rect key="frame" x="50" y="318" width="379" height="31"/>
+                                <rect key="frame" x="50" y="204" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nY-bku">
-                                <rect key="frame" x="149" y="318" width="379" height="31"/>
+                                <rect key="frame" x="149" y="204" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHF-f6-L0J">
@@ -265,6 +265,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-95-83J">
+                                <rect key="frame" x="142" y="508" width="68" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -272,6 +277,7 @@
                         <outlet property="enterMixSettings" destination="w5k-cS-d8h" id="dwZ-Bk-4hJ"/>
                         <outlet property="hatMixer" destination="gdx-nY-bku" id="p2F-5K-7zm"/>
                         <outlet property="kickMixer" destination="QGN-pB-CDu" id="Tid-tC-uoD"/>
+                        <outlet property="snareKnobPlaceholder" destination="gl8-95-83J" id="B6h-Te-jWM"/>
                         <outlet property="snareMixer" destination="rev-yV-4QM" id="T50-RU-ZaB"/>
                         <outlet property="tomMixer" destination="DMA-C3-Wr6" id="Nlg-5C-Arn"/>
                     </connections>
