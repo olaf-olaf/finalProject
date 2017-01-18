@@ -10,9 +10,10 @@ import UIKit
 import AudioKit
 
 class ViewController: UIViewController {
-   
- 
     
+    
+    @IBOutlet weak var metronomeTempoSlider: UISlider!
+    @IBOutlet weak var metronomeButton: UIButton!
     @IBOutlet weak var nextKit: UIButton!
     @IBOutlet weak var previousKit: UIButton!
     @IBOutlet weak var kitDisplay: UILabel!
@@ -25,8 +26,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Call the the sharedinstance so the first hit won't have latency issues.
-        AudioController.sharedInstance
+        //AudioController.sharedInstance
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
+        metronomeTempoSlider.value = Float(AudioController.sharedInstance.currentFrequency)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +52,12 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func enableMetronome(_ sender: Any) {
+        if metronomeButton.isTouchInside {
+            AudioController.sharedInstance.setMetronome()
+        }
+    }
+    
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.kickPlayer.play()
     }
@@ -65,5 +73,10 @@ class ViewController: UIViewController {
     @IBAction func hatPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.hatPlayer.play()
     }
+    @IBAction func setMetronomeTempo(_ sender: UISlider) {
+        print ("TEMPO", metronomeTempoSlider.value)
+        AudioController.sharedInstance.setMetronomeTempo(bpm: metronomeTempoSlider.value)
+    }
+
 }
 

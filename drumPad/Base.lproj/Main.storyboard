@@ -77,10 +77,16 @@
                                 <rect key="frame" x="236" y="589" width="84" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Metronome"/>
+                                <connections>
+                                    <action selector="enableMetronome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dws-bI-MOd"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="40" minValue="40" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Zv1-W0-Yzq">
                                 <rect key="frame" x="5" y="589" width="225" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="setMetronomeTempo:" destination="BYZ-38-t0r" eventType="valueChanged" id="uxi-9g-r2b"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="808" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8u-hb-l3S">
                                 <rect key="frame" x="146" y="28" width="82" height="21"/>
@@ -114,6 +120,8 @@
                         <outlet property="hiHatPad" destination="vyW-hg-AxR" id="qHV-KQ-8t8"/>
                         <outlet property="kickPad" destination="SDh-q2-L5w" id="2yI-Lj-cZb"/>
                         <outlet property="kitDisplay" destination="x8u-hb-l3S" id="nvX-uQ-E5P"/>
+                        <outlet property="metronomeButton" destination="fvw-CV-Ndg" id="bGN-3m-7mo"/>
+                        <outlet property="metronomeTempoSlider" destination="Zv1-W0-Yzq" id="W9T-yg-oCP"/>
                         <outlet property="nextKit" destination="IPe-CA-tfe" id="tIp-ML-S5A"/>
                         <outlet property="previousKit" destination="lxc-FP-c2i" id="8bz-CL-8yy"/>
                         <outlet property="snarePad" destination="F5b-bl-iaa" id="LMa-tH-kDq"/>

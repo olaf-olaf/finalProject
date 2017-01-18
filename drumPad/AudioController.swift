@@ -27,7 +27,20 @@ class AudioController {
     var reverb: AKReverb
     var distortion: AKDistortion
     var ringModulator: AKRingModulator
-
+    let finalMixer: AKMixer
+    
+    var currentFrequency = 60.0
+    let generator = AKOperationGenerator() { parameters in
+        let beep = AKOperation.sineWave(frequency: 480)
+    
+        let metronome = AKOperation.metronome(frequency: parameters[0] / 60)
+    
+        let beeps = beep.triggeredWithEnvelope(
+            trigger: metronome,
+            attack: 0.01, hold: 0, release: 0.05)
+        return beeps
+    }
+    
 
     // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
@@ -46,7 +59,10 @@ class AudioController {
         distortion.finalMix = 0
         reverb = AKReverb(distortion)
         reverb.dryWetMix = 0
-        AudioKit.output = reverb
+        
+        generator.parameters = [currentFrequency]
+        finalMixer = AKMixer(reverb, generator)
+        AudioKit.output = finalMixer
         AudioKit.start()
     }
     
@@ -85,5 +101,19 @@ class AudioController {
         tomPlayer.pan = Double(tomPan)
         hatPlayer.volume = Double(hatVolume)
         hatPlayer.pan = Double(hatPan)
+    }
+    
+    func setMetronome() {
+        if generator.isStarted {
+            generator.stop()
+        } else {
+            generator.start()
+        }
+    }
+    
+    func setMetronomeTempo(bpm: Float){
+        currentFrequency = Double(bpm)
+        generator.parameters = [currentFrequency]
+        
     }
 }
