@@ -22,7 +22,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var hiHatPad: UIButton!
     @IBOutlet weak var snarePad: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Call the the sharedinstance so the first hit won't have latency issues.
