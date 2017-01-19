@@ -117,12 +117,11 @@ class AudioController {
     
     func playSample(player: inout AKAudioPlayer){
         
+        // IMPLEMENT A SECOND PLAYER MECHANISM HERE.
         if player.isStarted {
             player.stop()
             player.start()
-            print("PLAYHEAD1", player.playhead)
             if player.isStopped {
-                print("PLAYHEAD2", player.playhead)
                 player.play()
             }
         } else {
