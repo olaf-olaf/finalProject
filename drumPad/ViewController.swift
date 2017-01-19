@@ -12,7 +12,6 @@ import AudioKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var metronomeTempoSlider: UISlider!
     @IBOutlet weak var metronomeButton: UIButton!
     @IBOutlet weak var nextKit: UIButton!
