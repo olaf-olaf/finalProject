@@ -266,7 +266,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-95-83J">
-                                <rect key="frame" x="86" y="458" width="124" height="126"/>
+                                <rect key="frame" x="9" y="523" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-8g-i2t">
+                                <rect key="frame" x="88" y="523" width="72" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJi-Bw-BfI">
+                                <rect key="frame" x="201" y="512" width="72" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-hn-z9v">
+                                <rect key="frame" x="287" y="512" width="72" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -275,10 +290,13 @@
                     </view>
                     <connections>
                         <outlet property="enterMixSettings" destination="w5k-cS-d8h" id="dwZ-Bk-4hJ"/>
+                        <outlet property="hatKnobPlaceholder" destination="n5f-hn-z9v" id="rS6-eo-lkw"/>
                         <outlet property="hatMixer" destination="gdx-nY-bku" id="p2F-5K-7zm"/>
+                        <outlet property="kickKnobPlaceholder" destination="XUO-8g-i2t" id="5Ye-A7-dRP"/>
                         <outlet property="kickMixer" destination="QGN-pB-CDu" id="Tid-tC-uoD"/>
                         <outlet property="snareKnobPlaceholder" destination="gl8-95-83J" id="B6h-Te-jWM"/>
                         <outlet property="snareMixer" destination="rev-yV-4QM" id="T50-RU-ZaB"/>
+                        <outlet property="tomKnobPlaceholder" destination="FJi-Bw-BfI" id="GGr-TK-3cU"/>
                         <outlet property="tomMixer" destination="DMA-C3-Wr6" id="Nlg-5C-Arn"/>
                     </connections>
                 </viewController>
@@ -288,6 +306,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Yr4-oI-jc3"/>
+        <segue reference="SY9-Uh-moG"/>
     </inferredMetricsTieBreakers>
 </document>

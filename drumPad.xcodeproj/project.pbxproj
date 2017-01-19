@@ -37,6 +37,7 @@
 		EDBE552F1E268BB9004156A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBE552E1E268BB9004156A8 /* AVFoundation.framework */; };
 		EDD4BF531E2CEE5D002494B6 /* FunkHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */; };
 		EDD4BF551E2CEE5D002494B6 /* FunkSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */; };
+		EDF0FD191E30C804008D9B61 /* process.md in Sources */ = {isa = PBXBuildFile; fileRef = EDF0FD181E30C804008D9B61 /* process.md */; };
 		EDF800AE1E2CF0670080241B /* FunkKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AC1E2CF0670080241B /* FunkKick.wav */; };
 		EDF800AF1E2CF0670080241B /* FunkTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AD1E2CF0670080241B /* FunkTom.wav */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		EDBE552E1E268BB9004156A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkHat.wav; path = ../../../iossamples/funk/FunkHat.wav; sourceTree = "<group>"; };
 		EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkSnare.wav; path = ../../../iossamples/funk/FunkSnare.wav; sourceTree = "<group>"; };
+		EDF0FD181E30C804008D9B61 /* process.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = process.md; sourceTree = "<group>"; };
 		EDF800AC1E2CF0670080241B /* FunkKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkKick.wav; path = ../../../iossamples/funk/FunkKick.wav; sourceTree = "<group>"; };
 		EDF800AD1E2CF0670080241B /* FunkTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkTom.wav; path = ../../../iossamples/funk/FunkTom.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,6 +211,7 @@
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				ED367B3F1E2FAE6B00B0235F /* Knob.swift */,
 				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
+				EDF0FD181E30C804008D9B61 /* process.md */,
 				ED19C9A61E278177003C3044 /* AudioController.swift */,
 				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
 				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
@@ -538,6 +541,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF0FD191E30C804008D9B61 /* process.md in Sources */,
 				ED19C9A71E278177003C3044 /* AudioController.swift in Sources */,
 				ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */,
 				EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */,

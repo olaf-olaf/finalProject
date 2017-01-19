@@ -6,29 +6,25 @@
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
+
+//A rotary knob based on code from https://www.raywenderlich.com/82058/custom-control-tutorial-ios-swift-reusable-knob
+
 import UIKit
 import UIKit.UIGestureRecognizerSubclass
 
 public class Knob: UIControl {
-    /** Specifies the angle of the start of the knob control track. Defaults to -11π/8 */
     public var startAngle: CGFloat {
         get { return knobRenderer.startAngle }
         set { knobRenderer.startAngle = newValue }
     }
-    
-    /** Specifies the end angle of the knob control track. Defaults to 3π/8 */
     public var endAngle: CGFloat {
         get { return knobRenderer.endAngle }
         set { knobRenderer.endAngle = newValue }
     }
-    
-    /** Specifies the width in points of the knob control track. Defaults to 2.0 */
     public var lineWidth: CGFloat {
         get { return knobRenderer.lineWidth }
         set { knobRenderer.lineWidth = newValue }
     }
-    
-    /** Specifies the length in points of the pointer on the knob. Defaults to 6.0 */
     public var pointerLength: CGFloat {
         get { return knobRenderer.pointerLength }
         set { knobRenderer.pointerLength = newValue }
@@ -36,29 +32,16 @@ public class Knob: UIControl {
     
     private let knobRenderer = KnobRenderer()
     
+    private var backingValue: Float = 0.01
     
-    private var backingValue: Float = 0.0
-    
-    /** Contains the receiver’s current value. */
     public var value: Float {
         get { return backingValue }
         set { setValue(value: newValue, animated: false) }
     }
     
-    //    /** Sets the receiver’s current value, allowing you to animate the change visually. */
-    //    public func setValue(value: Float, animated: Bool) {
-    //        if value != backingValue {
-    //            backingValue = min(maximumValue, max(minimumValue, value))
-    //        }
-    //    }
     public func setValue(value: Float, animated: Bool) {
         if value != self.value {
-            print("SETVALUEBAM", value)
-            // Save the value to the backing value
-            // Make sure we limit it to the requested bounds
             self.backingValue = min(self.maximumValue, max(self.minimumValue, value))
-            
-            // Now let's update the knob with the correct angle
             let angleRange = endAngle - startAngle
             let valueRange = CGFloat(maximumValue - minimumValue)
             let angle = CGFloat(value - minimumValue) / valueRange * angleRange + startAngle
@@ -66,73 +49,41 @@ public class Knob: UIControl {
         }
     }
     
-    
-    /** Contains the minimum value of the receiver. */
     public var minimumValue: Float = -1.0
-    
-    /** Contains the maximum value of the receiver. */
     public var maximumValue: Float = 1.0
-    
-    /** Contains a Boolean value indicating whether changes
-     in the sliders value generate continuous update events. */
     public var continuous = true
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
         
         createSublayers()
-        
         let gr = RotationGestureRecognizer(target: self, action: #selector(handleRotation(sender:)))
         self.addGestureRecognizer(gr)
-        
-        
     }
     
     func handleRotation(sender: AnyObject) {
         let gr = sender as! RotationGestureRecognizer
-        
-        print("ROTATION", gr.rotation)
-        
-        // 1. Mid-point angle
         let midPointAngle = (2.0 * CGFloat(M_PI) + self.startAngle - self.endAngle) / 2.0 + self.endAngle
-        //print ("MIDPOINT", midPointAngle)
-        
-        // 2. Ensure the angle is within a suitable range
         var boundedAngle = gr.rotation
-        //print ("BOUNDANGLE", boundedAngle)
+   
         if boundedAngle > midPointAngle {
             boundedAngle -= 2.0 * CGFloat(M_PI)
         } else if boundedAngle < (midPointAngle - 2.0 * CGFloat(M_PI)) {
             boundedAngle += 2 * CGFloat(M_PI)
         }
-        
-        
-        // 3. Bound the angle to within the suitable range
         boundedAngle = min(self.endAngle, max(self.startAngle, boundedAngle))
-        //print("MIN",self.endAngle)
-        //print("CHECKBOUNDED1", boundedAngle)
-        
-        // 4. Convert the angle to a value
         let angleRange = endAngle - startAngle
         let valueRange = maximumValue - minimumValue
-        // print("VALUERANGE", valueRange)
         let valueForAngle = Float(boundedAngle - startAngle) / Float(angleRange) * valueRange + minimumValue
-        
-        // 5. Set the control to this value
         self.value = valueForAngle
-        //print("VALUE", valueForAngle )
-        
-        // Notify of value change
         if continuous {
             sendActions(for: .valueChanged)
         } else {
-            // Only send an update if the gesture has completed
             if (gr.state == UIGestureRecognizerState.ended) || (gr.state == UIGestureRecognizerState.cancelled) {
                 sendActions(for: .valueChanged)
             }
         }
     }
-    
     
     public required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -151,7 +102,6 @@ public class Knob: UIControl {
         layer.addSublayer(knobRenderer.trackLayer)
         layer.addSublayer(knobRenderer.pointerLayer)
     }
-    
     public override func tintColorDidChange() {
         knobRenderer.strokeColor = tintColor
     }
@@ -186,32 +136,24 @@ private class KnobRenderer {
         didSet { update() }
     }
     
-    //var lineWidth: CGFloat = 1.0
-    
     let trackLayer = CAShapeLayer()
-    //var startAngle: CGFloat = 0.0
-    //var endAngle: CGFloat = 0.0
-    
     let pointerLayer = CAShapeLayer()
-    
     var backingPointerAngle: CGFloat = 0.0
-    
     var pointerAngle: CGFloat {
         get { return backingPointerAngle }
         set { setPointerAngle(pointerAngle: newValue, animated: false) }
     }
     
     func setPointerAngle(pointerAngle: CGFloat, animated: Bool) {
+        
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        
         pointerLayer.transform = CATransform3DMakeRotation(pointerAngle, 0.0, 0.0, 0.1)
         
         if animated {
             let midAngle = (max(pointerAngle, self.pointerAngle) - min(pointerAngle, self.pointerAngle) ) / 2.0 + min(pointerAngle, self.pointerAngle)
             let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
             animation.duration = 0.25
-            
             animation.values = [self.pointerAngle, midAngle, pointerAngle]
             animation.keyTimes = [0.0, 0.5, 1.0]
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
@@ -222,8 +164,6 @@ private class KnobRenderer {
         
         self.backingPointerAngle = pointerAngle
     }
-    
-    //var pointerLength: CGFloat = 0.0
     
     init() {
         trackLayer.fillColor = UIColor.clear.cgColor
@@ -247,7 +187,6 @@ private class KnobRenderer {
     func update() {
         trackLayer.lineWidth = lineWidth
         pointerLayer.lineWidth = lineWidth
-        
         updateTrackLayerPath()
         updatePointerLayerPath()
     }
@@ -257,10 +196,8 @@ private class KnobRenderer {
         
         trackLayer.bounds = bounds
         trackLayer.position = position
-        
         pointerLayer.bounds = bounds
         pointerLayer.position = position
-        
         update()
     }
 }
@@ -278,32 +215,25 @@ private class RotationGestureRecognizer: UIPanGestureRecognizer {
     override func touchesBegan(_ touches: Set<UITouch>,
                                with event: UIEvent) {
         super.touchesBegan(touches , with: event)
-        print ("began")
-        
         updateRotationWithTouches(touches: touches)
     }
     
     override func touchesMoved(_ touches: Set<UITouch>,
                                with event: UIEvent) {
         super.touchesMoved(touches , with: event)
-        print ("moved")
-        
         updateRotationWithTouches(touches: touches)
     }
+    
     func updateRotationWithTouches(touches: Set<NSObject>) {
         if let touch = touches[touches.startIndex] as? UITouch {
             self.rotation = rotationForLocation(location: touch.location(in: self.view))
-            print("rotationupdate")
         }
     }
     
     func rotationForLocation(location: CGPoint) -> CGFloat {
         let offset = CGPoint(x: location.x - view!.bounds.midX, y: location.y - view!.bounds.midY)
-        print("rotationforlocation")
         return atan2(offset.y, offset.x)
-        
     }
-    
 }
 
 

@@ -10,9 +10,16 @@ import UIKit
 
 class AudioMixerViewController: UIViewController {
     
+    // CLASSES DUS BEGINNEN MET HOOFDLETTER
     var snareKnob: Knob!
+    var hatKnob: Knob!
+    var kickKnob: Knob!
+    var tomKnob: Knob!
     
+    @IBOutlet weak var hatKnobPlaceholder: UIView!
+    @IBOutlet weak var tomKnobPlaceholder: UIView!
     @IBOutlet weak var snareKnobPlaceholder: UIView!
+    @IBOutlet weak var kickKnobPlaceholder: UIView!
     @IBOutlet weak var enterMixSettings: UIButton!
     @IBOutlet weak var hatMixer: UISlider! {
         didSet{
@@ -45,10 +52,19 @@ class AudioMixerViewController: UIViewController {
         
         snareKnob = Knob(frame: snareKnobPlaceholder.bounds)
         snareKnobPlaceholder.addSubview(snareKnob)
-        snareKnob.lineWidth = 4.0
-        snareKnob.pointerLength = 12.0
+        snareKnob.value = Float(AudioController.sharedInstance.snarePlayer.pan)
         
+        kickKnob = Knob(frame: kickKnobPlaceholder.bounds)
+        kickKnobPlaceholder.addSubview(kickKnob)
+        kickKnob.value = Float(AudioController.sharedInstance.kickPlayer.pan)
         
+        tomKnob = Knob(frame: tomKnobPlaceholder.bounds)
+        tomKnobPlaceholder.addSubview(tomKnob)
+        tomKnob.value = Float(AudioController.sharedInstance.tomPlayer.pan)
+        
+        hatKnob = Knob(frame: hatKnobPlaceholder.bounds)
+        hatKnobPlaceholder.addSubview(hatKnob)
+        hatKnob.value = Float(AudioController.sharedInstance.hatPlayer.pan)
 
         // Do any additional setup after loading the view.
     }
@@ -60,9 +76,7 @@ class AudioMixerViewController: UIViewController {
     
     @IBAction func setMixSettings(_ sender: Any) {
         if enterMixSettings.isTouchInside{
-            AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: 0.0, snarePan: 0.0 , tomPan: 0.0, hatPan: 0.0)
-            print("KNOB", snareKnob.value)
+            AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
         }
     }
-
 }
