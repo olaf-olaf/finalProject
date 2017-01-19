@@ -41,7 +41,6 @@ class AudioController {
         return beeps
     }
     
-
     // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
         kickPlayer = try! AKAudioPlayer(file: kickFile)
