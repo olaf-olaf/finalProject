@@ -61,6 +61,13 @@ public class Knob: UIControl {
         self.addGestureRecognizer(gr)
     }
     
+    func roundValue() {
+        
+        if value > -0.20 && value < 0.20 {
+            value = 0
+        }
+    }
+    
     func handleRotation(sender: AnyObject) {
         let gr = sender as! RotationGestureRecognizer
         let midPointAngle = (2.0 * CGFloat(M_PI) + self.startAngle - self.endAngle) / 2.0 + self.endAngle
@@ -107,7 +114,6 @@ public class Knob: UIControl {
     }
     
 }
-
 
 private class KnobRenderer {
     var strokeColor: UIColor {

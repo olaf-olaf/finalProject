@@ -85,6 +85,7 @@
                                 <rect key="frame" x="5" y="589" width="225" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
+                                    <action selector="releasedTempoSlider:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="cv4-0q-KLe"/>
                                     <action selector="setMetronomeTempo:" destination="BYZ-38-t0r" eventType="valueChanged" id="uxi-9g-r2b"/>
                                 </connections>
                             </slider>

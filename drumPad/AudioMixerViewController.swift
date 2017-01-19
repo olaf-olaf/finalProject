@@ -75,6 +75,11 @@ class AudioMixerViewController: UIViewController {
     }
     
     @IBAction func setMixSettings(_ sender: Any) {
+        
+        tomKnob.roundValue()
+        kickKnob.roundValue()
+        hatKnob.roundValue()
+        snareKnob.roundValue()
         if enterMixSettings.isTouchInside{
             AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
         }

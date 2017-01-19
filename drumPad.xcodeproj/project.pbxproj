@@ -206,14 +206,9 @@
 		EDAB93F61E23B62D00464F65 /* drumPad */ = {
 			isa = PBXGroup;
 			children = (
-				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
-				ED367B3F1E2FAE6B00B0235F /* Knob.swift */,
-				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
-				ED19C9A61E278177003C3044 /* AudioController.swift */,
-				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
-				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
-				ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */,
-				EDBBBDDA1E263E8100374767 /* FxController.swift */,
+				EDF0FD1C1E30F6F6008D9B61 /* View */,
+				EDF0FD1B1E30F6E7008D9B61 /* Model */,
+				EDF0FD1A1E30F6B9008D9B61 /* Controller */,
 				EDAB93FE1E23B62D00464F65 /* Assets.xcassets */,
 				ED2B25AA1E2B98B900364598 /* samples */,
 				EDAB94001E23B62D00464F65 /* LaunchScreen.storyboard */,
@@ -238,6 +233,35 @@
 				EDAB94191E23B62D00464F65 /* Info.plist */,
 			);
 			path = drumPadUITests;
+			sourceTree = "<group>";
+		};
+		EDF0FD1A1E30F6B9008D9B61 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EDAB93FB1E23B62D00464F65 /* Main.storyboard */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EDF0FD1B1E30F6E7008D9B61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
+				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
+				ED367B3F1E2FAE6B00B0235F /* Knob.swift */,
+				ED19C9A61E278177003C3044 /* AudioController.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EDF0FD1C1E30F6F6008D9B61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */,
+				EDBBBDDA1E263E8100374767 /* FxController.swift */,
+				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

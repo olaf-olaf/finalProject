@@ -11,6 +11,8 @@ import AudioKit
 class AudioController {
     
     static let sharedInstance = AudioController()
+    
+    
 
     let LEDKitSelector = ShowKitLed()
     
@@ -65,7 +67,6 @@ class AudioController {
         AudioKit.start()
     }
     
-    
     func replaceKit(kitName: String) {
         let newKickFile = try! AKAudioFile(readFileName: kitName+"Kick.wav")
         let newSnareFile = try! AKAudioFile(readFileName: kitName+"Snare.wav")
@@ -83,14 +84,12 @@ class AudioController {
         }
     }
     
-    
     func mixFx(reverbLevel: Float, distortionLevel: Float, ringLevel: Float){
         reverb.dryWetMix = Double(reverbLevel)
         distortion.finalMix = Double(distortionLevel)
         ringModulator.mix = Double(ringLevel)
     }
 
-    
     func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){
         kickPlayer.volume = Double(kickVolume)
         kickPlayer.pan = Double (Kickpan)
@@ -114,5 +113,20 @@ class AudioController {
         currentFrequency = Double(bpm)
         generator.parameters = [currentFrequency]
         
+    }
+    
+    func playSample(player: inout AKAudioPlayer){
+        
+        if player.isStarted {
+            player.stop()
+            player.start()
+            print("PLAYHEAD1", player.playhead)
+            if player.isStopped {
+                print("PLAYHEAD2", player.playhead)
+                player.play()
+            }
+        } else {
+            player.play(from:0.0)
+        }
     }
 }

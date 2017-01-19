@@ -24,8 +24,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Call the the sharedinstance so the first hit won't have latency issues.
-        //AudioController.sharedInstance
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
         metronomeTempoSlider.value = Float(AudioController.sharedInstance.currentFrequency)
     }
@@ -58,25 +56,33 @@ class ViewController: UIViewController {
     }
     
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.kickPlayer.play()
+        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.kickPlayer)
     }
     
     @IBAction func snarePadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.snarePlayer.play()
+        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.snarePlayer)
     }
     
     @IBAction func tomPadTouchDown(_ sender: UIButton) {
-         AudioController.sharedInstance.tomPlayer.play()
+        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.tomPlayer)
     }
     
     @IBAction func hatPadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.hatPlayer.play()
+        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.hatPlayer)
     }
     
     @IBAction func setMetronomeTempo(_ sender: UISlider) {
-        print ("TEMPO", metronomeTempoSlider.value)
         AudioController.sharedInstance.setMetronomeTempo(bpm: metronomeTempoSlider.value)
+        if metronomeTempoSlider.isTracking {
+            let bpm = String(format: "%.0f", metronomeTempoSlider.value)
+            kitDisplay.text = ("bpm: " + bpm)
+        } else {
+             kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
+        }
     }
 
+    @IBAction func releasedTempoSlider(_ sender: UISlider) {
+        kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
+    }
 }
 
