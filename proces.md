@@ -28,7 +28,7 @@ Today i’ve added a metronome to the app. The metronome’s speed can adjusted 
 Today i’ve been  working on adding a rotary knob to my project so i can let the user pan their samples. I accomplished this by completing a ray wenderlich tutorial written in swift 1.2. I’ve got the functionality working completely but still have to figure out improve the visual aspect of the knob.  
 
 ##19-01-2017
-I've been trying to implement callback functions in order to be able to repeatadly trigger a sample without the sample needing to finish first. In case I don't succeed i might solve this problem by
+I've been trying to implement callback functions in order to be able to repeatadly trigger a sample without the sample needing to finish first.I  have spoken to some potential users of the app and they would like to see the bpm of the metronome. I've implemented that as well. In case I don't succeed in properly fixing the playback problem with callback functions i will try to 'mask' the problem by. 
 - making samples shorter so the user doesn't notice this problem
-- creating several instances of audioplayers so if one is already playing, i can just play another one. This however, is quite smelly. 
-I have spoken to some potential users of the app and they would like to see the bpm of the metronome. I've implemented that as well.
+- creating several instances of audioplayers so if one is already playing, i can just play another one. This however, is quite ugly.
+
