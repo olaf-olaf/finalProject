@@ -32,3 +32,6 @@ I've been trying to implement callback functions in order to be able to repeatad
 - making samples shorter so the user doesn't notice this problem
 - creating several instances of audioplayers so if one is already playing, i can just play another one. This however, is quite ugly.
 
+##20-01-2017
+Today's presentation made clear that visual aspects of my app should be improved. It was still very basic. So today i've added some colors to the app that should give the user some feedback whether a button is pushed or something is playing. Right now i'm still trying to get everything as pretty as possible without using images. If i feel liek i've got the maximum visuals out of the app by coding I might improve the visuals by adding some custom images. 
+
