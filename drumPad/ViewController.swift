@@ -9,7 +9,6 @@
 import UIKit
 import AudioKit
 
-
 class ViewController: UIViewController {
    
     @IBOutlet weak var mixerButton: UIButton!
