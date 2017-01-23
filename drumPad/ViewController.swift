@@ -100,7 +100,7 @@ class ViewController: UIViewController {
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.kickPlayer)
         kickPad.backgroundColor = enabledColor
-           }
+    }
     
     @IBAction func releaseKickPad(_ sender: Any) {
         if kickPad.isTouchInside {
@@ -152,36 +152,5 @@ class ViewController: UIViewController {
     @IBAction func releasedTempoSlider(_ sender: UISlider) {
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
     }
-    
-//    
-//    func animateHit(button: UIButton) {
-//        let redColor: Float = (245.0 / 255.0)
-//        var greenColor: Float = (124.0 / 255.0)
-//        var blueColor: Float = (113.0 / 255.0)
-//        var completed = false
-//        while completed == false {
-//            
-//            if greenColor < (245 / 255) {
-//                greenColor += (0.001 / 255)
-//                print(greenColor)
-//            }
-//            if blueColor < (245 / 255) {
-//                blueColor += (0.001 / 255)
-//                print(blueColor)
-//            }
-//            else {
-//                completed = true
-//                print("true")
-//            }
-//            button.backgroundColor = UIColor(colorLiteralRed: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
-//            
-////            if greenColor == (245 / 255) && blueColor == (245 / 255) {
-////                completed = true
-////                print("TRUE")
-////            }
-//        }
-//        print("red", (redColor * 255), "green", (greenColor * 255), "bleu", (blueColor * 255))
-//
-//    }
-   }
+}
 

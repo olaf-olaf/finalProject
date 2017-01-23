@@ -26,6 +26,7 @@
 		ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */; };
 		ED367B401E2FAE6B00B0235F /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED367B3F1E2FAE6B00B0235F /* Knob.swift */; };
 		ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */; };
+		ED92EB3B1E36183F00A720FE /* ShowMixerLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */; };
 		EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F71E23B62D00464F65 /* AppDelegate.swift */; };
 		EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAB93F91E23B62D00464F65 /* ViewController.swift */; };
 		EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDAB93FB1E23B62D00464F65 /* Main.storyboard */; };
@@ -84,6 +85,7 @@
 		ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKitLed.swift; sourceTree = "<group>"; };
 		ED367B3F1E2FAE6B00B0235F /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 		ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerViewController.swift; sourceTree = "<group>"; };
+		ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMixerLed.swift; sourceTree = "<group>"; };
 		EDAB93F41E23B62D00464F65 /* drumPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = drumPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAB93F71E23B62D00464F65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDAB93F91E23B62D00464F65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
+				ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */,
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				ED367B3F1E2FAE6B00B0235F /* Knob.swift */,
 				ED19C9A61E278177003C3044 /* AudioController.swift */,
@@ -562,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED92EB3B1E36183F00A720FE /* ShowMixerLed.swift in Sources */,
 				ED19C9A71E278177003C3044 /* AudioController.swift in Sources */,
 				ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */,
 				EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */,

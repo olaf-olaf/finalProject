@@ -325,21 +325,33 @@
                                 <rect key="frame" x="-52" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeKickDb:" destination="Gf0-8E-Cw1" eventType="valueChanged" id="dqz-F4-8kD"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rev-yV-4QM">
                                 <rect key="frame" x="-149" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeSnareDb:" destination="Gf0-8E-Cw1" eventType="valueChanged" id="RBL-bW-ubq"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-C3-Wr6">
                                 <rect key="frame" x="50" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeTomDb:" destination="Gf0-8E-Cw1" eventType="valueChanged" id="XCA-nt-6Qa"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nY-bku">
                                 <rect key="frame" x="149" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="changeHatDb:" destination="Gf0-8E-Cw1" eventType="valueChanged" id="pg5-nw-ULI"/>
+                                </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-hx-oHE">
                                 <rect key="frame" x="5" y="522" width="364" height="72"/>
@@ -348,10 +360,17 @@
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-95-83J">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="72"/>
                                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="h9K-7H-aTG" appends="YES" id="r5R-wX-vXd"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-8g-i2t">
                                         <rect key="frame" x="98" y="0.0" width="70" height="72"/>
                                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="uFW-ir-ZQs" appends="YES" id="XWa-wg-nzh"/>
+                                        </connections>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJi-Bw-BfI">
                                         <rect key="frame" x="196" y="0.0" width="70" height="72"/>
@@ -364,15 +383,16 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHF-f6-L0J">
-                                <rect key="frame" x="5" y="619" width="70" height="40"/>
+                                <rect key="frame" x="0.0" y="619" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIp-wo-OH9">
-                                <rect key="frame" x="201" y="619" width="70" height="40"/>
+                                <rect key="frame" x="196" y="619" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -380,7 +400,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnY-wb-48A">
-                                <rect key="frame" x="299" y="619" width="70" height="40"/>
+                                <rect key="frame" x="294" y="619" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -388,7 +408,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA4-Ul-kHa">
-                                <rect key="frame" x="103" y="619" width="70" height="40"/>
+                                <rect key="frame" x="98" y="619" width="80" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -412,16 +432,32 @@
                     <connections>
                         <outlet property="enterMixSettings" destination="w5k-cS-d8h" id="dwZ-Bk-4hJ"/>
                         <outlet property="hatKnobPlaceholder" destination="n5f-hn-z9v" id="rS6-eo-lkw"/>
+                        <outlet property="hatLed" destination="SnY-wb-48A" id="fUC-nx-RaL"/>
                         <outlet property="hatMixer" destination="gdx-nY-bku" id="p2F-5K-7zm"/>
                         <outlet property="kickKnobPlaceholder" destination="XUO-8g-i2t" id="5Ye-A7-dRP"/>
+                        <outlet property="kickLed" destination="bA4-Ul-kHa" id="OPf-w5-Ft3"/>
                         <outlet property="kickMixer" destination="QGN-pB-CDu" id="Tid-tC-uoD"/>
+                        <outlet property="kickPanRecog" destination="uFW-ir-ZQs" id="Y06-qQ-2B7"/>
                         <outlet property="snareKnobPlaceholder" destination="gl8-95-83J" id="B6h-Te-jWM"/>
+                        <outlet property="snareLed" destination="UHF-f6-L0J" id="eEM-fo-OJN"/>
                         <outlet property="snareMixer" destination="rev-yV-4QM" id="T50-RU-ZaB"/>
+                        <outlet property="snarePanRecog" destination="h9K-7H-aTG" id="7cb-jC-wha"/>
                         <outlet property="tomKnobPlaceholder" destination="FJi-Bw-BfI" id="GGr-TK-3cU"/>
+                        <outlet property="tomLed" destination="nIp-wo-OH9" id="85a-xS-U3L"/>
                         <outlet property="tomMixer" destination="DMA-C3-Wr6" id="Nlg-5C-Arn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alU-us-cde" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="uFW-ir-ZQs">
+                    <connections>
+                        <action selector="kickKnobIsPanned:" destination="Gf0-8E-Cw1" id="swf-AI-wAU"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="1" id="h9K-7H-aTG">
+                    <connections>
+                        <action selector="snareKnobIsPanned:" destination="Gf0-8E-Cw1" id="8wr-nT-X6J"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1348" y="34.632683658170919"/>
         </scene>

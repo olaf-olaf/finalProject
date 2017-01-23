@@ -240,6 +240,7 @@ private class RotationGestureRecognizer: UIPanGestureRecognizer {
         let offset = CGPoint(x: location.x - view!.bounds.midX, y: location.y - view!.bounds.midY)
         return atan2(offset.y, offset.x)
     }
+    
 }
 
 
