@@ -65,6 +65,7 @@ class AudioMixerViewController: UIViewController {
         snareKnob = Knob(frame: snareKnobPlaceholder.bounds)
         snareKnobPlaceholder.addSubview(snareKnob)
         snareKnob.value = Float(AudioController.sharedInstance.snarePlayer.pan)
+        snareKnob.getLabelText(labelText: &snareLed.text!)
         
         kickKnob = Knob(frame: kickKnobPlaceholder.bounds)
         kickKnobPlaceholder.addSubview(kickKnob)
