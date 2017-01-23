@@ -32,6 +32,7 @@
                                     <constraint firstAttribute="height" constant="139" id="E6p-uv-1fo"/>
                                 </constraints>
                                 <connections>
+                                    <action selector="releaseSnarePad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DlA-On-z5H"/>
                                     <action selector="snarePadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="PR6-PT-hvh"/>
                                 </connections>
                             </button>
@@ -39,6 +40,7 @@
                                 <rect key="frame" x="194" y="331" width="165" height="151"/>
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <action selector="releaseTomPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bSO-aL-sYs"/>
                                     <action selector="tomPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1tl-IC-ESu"/>
                                 </connections>
                             </button>
@@ -47,6 +49,7 @@
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="kickPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="5vh-hv-isN"/>
+                                    <action selector="releaseKickPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kzd-ft-i1m"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyW-hg-AxR">
@@ -54,6 +57,7 @@
                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="hatPadTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="V1E-av-tao"/>
+                                    <action selector="releaseHatPad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QJZ-Cw-hqM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdk-Ea-DZ3">
@@ -233,7 +237,7 @@
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dVv-Fc-fNE">
-                                <rect key="frame" x="7" y="556" width="360" height="21"/>
+                                <rect key="frame" x="7" y="556.5" width="360" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverb" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epx-an-GBD">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="20.5"/>
@@ -318,22 +322,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QGN-pB-CDu">
-                                <rect key="frame" x="-63" y="275" width="375" height="31"/>
+                                <rect key="frame" x="-52" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rev-yV-4QM">
-                                <rect key="frame" x="-153" y="275" width="375" height="31"/>
+                                <rect key="frame" x="-149" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="DMA-C3-Wr6">
-                                <rect key="frame" x="50" y="275" width="375" height="31"/>
+                                <rect key="frame" x="50" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gdx-nY-bku">
-                                <rect key="frame" x="149" y="275" width="375" height="31"/>
+                                <rect key="frame" x="149" y="300" width="375" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
@@ -343,50 +347,50 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gl8-95-83J">
                                         <rect key="frame" x="0.0" y="0.0" width="70" height="72"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XUO-8g-i2t">
                                         <rect key="frame" x="98" y="0.0" width="70" height="72"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FJi-Bw-BfI">
                                         <rect key="frame" x="196" y="0.0" width="70" height="72"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5f-hn-z9v">
                                         <rect key="frame" x="294" y="0.0" width="70" height="72"/>
-                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Snare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UHF-f6-L0J">
-                                <rect key="frame" x="5" y="589" width="70" height="58"/>
+                                <rect key="frame" x="5" y="619" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tom" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIp-wo-OH9">
-                                <rect key="frame" x="201" y="589" width="70" height="58"/>
+                                <rect key="frame" x="201" y="619" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnY-wb-48A">
-                                <rect key="frame" x="299" y="589" width="70" height="58"/>
+                                <rect key="frame" x="299" y="619" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kick" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bA4-Ul-kHa">
-                                <rect key="frame" x="103" y="589" width="70" height="58"/>
+                                <rect key="frame" x="103" y="619" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>

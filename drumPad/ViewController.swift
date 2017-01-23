@@ -11,6 +11,7 @@ import AudioKit
 
 class ViewController: UIViewController {
    
+    
     @IBOutlet weak var mixerButton: UIButton!
     @IBOutlet weak var fxButton: UIButton!
     @IBOutlet weak var metronomeTempoSlider: UISlider!
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     let disabledColor = UIColor(red: (245/255.0), green: (245/255.0), blue: (245/255.0), alpha: 1.0)
+    let idlePadColor = UIColor(red: (112/255.0), green: (112/255.0), blue: (112/255.0), alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,18 +99,44 @@ class ViewController: UIViewController {
     
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.kickPlayer)
+        kickPad.backgroundColor = enabledColor
+           }
+    
+    @IBAction func releaseKickPad(_ sender: Any) {
+        if kickPad.isTouchInside {
+             kickPad.backgroundColor = idlePadColor        }
     }
     
     @IBAction func snarePadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.snarePlayer)
+        snarePad.backgroundColor = enabledColor
     }
     
+    @IBAction func releaseSnarePad(_ sender: Any) {
+        if snarePad.isTouchInside {
+            snarePad.backgroundColor = idlePadColor
+        }
+    }
+  
     @IBAction func tomPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.tomPlayer)
+        tomPad.backgroundColor = enabledColor
+    }
+    
+    @IBAction func releaseTomPad(_ sender: Any) {
+        if tomPad.isTouchInside {
+            tomPad.backgroundColor = idlePadColor
+        }
     }
     
     @IBAction func hatPadTouchDown(_ sender: UIButton) {
         AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.hatPlayer)
+        hiHatPad.backgroundColor = enabledColor
+    }
+    @IBAction func releaseHatPad(_ sender: Any) {
+        if hiHatPad.isTouchInside{
+            hiHatPad.backgroundColor = idlePadColor
+        }
     }
     
     @IBAction func setMetronomeTempo(_ sender: UISlider) {
@@ -124,5 +152,36 @@ class ViewController: UIViewController {
     @IBAction func releasedTempoSlider(_ sender: UISlider) {
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
     }
-}
+    
+//    
+//    func animateHit(button: UIButton) {
+//        let redColor: Float = (245.0 / 255.0)
+//        var greenColor: Float = (124.0 / 255.0)
+//        var blueColor: Float = (113.0 / 255.0)
+//        var completed = false
+//        while completed == false {
+//            
+//            if greenColor < (245 / 255) {
+//                greenColor += (0.001 / 255)
+//                print(greenColor)
+//            }
+//            if blueColor < (245 / 255) {
+//                blueColor += (0.001 / 255)
+//                print(blueColor)
+//            }
+//            else {
+//                completed = true
+//                print("true")
+//            }
+//            button.backgroundColor = UIColor(colorLiteralRed: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
+//            
+////            if greenColor == (245 / 255) && blueColor == (245 / 255) {
+////                completed = true
+////                print("TRUE")
+////            }
+//        }
+//        print("red", (redColor * 255), "green", (greenColor * 255), "bleu", (blueColor * 255))
+//
+//    }
+   }
 
