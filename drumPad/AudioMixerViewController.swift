@@ -9,7 +9,6 @@
 import UIKit
 
 class AudioMixerViewController: UIViewController {
-    
     // CLASSES DUS BEGINNEN MET HOOFDLETTER
     var snareKnob: Knob!
     var hatKnob: Knob!
