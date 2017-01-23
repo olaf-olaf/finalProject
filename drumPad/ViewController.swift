@@ -26,10 +26,6 @@ class ViewController: UIViewController {
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     let disabledColor = UIColor(red: (245/255.0), green: (245/255.0), blue: (245/255.0), alpha: 1.0)
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit

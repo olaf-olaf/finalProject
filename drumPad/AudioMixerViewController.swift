@@ -65,6 +65,7 @@ class AudioMixerViewController: UIViewController {
         hatKnob = Knob(frame: hatKnobPlaceholder.bounds)
         hatKnobPlaceholder.addSubview(hatKnob)
         hatKnob.value = Float(AudioController.sharedInstance.hatPlayer.pan)
+        enterMixSettings.layer.cornerRadius = 5
 
         // Do any additional setup after loading the view.
     }

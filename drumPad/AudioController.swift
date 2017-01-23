@@ -11,9 +11,6 @@ import AudioKit
 class AudioController {
     
     static let sharedInstance = AudioController()
-    
-    
-
     let LEDKitSelector = ShowKitLed()
     
     let kickFile = try! AKAudioFile(readFileName: "808Kick.wav")
@@ -29,6 +26,7 @@ class AudioController {
     var reverb: AKReverb
     var distortion: AKDistortion
     var ringModulator: AKRingModulator
+    var delay: AKDelay
     let finalMixer: AKMixer
     
     var currentFrequency = 60.0
@@ -60,9 +58,12 @@ class AudioController {
         distortion.finalMix = 0
         reverb = AKReverb(distortion)
         reverb.dryWetMix = 0
+        delay = AKDelay(reverb)
+        delay.presetShortDelay()
+        delay.dryWetMix = 0
         
         generator.parameters = [currentFrequency]
-        finalMixer = AKMixer(reverb, generator)
+        finalMixer = AKMixer(delay, generator)
         AudioKit.output = finalMixer
         AudioKit.start()
     }
@@ -84,10 +85,11 @@ class AudioController {
         }
     }
     
-    func mixFx(reverbLevel: Float, distortionLevel: Float, ringLevel: Float){
+    func mixFx(reverbLevel: Float, distortionLevel: Float, ringLevel: Float, delayLevel: Float){
         reverb.dryWetMix = Double(reverbLevel)
         distortion.finalMix = Double(distortionLevel)
         ringModulator.mix = Double(ringLevel)
+        delay.dryWetMix = Double(delayLevel)
     }
 
     func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){

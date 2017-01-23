@@ -99,7 +99,8 @@ public class Knob: UIControl {
     
     func createSublayers() {
         knobRenderer.update(bounds: bounds)
-        knobRenderer.strokeColor = tintColor
+        knobRenderer.strokeColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
+        //tintColor
         knobRenderer.startAngle = -CGFloat(M_PI * 11.0 / 8.0);
         knobRenderer.endAngle = CGFloat(M_PI * 3.0 / 8.0);
         knobRenderer.pointerAngle = knobRenderer.startAngle;
