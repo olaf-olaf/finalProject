@@ -9,10 +9,9 @@
 import UIKit
 
 class AudioMixerViewController: UIViewController {
-    // CLASSES DUS BEGINNEN MET HOOFDLETTER
-    @IBOutlet var kickPanRecog: UIPanGestureRecognizer!
-    @IBOutlet var snarePanRecog: UIPanGestureRecognizer!
     
+
+    // CLASSES DUS BEGINNEN MET HOOFDLETTER
     var snareKnob: Knob!
     var hatKnob: Knob!
     var kickKnob: Knob!
@@ -54,6 +53,7 @@ class AudioMixerViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -79,23 +79,26 @@ class AudioMixerViewController: UIViewController {
         hatKnobPlaceholder.addSubview(hatKnob)
         hatKnob.value = Float(AudioController.sharedInstance.hatPlayer.pan)
         enterMixSettings.layer.cornerRadius = 5
-
+        
+        // PROGRAMATICALLY GESTURES
+//        let pan = UIPanGestureRecognizer(target: self, action: #selector(self.kickKnobPan))
+//        kickKnobPlaceholder.addGestureRecognizer(pan)
+        
         // Do any additional setup after loading the view.
     }
+    
+//    // This doesn't work either
+//    func kickKnobPan(sender: UIPanGestureRecognizer) {
+//        print("PAN")
+//        if sender.state == cha
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func snareKnobIsPanned(_ sender: Any) {
-        print("PAN")
-    }
     
-   
-    @IBAction func kickKnobIsPanned(_ sender: UIPanGestureRecognizer) {
-        print("PANNING")
-    }
     
     @IBAction func changeHatDb(_ sender: Any) {
         if hatMixer.isTracking {
@@ -139,4 +142,5 @@ class AudioMixerViewController: UIViewController {
             AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
         }
     }
+    
 }

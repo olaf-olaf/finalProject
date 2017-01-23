@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AudioKit
+//import AudioKit
 
 class ViewController: UIViewController {
    
@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
+       // kitDisplay.baselineAdjustment = .alignCenters
+        kitDisplay.textAlignment = .center
         metronomeTempoSlider.value = Float(AudioController.sharedInstance.currentFrequency)
         
         nextKit.layer.cornerRadius = 5
@@ -152,5 +154,8 @@ class ViewController: UIViewController {
     @IBAction func releasedTempoSlider(_ sender: UISlider) {
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
     }
+    
+    
+        
 }
 
