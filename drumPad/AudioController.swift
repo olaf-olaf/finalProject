@@ -19,17 +19,22 @@ class AudioController {
     let tomFile = try! AKAudioFile(readFileName: "808Tom.wav")
     
     var kickPlayer: AKAudioPlayer
+    var backupKickPlayer: AKAudioPlayer
     var snarePlayer: AKAudioPlayer
+    var backupSnarePlayer: AKAudioPlayer
     var hatPlayer: AKAudioPlayer
+    var backupHatPlayer: AKAudioPlayer
     var tomPlayer: AKAudioPlayer
+    var backupTomPlayer: AKAudioPlayer
     let mixer: AKMixer
-    var reverb: AKReverb
+    var reverb: AKReverb2
     var distortion: AKDistortion
     var ringModulator: AKRingModulator
     var delay: AKDelay
     let finalMixer: AKMixer
     
     var currentFrequency = 60.0
+    
     let generator = AKOperationGenerator() { parameters in
         let beep = AKOperation.sineWave(frequency: 480)
     
@@ -43,20 +48,33 @@ class AudioController {
     
     // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
+        
         kickPlayer = try! AKAudioPlayer(file: kickFile)
         kickPlayer.volume = 0.5
+        backupKickPlayer = try! AKAudioPlayer(file: kickFile)
+        backupKickPlayer.volume = 0.5
+        
         snarePlayer = try! AKAudioPlayer(file: snareFile)
         snarePlayer.volume = 0.5
+        backupSnarePlayer = try! AKAudioPlayer(file: snareFile)
+        backupSnarePlayer.volume = 0.5
+        
         hatPlayer = try! AKAudioPlayer(file: hatFile)
         hatPlayer.volume = 0.5
+        backupHatPlayer = try! AKAudioPlayer(file: hatFile)
+        backupHatPlayer.volume = 0.5
+        
         tomPlayer = try! AKAudioPlayer(file: tomFile)
         tomPlayer.volume = 0.5
-        mixer = AKMixer(kickPlayer, snarePlayer, hatPlayer, tomPlayer)
+        backupTomPlayer = try! AKAudioPlayer(file: tomFile)
+        backupTomPlayer.volume = 0.5
+        
+        mixer = AKMixer(kickPlayer, snarePlayer, hatPlayer, tomPlayer, backupKickPlayer, backupSnarePlayer, backupHatPlayer, backupTomPlayer)
         ringModulator = AKRingModulator(mixer)
         ringModulator.mix = 0
         distortion = AKDistortion(ringModulator)
         distortion.finalMix = 0
-        reverb = AKReverb(distortion)
+        reverb = AKReverb2(distortion)
         reverb.dryWetMix = 0
         delay = AKDelay(reverb)
         delay.presetShortDelay()
@@ -66,6 +84,11 @@ class AudioController {
         finalMixer = AKMixer(delay, generator)
         AudioKit.output = finalMixer
         AudioKit.start()
+        
+        setReverbParameters(randomInflections: 20.00, minDelay: 0.009, maxDelay: 0.20, decayOne: 1.0, DecayTwo: 0.5)
+        setDelayParameters(delayTime: 0.1, delayFeedback: 0.01)
+        setRingParameters(ringFrequencyOne: 100, ringFrequencyTwo: 103)
+        setDistortionParameters(distortionDecimation: 0.05, distortionRouding: 0.1)
     }
     
     func replaceKit(kitName: String) {
@@ -76,9 +99,16 @@ class AudioController {
         
         do {
             try kickPlayer.replace(file: newKickFile)
+            try backupKickPlayer.replace(file: newKickFile)
+            
             try snarePlayer.replace(file: newSnareFile)
+            try backupSnarePlayer.replace(file: newSnareFile)
+            
             try hatPlayer.replace(file: newHatFile)
+            try backupHatPlayer.replace(file: newHatFile)
+            
             try tomPlayer.replace(file: newTomFile)
+            try backupTomPlayer.replace(file: newTomFile)
             
         } catch {
             print (error)
@@ -94,13 +124,24 @@ class AudioController {
 
     func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){
         kickPlayer.volume = Double(kickVolume)
-        kickPlayer.pan = Double (Kickpan)
+        kickPlayer.pan = Double(Kickpan)
+        backupKickPlayer.volume = Double(kickVolume)
+        backupKickPlayer.pan = Double(Kickpan)
+
         snarePlayer.volume = Double(snareVolume)
+        backupSnarePlayer.volume = Double(snareVolume)
         snarePlayer.pan = Double(snarePan)
+        backupSnarePlayer.pan = Double(snarePan)
+        
         tomPlayer.volume = Double(tomVolume)
+        backupTomPlayer.volume = Double(tomVolume)
         tomPlayer.pan = Double(tomPan)
+        backupTomPlayer.pan  = Double(tomPan)
+
         hatPlayer.volume = Double(hatVolume)
+        backupHatPlayer.volume = Double(hatVolume)
         hatPlayer.pan = Double(hatPan)
+        backupHatPlayer.pan = Double(hatPan)
     }
     
     func setMetronome() {
@@ -114,20 +155,39 @@ class AudioController {
     func setMetronomeTempo(bpm: Float){
         currentFrequency = Double(bpm)
         generator.parameters = [currentFrequency]
-        
     }
     
-    func playSample(player: inout AKAudioPlayer){
-        
-        // IMPLEMENT A SECOND PLAYER MECHANISM HERE.
+    func playSample(player: AKAudioPlayer, backupPlayer: AKAudioPlayer){
         if player.isStarted {
-            player.stop()
-            player.start()
-            if player.isStopped {
-                player.play()
-            }
+            backupPlayer.play()
         } else {
-            player.play(from:0.0)
+            player.play()
         }
+    }
+    
+    func setReverbParameters(randomInflections: Double, minDelay: Double, maxDelay: Double, decayOne: Double, DecayTwo: Double) {
+        reverb.gain = 10
+        reverb.minDelayTime = minDelay
+        reverb.maxDelayTime = maxDelay
+        reverb.decayTimeAt0Hz = decayOne
+        reverb.decayTimeAtNyquist = DecayTwo
+        reverb.randomizeReflections = randomInflections
+    }
+    
+    func setDelayParameters(delayTime: Double, delayFeedback: Double){
+        delay.time = delayTime
+        delay.feedback = delayFeedback
+    }
+    
+    func setRingParameters(ringFrequencyOne: Double, ringFrequencyTwo: Double) {
+        ringModulator.frequency1 = ringFrequencyOne
+        ringModulator.frequency2 = ringFrequencyTwo
+    }
+    
+    func setDistortionParameters(distortionDecimation: Double, distortionRouding: Double) {
+        distortion.decimation = distortionDecimation
+        distortion.rounding = distortionRouding
+        distortion.ringModMix = 0
+        distortion.ringModBalance = 0
     }
 }

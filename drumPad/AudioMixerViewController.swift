@@ -65,12 +65,12 @@ class AudioMixerViewController: UIViewController {
         snareKnob = Knob(frame: snareKnobPlaceholder.bounds)
         snareKnobPlaceholder.addSubview(snareKnob)
         snareKnob.value = Float(AudioController.sharedInstance.snarePlayer.pan)
-        snareKnob.getLabelText(labelText: &snareLed.text!)
+        //snareKnob.getLabelText(labelText: &snareLed.text!)
         
         kickKnob = Knob(frame: kickKnobPlaceholder.bounds)
         kickKnobPlaceholder.addSubview(kickKnob)
         kickKnob.value = Float(AudioController.sharedInstance.kickPlayer.pan)
-        kickKnobPlaceholder.isUserInteractionEnabled = true
+        //kickKnobPlaceholder.isUserInteractionEnabled = true
         
         tomKnob = Knob(frame: tomKnobPlaceholder.bounds)
         tomKnobPlaceholder.addSubview(tomKnob)
@@ -97,6 +97,10 @@ class AudioMixerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setLabel() {
+        kickLed.text = "CHECK"
     }
     
     

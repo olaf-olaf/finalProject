@@ -14,20 +14,6 @@ import UIKit.UIGestureRecognizerSubclass
 
 public class Knob: UIControl {
     
-   
-    // HIER EEN POINTER VAN MAKEN ALS ALTERNATIEF.
-    var mixerLabelText = String()
-    
-    func getLabelText(labelText: inout String) {
-        mixerLabelText = labelText
-    }
-    
-    func setLabel() {
-        let output = String(value)
-        mixerLabelText = output
-        print(mixerLabelText)
-    }
-    
     public var startAngle: CGFloat {
         get { return knobRenderer.startAngle }
         set { knobRenderer.startAngle = newValue }
@@ -84,8 +70,6 @@ public class Knob: UIControl {
     }
     
     func handleRotation(sender: AnyObject) {
-        print("ROTATING")
-        setLabel()
         let gr = sender as! RotationGestureRecognizer
         let midPointAngle = (2.0 * CGFloat(M_PI) + self.startAngle - self.endAngle) / 2.0 + self.endAngle
         var boundedAngle = gr.rotation

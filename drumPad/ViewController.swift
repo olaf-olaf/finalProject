@@ -26,12 +26,11 @@ class ViewController: UIViewController {
     
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     let disabledColor = UIColor(red: (245/255.0), green: (245/255.0), blue: (245/255.0), alpha: 1.0)
-    let idlePadColor = UIColor(red: (112/255.0), green: (112/255.0), blue: (112/255.0), alpha: 1.0)
+    let idlePadColor = UIColor(red: (102/255.0), green: (102/255.0), blue: (102/255.0), alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
-       // kitDisplay.baselineAdjustment = .alignCenters
         kitDisplay.textAlignment = .center
         metronomeTempoSlider.value = Float(AudioController.sharedInstance.currentFrequency)
         
@@ -41,12 +40,18 @@ class ViewController: UIViewController {
         mixerButton.layer.cornerRadius = 5
         fxButton.layer.cornerRadius = 5
         
+        if AudioController.sharedInstance.generator.isPlaying {
+            metronomeButton.backgroundColor = enabledColor
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
                // Dispose of any resources that can be recreated.
     }
+    
+    
     
     @IBAction func touchDownMixer(_ sender: UIButton) {
         mixerButton.backgroundColor = enabledColor
@@ -100,7 +105,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func kickPadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.kickPlayer)
+        AudioController.sharedInstance.playSample(player: AudioController.sharedInstance.kickPlayer, backupPlayer: AudioController.sharedInstance.backupKickPlayer)
         kickPad.backgroundColor = enabledColor
     }
     
@@ -110,7 +115,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func snarePadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.snarePlayer)
+        AudioController.sharedInstance.playSample(player: AudioController.sharedInstance.snarePlayer, backupPlayer: AudioController.sharedInstance.backupSnarePlayer)
         snarePad.backgroundColor = enabledColor
     }
     
@@ -121,7 +126,7 @@ class ViewController: UIViewController {
     }
   
     @IBAction func tomPadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.tomPlayer)
+        AudioController.sharedInstance.playSample(player: AudioController.sharedInstance.tomPlayer, backupPlayer: AudioController.sharedInstance.backupTomPlayer)
         tomPad.backgroundColor = enabledColor
     }
     
@@ -132,7 +137,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func hatPadTouchDown(_ sender: UIButton) {
-        AudioController.sharedInstance.playSample(player: &AudioController.sharedInstance.hatPlayer)
+        AudioController.sharedInstance.playSample(player: AudioController.sharedInstance.hatPlayer, backupPlayer: AudioController.sharedInstance.backupHatPlayer)
         hiHatPad.backgroundColor = enabledColor
     }
     @IBAction func releaseHatPad(_ sender: Any) {
