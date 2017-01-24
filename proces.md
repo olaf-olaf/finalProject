@@ -35,3 +35,7 @@ I've been trying to implement callback functions in order to be able to repeatad
 ##20-01-2017
 Today's presentation made clear that visual aspects of my app should be improved. It was still very basic. So today i've added some colors to the app that should give the user some feedback whether a button is pushed or something is playing. Right now i'm still trying to get everything as pretty as possible without using images. If i feel liek i've got the maximum visuals out of the app by coding I might improve the visuals by adding some custom images. 
 
+##23-01-2017
+
+Today i've been working on the visual aspect of my app. Besides audio feedback, every knob should give visual feedback / information as well. I am having problems with changing a label when my knob is activated since I can't use an IBaction for it. I'm trying to fix this by creating a pointer to the label text within the knob class. 
+
