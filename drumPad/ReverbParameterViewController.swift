@@ -23,7 +23,6 @@ class ReverbParameterViewController: UIViewController {
         super.viewDidLoad()
         
         setReverbButton.layer.cornerRadius = 5
-        
         DecayKnob = Knob(frame: decayKnobPlaceHolder.bounds)
         decayKnobPlaceHolder.addSubview(DecayKnob)
         DecayKnob.lineWidth = 5.0
@@ -31,8 +30,6 @@ class ReverbParameterViewController: UIViewController {
         DecayKnob.minimumValue = 0
         DecayKnob.maximumValue = 2
         DecayKnob.value = Float(AudioController.sharedInstance.reverb.decayTimeAtNyquist)
-        
-        
         DelayKnob = Knob(frame: delayKnobPlaceholder.bounds)
         delayKnobPlaceholder.addSubview(DelayKnob)
         DelayKnob.lineWidth = 5.0
@@ -40,7 +37,6 @@ class ReverbParameterViewController: UIViewController {
         DelayKnob.minimumValue = 0
         DelayKnob.maximumValue = 1
         DelayKnob.value = Float(AudioController.sharedInstance.reverb.maxDelayTime)
-        
         ReflectionKnob = Knob(frame: reflectionKnobPlaceholder.bounds)
         reflectionKnobPlaceholder.addSubview(ReflectionKnob)
         ReflectionKnob.lineWidth = 5.0
@@ -49,7 +45,6 @@ class ReverbParameterViewController: UIViewController {
         ReflectionKnob.maximumValue = 15
         ReflectionKnob.value = Float(AudioController.sharedInstance.reverb.randomizeReflections)
        
-        
 
         // Do any additional setup after loading the view.
     }
