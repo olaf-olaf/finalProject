@@ -39,3 +39,10 @@ Today's presentation made clear that visual aspects of my app should be improved
 
 Today i've been working on the visual aspect of my app. Besides audio feedback, every knob should give visual feedback / information as well. I am having problems with changing a label when my knob is activated since I can't use an IBaction for it. I'm trying to fix this by creating a pointer to the label text within the knob class. 
 
+##24-01-2017
+I've set the 'knob IBaction' problem aside for now since I'm really stuck without help. Instead of being stuck on a minor visual issue, I've decided to improve the effect settings of my app. Since I want the user to be able to make some weird noises i've created some functions and a Viewcontroller that allow the user to edit FX parameters.
+
+##25-01-2017
+Today i've added all the FX parameter views. I've also updated all of the constraints and worked on visual consitency. I'm considering whether adding more functionality would be harmfull to the user experience.
+
+
