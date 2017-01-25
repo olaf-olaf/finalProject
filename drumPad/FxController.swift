@@ -11,6 +11,10 @@ import UIKit
 class FxController: UIViewController {
     
    
+    @IBOutlet weak var setRing: UIButton!
+    @IBOutlet weak var setDelay: UIButton!
+    @IBOutlet weak var setDistortion: UIButton!
+    @IBOutlet weak var setReverb: UIButton!
     @IBOutlet weak var enterFx: UIButton!
     @IBOutlet weak var delaySlider: UISlider!{
         didSet{
@@ -45,6 +49,10 @@ class FxController: UIViewController {
         distortionSlider.value = Float(AudioController.sharedInstance.distortion.finalMix)
         delaySlider.value = Float(AudioController.sharedInstance.delay.dryWetMix)
         enterFx.layer.cornerRadius = 5
+        setRing.layer.cornerRadius = 5
+        setDelay.layer.cornerRadius = 5
+        setDistortion.layer.cornerRadius = 5
+        setReverb.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,6 +60,18 @@ class FxController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func ringPressed(_ sender: UIButton) {
+        setRing.backgroundColor = enabledColor
+    }
+    @IBAction func delayPressed(_ sender: UIButton) {
+        setDelay.backgroundColor = enabledColor
+    }
+    @IBAction func distortionPressed(_ sender: UIButton) {
+        setDistortion.backgroundColor = enabledColor
+    }
+    @IBAction func reverbPressed(_ sender: UIButton) {
+        setReverb.backgroundColor = enabledColor
+    }
     @IBAction func setFx(_ sender: Any) {
         if enterFx.isTouchInside {
             enterFx.backgroundColor = enabledColor

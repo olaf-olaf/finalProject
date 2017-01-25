@@ -12,6 +12,9 @@
 		52C8DB3AF93235BCDB1ACBD5 /* Pods_drumPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 619218898C57C8EA247EDA0B /* Pods_drumPad.framework */; };
 		ED065DDB1E2CF6E400D30D9B /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */; };
 		ED19C9A71E278177003C3044 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED19C9A61E278177003C3044 /* AudioController.swift */; };
+		ED24B5191E38B612000E96FB /* DistortionParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B5181E38B612000E96FB /* DistortionParameterViewController.swift */; };
+		ED24B51B1E38C355000E96FB /* DelayParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B51A1E38C355000E96FB /* DelayParameterViewController.swift */; };
+		ED24B51D1E38CA6F000E96FB /* RingParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B51C1E38CA6F000E96FB /* RingParameterViewController.swift */; };
 		ED26413C1E2CDF9400A790FB /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641381E2CDF9400A790FB /* 808Snare.wav */; };
 		ED26413D1E2CDF9400A790FB /* 808Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641391E2CDF9400A790FB /* 808Tom.wav */; };
 		ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26413E1E2CDFA400A790FB /* 909Hat.wav */; };
@@ -72,6 +75,9 @@
 		DC05107EC323F64615B54A87 /* Pods-drumPadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-drumPadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-drumPadUITests/Pods-drumPadUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Kick.wav; path = ../../../iossamples/808/808Kick.wav; sourceTree = "<group>"; };
 		ED19C9A61E278177003C3044 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		ED24B5181E38B612000E96FB /* DistortionParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistortionParameterViewController.swift; sourceTree = "<group>"; };
+		ED24B51A1E38C355000E96FB /* DelayParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayParameterViewController.swift; sourceTree = "<group>"; };
+		ED24B51C1E38CA6F000E96FB /* RingParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingParameterViewController.swift; sourceTree = "<group>"; };
 		ED2641381E2CDF9400A790FB /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Snare.wav; path = ../../../iossamples/808/808Snare.wav; sourceTree = "<group>"; };
 		ED2641391E2CDF9400A790FB /* 808Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Tom.wav; path = ../../../iossamples/808/808Tom.wav; sourceTree = "<group>"; };
 		ED26413E1E2CDFA400A790FB /* 909Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Hat.wav; path = ../../../iossamples/909/909Hat.wav; sourceTree = "<group>"; };
@@ -266,6 +272,9 @@
 				EDBBBDDA1E263E8100374767 /* FxController.swift */,
 				EDAB93F91E23B62D00464F65 /* ViewController.swift */,
 				ED92EB3C1E37801E00A720FE /* ReverbParameterViewController.swift */,
+				ED24B5181E38B612000E96FB /* DistortionParameterViewController.swift */,
+				ED24B51A1E38C355000E96FB /* DelayParameterViewController.swift */,
+				ED24B51C1E38CA6F000E96FB /* RingParameterViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -572,9 +581,12 @@
 				ED19C9A71E278177003C3044 /* AudioController.swift in Sources */,
 				ED92EB3D1E37801E00A720FE /* ReverbParameterViewController.swift in Sources */,
 				ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */,
+				ED24B51D1E38CA6F000E96FB /* RingParameterViewController.swift in Sources */,
 				EDAB93FA1E23B62D00464F65 /* ViewController.swift in Sources */,
+				ED24B5191E38B612000E96FB /* DistortionParameterViewController.swift in Sources */,
 				EDBBBDDB1E263E8100374767 /* FxController.swift in Sources */,
 				EDAB93F81E23B62D00464F65 /* AppDelegate.swift in Sources */,
+				ED24B51B1E38C355000E96FB /* DelayParameterViewController.swift in Sources */,
 				ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */,
 				ED367B401E2FAE6B00B0235F /* Knob.swift in Sources */,
 			);

@@ -56,7 +56,6 @@ class AudioMixerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         kickMixer.value = Float(AudioController.sharedInstance.kickPlayer.volume)
         snareMixer.value = Float(AudioController.sharedInstance.snarePlayer.volume)
         tomMixer.value = Float(AudioController.sharedInstance.tomPlayer.volume)
@@ -65,12 +64,10 @@ class AudioMixerViewController: UIViewController {
         snareKnob = Knob(frame: snareKnobPlaceholder.bounds)
         snareKnobPlaceholder.addSubview(snareKnob)
         snareKnob.value = Float(AudioController.sharedInstance.snarePlayer.pan)
-        //snareKnob.getLabelText(labelText: &snareLed.text!)
         
         kickKnob = Knob(frame: kickKnobPlaceholder.bounds)
         kickKnobPlaceholder.addSubview(kickKnob)
         kickKnob.value = Float(AudioController.sharedInstance.kickPlayer.pan)
-        //kickKnobPlaceholder.isUserInteractionEnabled = true
         
         tomKnob = Knob(frame: tomKnobPlaceholder.bounds)
         tomKnobPlaceholder.addSubview(tomKnob)
