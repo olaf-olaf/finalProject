@@ -120,8 +120,12 @@ class AudioMixerViewController: UIViewController {
         hatKnob.roundValue()
         snareKnob.roundValue()
         
+        let Levels = MixerLevels(kickLevel: kickMixer.value, snareLevel: snareMixer.value, tomLevel: tomMixer.value, hatLevel: hatMixer.value)
+        let Panning = MixerPanning(kickPan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
+        
         if enterMixSettings.isTouchInside{
-            AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
+//            AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
+            AudioController.sharedInstance.mixAudio(Levels: Levels, Panning: Panning)
         }
     }
 }

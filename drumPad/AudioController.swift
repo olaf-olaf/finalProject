@@ -8,6 +8,7 @@
 import Foundation
 import AudioKit
 
+
 class AudioController {
     
     static let sharedInstance = AudioController()
@@ -121,28 +122,32 @@ class AudioController {
         ringModulator.mix = Double(ringLevel)
         delay.dryWetMix = Double(delayLevel)
     }
-
-    func mixAudio (kickVolume: Float, snareVolume: Float, tomVolume: Float, hatVolume: Float,  Kickpan: Float, snarePan: Float, tomPan: Float, hatPan: Float){
-        kickPlayer.volume = Double(kickVolume)
-        kickPlayer.pan = Double(Kickpan)
-        backupKickPlayer.volume = Double(kickVolume)
-        backupKickPlayer.pan = Double(Kickpan)
-
-        snarePlayer.volume = Double(snareVolume)
-        backupSnarePlayer.volume = Double(snareVolume)
-        snarePlayer.pan = Double(snarePan)
-        backupSnarePlayer.pan = Double(snarePan)
+    
+    func mixAudio(Levels: MixerLevels, Panning: MixerPanning){
+        kickPlayer.volume = Double(Levels.kickLevel)
+        backupKickPlayer.volume = Double(Levels.kickLevel)
+        kickPlayer.pan = Double(Panning.kickPan)
+        backupKickPlayer.pan = Double(Panning.kickPan)
         
-        tomPlayer.volume = Double(tomVolume)
-        backupTomPlayer.volume = Double(tomVolume)
-        tomPlayer.pan = Double(tomPan)
-        backupTomPlayer.pan  = Double(tomPan)
-
-        hatPlayer.volume = Double(hatVolume)
-        backupHatPlayer.volume = Double(hatVolume)
-        hatPlayer.pan = Double(hatPan)
-        backupHatPlayer.pan = Double(hatPan)
+        snarePlayer.volume = Double(Levels.snareLevel)
+        backupSnarePlayer.volume = Double(Levels.snareLevel)
+        snarePlayer.pan = Double(Panning.snarePan)
+        backupSnarePlayer.pan = Double(Panning.snarePan)
+        
+        tomPlayer.volume = Double(Levels.tomLevel)
+        backupTomPlayer.volume = Double(Levels.tomLevel)
+        tomPlayer.pan = Double(Panning.tomPan)
+        backupTomPlayer.pan  = Double(Panning.tomPan)
+        
+        hatPlayer.volume = Double(Levels.hatLevel)
+        backupHatPlayer.volume = Double(Levels.hatLevel)
+        hatPlayer.pan = Double(Panning.hatPan)
+        backupHatPlayer.pan = Double(Panning.hatPan)
+        
+        
     }
+    
+    
     
     func setMetronome() {
         if generator.isStarted {
