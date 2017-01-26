@@ -52,8 +52,6 @@ class AudioMixerViewController: UIViewController {
         }
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         kickMixer.value = Float(AudioController.sharedInstance.kickPlayer.volume)
@@ -78,29 +76,13 @@ class AudioMixerViewController: UIViewController {
         hatKnob.value = Float(AudioController.sharedInstance.hatPlayer.pan)
         enterMixSettings.layer.cornerRadius = 5
         
-        // PROGRAMATICALLY GESTURES
-//        let pan = UIPanGestureRecognizer(target: self, action: #selector(self.kickKnobPan))
-//        kickKnobPlaceholder.addGestureRecognizer(pan)
-        
         // Do any additional setup after loading the view.
     }
     
-//    // This doesn't work either
-//    func kickKnobPan(sender: UIPanGestureRecognizer) {
-//        print("PAN")
-//        if sender.state == cha
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func setLabel() {
-        kickLed.text = "CHECK"
-    }
-    
-    
     
     @IBAction func changeHatDb(_ sender: Any) {
         if hatMixer.isTracking {
@@ -131,8 +113,6 @@ class AudioMixerViewController: UIViewController {
         }
     }
     
-    
-    
     @IBAction func setMixSettings(_ sender: Any) {
         enterMixSettings.backgroundColor = enabledColor
         tomKnob.roundValue()
@@ -144,5 +124,4 @@ class AudioMixerViewController: UIViewController {
             AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
         }
     }
-    
 }
