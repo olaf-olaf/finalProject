@@ -1,25 +1,12 @@
 PODS:
   - AudioKit (3.5.1)
-  - BTNavigationDropdownMenu (0.4.1)
 
 DEPENDENCIES:
   - AudioKit
-  - BTNavigationDropdownMenu (from `https://github.com/PhamBaTho/BTNavigationDropdownMenu.git`, branch `swift-3.0`)
-
-EXTERNAL SOURCES:
-  BTNavigationDropdownMenu:
-    :branch: swift-3.0
-    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
-
-CHECKOUT OPTIONS:
-  BTNavigationDropdownMenu:
-    :commit: 2c08c8579cf7a53ecb3dbf578e6e1034080a9859
-    :git: https://github.com/PhamBaTho/BTNavigationDropdownMenu.git
 
 SPEC CHECKSUMS:
   AudioKit: 7d3183b3f95b73c747348006d4085ac6207f71fc
-  BTNavigationDropdownMenu: 093f3cbfad1572f2c222bdf8d17584d1e13380d4
 
-PODFILE CHECKSUM: 6c7c45efe943e9c4a05b46067ac7a87b9771f988
+PODFILE CHECKSUM: 377ee77d062001f1ffed188c26d8a12a49ef2cdd
 
 COCOAPODS: 1.1.1
