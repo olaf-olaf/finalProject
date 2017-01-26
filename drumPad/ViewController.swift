@@ -11,7 +11,6 @@ import UIKit
 
 class ViewController: UIViewController {
    
-    
     @IBOutlet weak var mixerButton: UIButton!
     @IBOutlet weak var fxButton: UIButton!
     @IBOutlet weak var metronomeTempoSlider: UISlider!
