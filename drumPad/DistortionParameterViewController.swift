@@ -27,7 +27,6 @@ class distortionParametersViewController: UIViewController {
         DecimationKnob.minimumValue = 0
         DecimationKnob.maximumValue = 1
         DecimationKnob.value = Float(AudioController.sharedInstance.distortion.decimation)
-
         RoundingKnob = Knob(frame: roundingKnobPlaceholder.bounds)
         roundingKnobPlaceholder.addSubview(RoundingKnob)
         RoundingKnob.lineWidth = 5.0
@@ -35,8 +34,6 @@ class distortionParametersViewController: UIViewController {
         RoundingKnob.minimumValue = 0
         RoundingKnob.maximumValue = 1
         RoundingKnob.value = Float(AudioController.sharedInstance.distortion.rounding)
-        
-
         // Do any additional setup after loading the view.
     }
 

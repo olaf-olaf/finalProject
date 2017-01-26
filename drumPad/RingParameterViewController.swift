@@ -34,7 +34,7 @@ class RingParameterViewController: UIViewController {
         FrequencyBKnob.lineWidth = 5.0
         FrequencyBKnob.pointerLength = 10.0
         FrequencyBKnob.minimumValue = 0
-        FrequencyBKnob.maximumValue = 1
+        FrequencyBKnob.maximumValue = 800
         FrequencyBKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency2)
         // Do any additional setup after loading the view.
     }
