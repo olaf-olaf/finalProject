@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BTNavigationDropdownMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-drumPad.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,12 +32,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A52524E727A97710A55D0EDA55BB7CFE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AAF74A0744D0868A25DC9D3BBA810D44</key>
+		<key>E4279AE57F53BAE0930B139F7E4ECC57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
