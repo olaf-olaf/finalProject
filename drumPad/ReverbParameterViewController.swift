@@ -53,9 +53,7 @@ class ReverbParameterViewController: UIViewController {
         if setReverbButton.isTouchInside {
             
             setReverbButton.backgroundColor = enabledColor
-            let minDelay = AudioController.sharedInstance.reverb.minDelayTime
-            let decayOne = AudioController.sharedInstance.reverb.decayTimeAt0Hz
-            AudioController.sharedInstance.setReverbParameters(randomInflections: Double(ReflectionKnob.value), minDelay: minDelay, maxDelay: Double(DelayKnob.value), decayOne: decayOne, DecayTwo: Double(DecayKnob.value))
+            AudioController.sharedInstance.setReverbParameters(randomInflections: Double(ReflectionKnob.value), maxDelay: Double(DelayKnob.value), Decay: Double(DecayKnob.value))
         }
     }
 

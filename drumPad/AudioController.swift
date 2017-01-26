@@ -86,7 +86,7 @@ class AudioController {
         AudioKit.output = finalMixer
         AudioKit.start()
         
-        setReverbParameters(randomInflections: 20.00, minDelay: 0.009, maxDelay: 0.20, decayOne: 1.0, DecayTwo: 0.5)
+        setReverbParameters(randomInflections: 20.00, maxDelay: 0.20, Decay: 0.5)
         setDelayParameters(delayTime: 0.1, delayFeedback: 0.01)
         setRingParameters(ringFrequencyOne: 100, ringFrequencyTwo: 103)
         setDistortionParameters(distortionDecimation: 0.05, distortionRouding: 0.1)
@@ -170,12 +170,12 @@ class AudioController {
         }
     }
     
-    func setReverbParameters(randomInflections: Double, minDelay: Double, maxDelay: Double, decayOne: Double, DecayTwo: Double) {
+    func setReverbParameters(randomInflections: Double, maxDelay: Double, Decay: Double) {
         reverb.gain = 10
-        reverb.minDelayTime = minDelay
+        reverb.minDelayTime = 0.009
         reverb.maxDelayTime = maxDelay
-        reverb.decayTimeAt0Hz = decayOne
-        reverb.decayTimeAtNyquist = DecayTwo
+        reverb.decayTimeAt0Hz = 1.0
+        reverb.decayTimeAtNyquist = Decay
         reverb.randomizeReflections = randomInflections
     }
     
