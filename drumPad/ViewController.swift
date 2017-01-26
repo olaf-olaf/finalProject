@@ -71,9 +71,7 @@ class ViewController: UIViewController {
             AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
             nextKit.backgroundColor = disabledColor
         }
-        
     }
-    
     
     @IBAction func touchDownPrevious(_ sender: UIButton) {
         previousKit.backgroundColor = enabledColor
