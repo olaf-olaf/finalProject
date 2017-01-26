@@ -51,7 +51,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func touchDownMixer(_ sender: UIButton) {
         mixerButton.backgroundColor = enabledColor
     }
