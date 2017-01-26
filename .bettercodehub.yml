@@ -1,4 +1,5 @@
 exclude:
+- /Pods/BTNavigationDropdownMenu/Source/BTNavigationDropdownMenu.swift
 - /audioPlayback.playground/Contents.swift
 component_depth: 1
 languages:
