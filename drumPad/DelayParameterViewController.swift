@@ -22,12 +22,14 @@ class DelayParameterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDelayButton.layer.cornerRadius = 5
+        
         FeedbackKnob = Knob(frame: feedbackKnobPlaceholder.bounds)
         feedbackKnobPlaceholder.addSubview(FeedbackKnob)
         FeedbackKnob.lineWidth = 5.0
         FeedbackKnob.pointerLength = 10.0
         FeedbackKnob.minimumValue = 0
         FeedbackKnob.maximumValue = 1
+        
         FeedbackKnob.value = Float(AudioController.sharedInstance.delay.feedback)
         TimeKnob = Knob(frame: timeKnobPlaceholder.bounds)
         timeKnobPlaceholder.addSubview(TimeKnob)
@@ -36,13 +38,10 @@ class DelayParameterViewController: UIViewController {
         TimeKnob.minimumValue = 0
         TimeKnob.maximumValue = 1
         TimeKnob.value = Float(AudioController.sharedInstance.delay.time)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func setDelay(_ sender: UIButton) {

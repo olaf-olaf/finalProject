@@ -8,7 +8,6 @@
 import Foundation
 import AudioKit
 
-
 class AudioController {
     
     static let sharedInstance = AudioController()
@@ -27,13 +26,13 @@ class AudioController {
     var backupHatPlayer: AKAudioPlayer
     var tomPlayer: AKAudioPlayer
     var backupTomPlayer: AKAudioPlayer
+    
     let mixer: AKMixer
     var reverb: AKReverb2
     var distortion: AKDistortion
     var ringModulator: AKRingModulator
     var delay: AKDelay
     let finalMixer: AKMixer
-    
     var currentFrequency = 60.0
     
     let generator = AKOperationGenerator() { parameters in
@@ -49,7 +48,6 @@ class AudioController {
     
     // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     private init() {
-        
         kickPlayer = try! AKAudioPlayer(file: kickFile)
         kickPlayer.volume = 0.5
         backupKickPlayer = try! AKAudioPlayer(file: kickFile)
@@ -71,6 +69,7 @@ class AudioController {
         backupTomPlayer.volume = 0.5
         
         mixer = AKMixer(kickPlayer, snarePlayer, hatPlayer, tomPlayer, backupKickPlayer, backupSnarePlayer, backupHatPlayer, backupTomPlayer)
+        
         ringModulator = AKRingModulator(mixer)
         ringModulator.mix = 0
         distortion = AKDistortion(ringModulator)
@@ -97,20 +96,15 @@ class AudioController {
         let newSnareFile = try! AKAudioFile(readFileName: kitName+"Snare.wav")
         let newHatFile = try! AKAudioFile(readFileName: kitName+"Hat.wav")
         let newTomFile = try! AKAudioFile(readFileName: kitName+"Tom.wav")
-        
         do {
             try kickPlayer.replace(file: newKickFile)
             try backupKickPlayer.replace(file: newKickFile)
-            
             try snarePlayer.replace(file: newSnareFile)
             try backupSnarePlayer.replace(file: newSnareFile)
-            
             try hatPlayer.replace(file: newHatFile)
             try backupHatPlayer.replace(file: newHatFile)
-            
             try tomPlayer.replace(file: newTomFile)
             try backupTomPlayer.replace(file: newTomFile)
-            
         } catch {
             print (error)
         }
@@ -123,31 +117,27 @@ class AudioController {
         delay.dryWetMix = Double(delayLevel)
     }
     
-    func mixAudio(Levels: MixerLevels, Panning: MixerPanning){
-        kickPlayer.volume = Double(Levels.kickLevel)
-        backupKickPlayer.volume = Double(Levels.kickLevel)
-        kickPlayer.pan = Double(Panning.kickPan)
-        backupKickPlayer.pan = Double(Panning.kickPan)
+    func mixAudio(levels: MixerLevels, panning: MixerPanning){
+        kickPlayer.volume = Double(levels.kickLevel)
+        backupKickPlayer.volume = Double(levels.kickLevel)
+        kickPlayer.pan = Double(panning.kickPan)
+        backupKickPlayer.pan = Double(panning.kickPan)
         
-        snarePlayer.volume = Double(Levels.snareLevel)
-        backupSnarePlayer.volume = Double(Levels.snareLevel)
-        snarePlayer.pan = Double(Panning.snarePan)
-        backupSnarePlayer.pan = Double(Panning.snarePan)
+        snarePlayer.volume = Double(levels.snareLevel)
+        backupSnarePlayer.volume = Double(levels.snareLevel)
+        snarePlayer.pan = Double(panning.snarePan)
+        backupSnarePlayer.pan = Double(panning.snarePan)
         
-        tomPlayer.volume = Double(Levels.tomLevel)
-        backupTomPlayer.volume = Double(Levels.tomLevel)
-        tomPlayer.pan = Double(Panning.tomPan)
-        backupTomPlayer.pan  = Double(Panning.tomPan)
+        tomPlayer.volume = Double(levels.tomLevel)
+        backupTomPlayer.volume = Double(levels.tomLevel)
+        tomPlayer.pan = Double(panning.tomPan)
+        backupTomPlayer.pan  = Double(panning.tomPan)
         
-        hatPlayer.volume = Double(Levels.hatLevel)
-        backupHatPlayer.volume = Double(Levels.hatLevel)
-        hatPlayer.pan = Double(Panning.hatPan)
-        backupHatPlayer.pan = Double(Panning.hatPan)
-        
-        
+        hatPlayer.volume = Double(levels.hatLevel)
+        backupHatPlayer.volume = Double(levels.hatLevel)
+        hatPlayer.pan = Double(panning.hatPan)
+        backupHatPlayer.pan = Double(panning.hatPan)
     }
-    
-    
     
     func setMetronome() {
         if generator.isStarted {
@@ -173,8 +163,8 @@ class AudioController {
     func setReverbParameters(randomInflections: Double, maxDelay: Double, Decay: Double) {
         reverb.gain = 10
         reverb.minDelayTime = 0.009
-        reverb.maxDelayTime = maxDelay
         reverb.decayTimeAt0Hz = 1.0
+        reverb.maxDelayTime = maxDelay
         reverb.decayTimeAtNyquist = Decay
         reverb.randomizeReflections = randomInflections
     }

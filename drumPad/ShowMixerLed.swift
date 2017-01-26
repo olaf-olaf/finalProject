@@ -8,12 +8,11 @@
 
 import Foundation
 
+// A class that determines the behaviour of the LED's in the audiomixer.
 class ShowMixerLed {
     
     init() {
-        
     }
-    
     func calculateLevel(currentLevel: Float) -> String {
         let level = String(format: "%.2f", (currentLevel - 0.5) * 10)
         let output = "DB:" + String(level)

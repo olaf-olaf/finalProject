@@ -63,7 +63,6 @@ public class Knob: UIControl {
     }
     
     func roundValue() {
-        
         if value > -0.20 && value < 0.20 {
             value = 0
         }
@@ -97,7 +96,6 @@ public class Knob: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func createSublayers() {
         knobRenderer.update(bounds: bounds)
         knobRenderer.strokeColor = UIColor(red: (255/255.0), green: (67/255.0), blue: (60/255.0), alpha: 1.0)
@@ -106,7 +104,6 @@ public class Knob: UIControl {
         knobRenderer.pointerAngle = knobRenderer.startAngle;
         knobRenderer.lineWidth = 2.0
         knobRenderer.pointerLength = 6.0
-        
         layer.addSublayer(knobRenderer.trackLayer)
         layer.addSublayer(knobRenderer.pointerLayer)
     }
@@ -121,7 +118,6 @@ private class KnobRenderer {
         get {
             return UIColor(cgColor: trackLayer.strokeColor!)
         }
-        
         set(strokeColor) {
             trackLayer.strokeColor = strokeColor.cgColor
             pointerLayer.strokeColor = strokeColor.cgColor
@@ -152,11 +148,9 @@ private class KnobRenderer {
     }
     
     func setPointerAngle(pointerAngle: CGFloat, animated: Bool) {
-        
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         pointerLayer.transform = CATransform3DMakeRotation(pointerAngle, 0.0, 0.0, 0.1)
-        
         if animated {
             let midAngle = (max(pointerAngle, self.pointerAngle) - min(pointerAngle, self.pointerAngle) ) / 2.0 + min(pointerAngle, self.pointerAngle)
             let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
@@ -166,9 +160,7 @@ private class KnobRenderer {
             animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
             pointerLayer.add(animation, forKey: nil)
         }
-        
         CATransaction.commit()
-        
         self.backingPointerAngle = pointerAngle
     }
     
@@ -200,7 +192,6 @@ private class KnobRenderer {
     
     func update(bounds: CGRect) {
         let position = CGPoint(x: bounds.width / 2.0, y: bounds.height / 2.0)
-        
         trackLayer.bounds = bounds
         trackLayer.position = position
         pointerLayer.bounds = bounds
@@ -214,7 +205,6 @@ private class RotationGestureRecognizer: UIPanGestureRecognizer {
     
     override init(target: Any?, action: Selector? ) {
         super.init(target: target, action: action)
-        
         minimumNumberOfTouches = 1
         maximumNumberOfTouches = 1
     }

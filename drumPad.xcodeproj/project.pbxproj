@@ -42,7 +42,7 @@
 		EDBE552F1E268BB9004156A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDBE552E1E268BB9004156A8 /* AVFoundation.framework */; };
 		EDD4BF531E2CEE5D002494B6 /* FunkHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */; };
 		EDD4BF551E2CEE5D002494B6 /* FunkSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */; };
-		EDEFC6AA1E3A14B0008DE808 /* mixerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC6A91E3A14B0008DE808 /* mixerController.swift */; };
+		EDEFC6AA1E3A14B0008DE808 /* MixerParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDEFC6A91E3A14B0008DE808 /* MixerParameters.swift */; };
 		EDF800AE1E2CF0670080241B /* FunkKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AC1E2CF0670080241B /* FunkKick.wav */; };
 		EDF800AF1E2CF0670080241B /* FunkTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = EDF800AD1E2CF0670080241B /* FunkTom.wav */; };
 /* End PBXBuildFile section */
@@ -112,7 +112,7 @@
 		EDBE552E1E268BB9004156A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkHat.wav; path = ../../../iossamples/funk/FunkHat.wav; sourceTree = "<group>"; };
 		EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkSnare.wav; path = ../../../iossamples/funk/FunkSnare.wav; sourceTree = "<group>"; };
-		EDEFC6A91E3A14B0008DE808 /* mixerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mixerController.swift; sourceTree = "<group>"; };
+		EDEFC6A91E3A14B0008DE808 /* MixerParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MixerParameters.swift; sourceTree = "<group>"; };
 		EDF800AC1E2CF0670080241B /* FunkKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkKick.wav; path = ../../../iossamples/funk/FunkKick.wav; sourceTree = "<group>"; };
 		EDF800AD1E2CF0670080241B /* FunkTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = FunkTom.wav; path = ../../../iossamples/funk/FunkTom.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -260,7 +260,7 @@
 			children = (
 				ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */,
 				ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */,
-				EDEFC6A91E3A14B0008DE808 /* mixerController.swift */,
+				EDEFC6A91E3A14B0008DE808 /* MixerParameters.swift */,
 				EDAB93F71E23B62D00464F65 /* AppDelegate.swift */,
 				ED367B3F1E2FAE6B00B0235F /* Knob.swift */,
 				ED19C9A61E278177003C3044 /* AudioController.swift */,
@@ -592,7 +592,7 @@
 				ED24B51B1E38C355000E96FB /* DelayParameterViewController.swift in Sources */,
 				ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */,
 				ED367B401E2FAE6B00B0235F /* Knob.swift in Sources */,
-				EDEFC6AA1E3A14B0008DE808 /* mixerController.swift in Sources */,
+				EDEFC6AA1E3A14B0008DE808 /* MixerParameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

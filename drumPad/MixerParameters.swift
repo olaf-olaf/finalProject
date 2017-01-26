@@ -1,5 +1,5 @@
 //
-//  mixerController.swift
+//  MixerParameters.swift
 //  drumPad
 //
 //  Created by Olaf Kroon on 26/01/17.
@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Classes created to minimalize the amount of parameters needed for certain methods. 
 class MixerLevels {
     var kickLevel: Float
     var snareLevel: Float
@@ -20,7 +21,6 @@ class MixerLevels {
         self.tomLevel = tomLevel
         self.hatLevel = hatLevel
     }
-    
 }
 
 class MixerPanning {
@@ -35,6 +35,5 @@ class MixerPanning {
         self.tomPan = tomPan
         self.hatPan = hatPan
     }
-    
 }
 

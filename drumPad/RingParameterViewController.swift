@@ -22,6 +22,7 @@ class RingParameterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setRingButton.layer.cornerRadius = 5
+        
         FrequencyAKnob = Knob(frame: frequencyAKnobPlaceholder.bounds)
         frequencyAKnobPlaceholder.addSubview(FrequencyAKnob)
         FrequencyAKnob.lineWidth = 5.0
@@ -29,6 +30,7 @@ class RingParameterViewController: UIViewController {
         FrequencyAKnob.minimumValue = 0
         FrequencyAKnob.maximumValue = 800
         FrequencyAKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency1)
+        
         FrequencyBKnob = Knob(frame: frequencyBPKnoblaceholder.bounds)
         frequencyBPKnoblaceholder.addSubview(FrequencyBKnob)
         FrequencyBKnob.lineWidth = 5.0
@@ -36,12 +38,10 @@ class RingParameterViewController: UIViewController {
         FrequencyBKnob.minimumValue = 0
         FrequencyBKnob.maximumValue = 800
         FrequencyBKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency2)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func setRingParameters(_ sender: UIButton) {
@@ -50,14 +50,4 @@ class RingParameterViewController: UIViewController {
         let frequencyB = Double(FrequencyBKnob.value)
         AudioController.sharedInstance.setRingParameters(ringFrequencyOne: frequencyA, ringFrequencyTwo: frequencyB)
     }
-        /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

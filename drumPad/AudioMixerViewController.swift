@@ -10,8 +10,6 @@ import UIKit
 
 class AudioMixerViewController: UIViewController {
     
-
-    // CLASSES DUS BEGINNEN MET HOOFDLETTER
     var snareKnob: Knob!
     var hatKnob: Knob!
     var kickKnob: Knob!
@@ -91,6 +89,7 @@ class AudioMixerViewController: UIViewController {
             hatLed.text = "Hat"
         }
     }
+    
     @IBAction func changeTomDb(_ sender: Any) {
         if tomMixer.isTracking {
             tomLed.text = ledController.calculateLevel(currentLevel: tomMixer.value)
@@ -98,6 +97,7 @@ class AudioMixerViewController: UIViewController {
             tomLed.text = "Tom"
         }
     }
+    
     @IBAction func changeSnareDb(_ sender: Any) {
         if snareMixer.isTracking {
             snareLed.text = ledController.calculateLevel(currentLevel: snareMixer.value)
@@ -105,6 +105,7 @@ class AudioMixerViewController: UIViewController {
             snareLed.text = "Snare"
         }
     }
+    
     @IBAction func changeKickDb(_ sender: Any) {
         if kickMixer.isTracking {
             kickLed.text = ledController.calculateLevel(currentLevel: kickMixer.value)
@@ -119,13 +120,11 @@ class AudioMixerViewController: UIViewController {
         kickKnob.roundValue()
         hatKnob.roundValue()
         snareKnob.roundValue()
-        
-        let Levels = MixerLevels(kickLevel: kickMixer.value, snareLevel: snareMixer.value, tomLevel: tomMixer.value, hatLevel: hatMixer.value)
-        let Panning = MixerPanning(kickPan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
+        let levelSettings = MixerLevels(kickLevel: kickMixer.value, snareLevel: snareMixer.value, tomLevel: tomMixer.value, hatLevel: hatMixer.value)
+        let panningSetting = MixerPanning(kickPan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
         
         if enterMixSettings.isTouchInside{
-//            AudioController.sharedInstance.mixAudio(kickVolume: kickMixer.value, snareVolume: snareMixer.value, tomVolume: tomMixer.value, hatVolume: hatMixer.value, Kickpan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
-            AudioController.sharedInstance.mixAudio(Levels: Levels, Panning: Panning)
+            AudioController.sharedInstance.mixAudio(levels: levelSettings, panning: panningSetting)
         }
     }
 }

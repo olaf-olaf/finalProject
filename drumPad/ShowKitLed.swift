@@ -14,7 +14,6 @@ class ShowKitLed {
     var displayKit: String
     
     init () {
-        
         displayKit = drumKits[0]
     }
     
