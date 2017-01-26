@@ -8,7 +8,6 @@
 
 import Foundation
 
-// A class that determines the behaviour of the LED's in the audiomixer.
 class ShowMixerLed {
     
     init() {
