@@ -45,4 +45,7 @@ I've set the 'knob IBaction' problem aside for now since I'm really stuck withou
 ##25-01-2017
 Today i've added all the FX parameter views. I've also updated all of the constraints and worked on visual consitency. I'm considering whether adding more functionality would be harmfull to the user experience.
 
+##26-01-2017
+I ran bettercodehub on my program today and found out I had to turn some function parameters into objects. I also cleaned up some code.
+
 
