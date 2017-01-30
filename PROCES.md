@@ -48,4 +48,7 @@ Today i've added all the FX parameter views. I've also updated all of the constr
 ##26-01-2017
 I ran bettercodehub on my program today and found out I had to turn some function parameters into objects. I also cleaned up some code.
 
-
+##30-01-2017
+This morning I've been working on some sound design. I've added a two new kits and i've cut some of the sample's durations. I spent the entire afternoon coding up my project. Tomorrow i'm going to figure out
+- whether to pass all parameter related variables via objects. This might make the code more clear and ensures that not just any float will be passed into the function. Which is nice for future development. 
+- wheter to create some functions to set knob values. This will probably look cleaner. But I'm not sure yet wheter it's really necessary.
