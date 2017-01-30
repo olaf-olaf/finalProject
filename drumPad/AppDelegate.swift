@@ -4,7 +4,6 @@
 //
 //  Created by Olaf Kroon on 09/01/17.
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
-//
 
 import UIKit
 
