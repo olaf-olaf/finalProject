@@ -24,6 +24,7 @@ class ReverbParameterViewController: UIViewController {
         super.viewDidLoad()
         setReverbButton.layer.cornerRadius = 5
         
+        // Voor dit initialisen misschien een method maken
         decayKnob = Knob(frame: decayKnobPlaceHolder.bounds)
         decayKnobPlaceHolder.addSubview(decayKnob)
         decayKnob.lineWidth = 5.0

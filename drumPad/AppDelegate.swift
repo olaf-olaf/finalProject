@@ -3,8 +3,11 @@
 //  drumPad
 //
 //  Created by Olaf Kroon on 09/01/17.
+//  Student number: 10787321
+//  Course: Programmeerproject
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
-
+//
 import UIKit
 
 

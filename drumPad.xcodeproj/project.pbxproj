@@ -189,32 +189,80 @@
 		ED2B25AA1E2B98B900364598 /* samples */ = {
 			isa = PBXGroup;
 			children = (
+				ED3DDA271E3F66F200BC9C52 /* Funk */,
+				ED3DDA281E3F673300BC9C52 /* 606 */,
+				ED3DDA291E3F674000BC9C52 /* Techno */,
+				ED3DDA2A1E3F675900BC9C52 /* 808 */,
+				ED3DDA2C1E3F676E00BC9C52 /* Jazz */,
+				ED3DDA2B1E3F676800BC9C52 /* 909 */,
+			);
+			name = samples;
+			sourceTree = "<group>";
+		};
+		ED3DDA271E3F66F200BC9C52 /* Funk */ = {
+			isa = PBXGroup;
+			children = (
+				EDF800AC1E2CF0670080241B /* FunkKick.wav */,
+				EDF800AD1E2CF0670080241B /* FunkTom.wav */,
 				EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */,
 				EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */,
-				ED3DDA171E3F5D8300BC9C52 /* TechnoHat.wav */,
+			);
+			name = Funk;
+			sourceTree = "<group>";
+		};
+		ED3DDA281E3F673300BC9C52 /* 606 */ = {
+			isa = PBXGroup;
+			children = (
 				ED3DDA1F1E3F5D8D00BC9C52 /* 606Hat.wav */,
 				ED3DDA201E3F5D8D00BC9C52 /* 606Kick.wav */,
 				ED3DDA211E3F5D8D00BC9C52 /* 606Snare.wav */,
 				ED3DDA221E3F5D8D00BC9C52 /* 606Tom.wav */,
+			);
+			name = 606;
+			sourceTree = "<group>";
+		};
+		ED3DDA291E3F674000BC9C52 /* Techno */ = {
+			isa = PBXGroup;
+			children = (
+				ED3DDA171E3F5D8300BC9C52 /* TechnoHat.wav */,
 				ED3DDA181E3F5D8300BC9C52 /* TechnoKick.wav */,
 				ED3DDA191E3F5D8300BC9C52 /* TechnoSnare.wav */,
 				ED3DDA1A1E3F5D8300BC9C52 /* TechnoTom.wav */,
-				EDF800AC1E2CF0670080241B /* FunkKick.wav */,
-				EDF800AD1E2CF0670080241B /* FunkTom.wav */,
+			);
+			name = Techno;
+			sourceTree = "<group>";
+		};
+		ED3DDA2A1E3F675900BC9C52 /* 808 */ = {
+			isa = PBXGroup;
+			children = (
 				ED26414F1E2CE17400A790FB /* 808Hat.wav */,
 				ED065DDA1E2CF6E400D30D9B /* 808Kick.wav */,
 				ED2641391E2CDF9400A790FB /* 808Tom.wav */,
 				ED2641381E2CDF9400A790FB /* 808Snare.wav */,
-				ED2641461E2CDFBA00A790FB /* JazzHat.wav */,
-				ED2641491E2CDFBA00A790FB /* JazzTom.wav */,
-				ED2641481E2CDFBA00A790FB /* JazzSnare.wav */,
-				ED2641471E2CDFBA00A790FB /* JazzKick.wav */,
+			);
+			name = 808;
+			sourceTree = "<group>";
+		};
+		ED3DDA2B1E3F676800BC9C52 /* 909 */ = {
+			isa = PBXGroup;
+			children = (
 				ED26413E1E2CDFA400A790FB /* 909Hat.wav */,
 				ED2641411E2CDFA400A790FB /* 909Tom.wav */,
 				ED2641401E2CDFA400A790FB /* 909Snare.wav */,
 				ED26413F1E2CDFA400A790FB /* 909Kick.wav */,
 			);
-			name = samples;
+			name = 909;
+			sourceTree = "<group>";
+		};
+		ED3DDA2C1E3F676E00BC9C52 /* Jazz */ = {
+			isa = PBXGroup;
+			children = (
+				ED2641461E2CDFBA00A790FB /* JazzHat.wav */,
+				ED2641491E2CDFBA00A790FB /* JazzTom.wav */,
+				ED2641481E2CDFBA00A790FB /* JazzSnare.wav */,
+				ED2641471E2CDFBA00A790FB /* JazzKick.wav */,
+			);
+			name = Jazz;
 			sourceTree = "<group>";
 		};
 		EDAB93EB1E23B62C00464F65 = {
