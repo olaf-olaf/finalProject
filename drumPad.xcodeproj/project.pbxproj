@@ -28,6 +28,14 @@
 		ED2641501E2CE17400A790FB /* 808Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26414F1E2CE17400A790FB /* 808Hat.wav */; };
 		ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */; };
 		ED367B401E2FAE6B00B0235F /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED367B3F1E2FAE6B00B0235F /* Knob.swift */; };
+		ED3DDA1B1E3F5D8300BC9C52 /* TechnoHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA171E3F5D8300BC9C52 /* TechnoHat.wav */; };
+		ED3DDA1C1E3F5D8300BC9C52 /* TechnoKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA181E3F5D8300BC9C52 /* TechnoKick.wav */; };
+		ED3DDA1D1E3F5D8300BC9C52 /* TechnoSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA191E3F5D8300BC9C52 /* TechnoSnare.wav */; };
+		ED3DDA1E1E3F5D8300BC9C52 /* TechnoTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA1A1E3F5D8300BC9C52 /* TechnoTom.wav */; };
+		ED3DDA231E3F5D8D00BC9C52 /* 606Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA1F1E3F5D8D00BC9C52 /* 606Hat.wav */; };
+		ED3DDA241E3F5D8D00BC9C52 /* 606Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA201E3F5D8D00BC9C52 /* 606Kick.wav */; };
+		ED3DDA251E3F5D8D00BC9C52 /* 606Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA211E3F5D8D00BC9C52 /* 606Snare.wav */; };
+		ED3DDA261E3F5D8D00BC9C52 /* 606Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED3DDA221E3F5D8D00BC9C52 /* 606Tom.wav */; };
 		ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */; };
 		ED92EB3B1E36183F00A720FE /* ShowMixerLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */; };
 		ED92EB3D1E37801E00A720FE /* ReverbParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92EB3C1E37801E00A720FE /* ReverbParameterViewController.swift */; };
@@ -92,6 +100,14 @@
 		ED26414F1E2CE17400A790FB /* 808Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Hat.wav; path = ../../../iossamples/808/808Hat.wav; sourceTree = "<group>"; };
 		ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKitLed.swift; sourceTree = "<group>"; };
 		ED367B3F1E2FAE6B00B0235F /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		ED3DDA171E3F5D8300BC9C52 /* TechnoHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TechnoHat.wav; path = ../../../iossamples/techno/TechnoHat.wav; sourceTree = "<group>"; };
+		ED3DDA181E3F5D8300BC9C52 /* TechnoKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TechnoKick.wav; path = ../../../iossamples/techno/TechnoKick.wav; sourceTree = "<group>"; };
+		ED3DDA191E3F5D8300BC9C52 /* TechnoSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TechnoSnare.wav; path = ../../../iossamples/techno/TechnoSnare.wav; sourceTree = "<group>"; };
+		ED3DDA1A1E3F5D8300BC9C52 /* TechnoTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = TechnoTom.wav; path = ../../../iossamples/techno/TechnoTom.wav; sourceTree = "<group>"; };
+		ED3DDA1F1E3F5D8D00BC9C52 /* 606Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 606Hat.wav; path = ../../../iossamples/606/606Hat.wav; sourceTree = "<group>"; };
+		ED3DDA201E3F5D8D00BC9C52 /* 606Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 606Kick.wav; path = ../../../iossamples/606/606Kick.wav; sourceTree = "<group>"; };
+		ED3DDA211E3F5D8D00BC9C52 /* 606Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 606Snare.wav; path = ../../../iossamples/606/606Snare.wav; sourceTree = "<group>"; };
+		ED3DDA221E3F5D8D00BC9C52 /* 606Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 606Tom.wav; path = ../../../iossamples/606/606Tom.wav; sourceTree = "<group>"; };
 		ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerViewController.swift; sourceTree = "<group>"; };
 		ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMixerLed.swift; sourceTree = "<group>"; };
 		ED92EB3C1E37801E00A720FE /* ReverbParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverbParameterViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +191,14 @@
 			children = (
 				EDD4BF4F1E2CEE5D002494B6 /* FunkHat.wav */,
 				EDD4BF511E2CEE5D002494B6 /* FunkSnare.wav */,
+				ED3DDA171E3F5D8300BC9C52 /* TechnoHat.wav */,
+				ED3DDA1F1E3F5D8D00BC9C52 /* 606Hat.wav */,
+				ED3DDA201E3F5D8D00BC9C52 /* 606Kick.wav */,
+				ED3DDA211E3F5D8D00BC9C52 /* 606Snare.wav */,
+				ED3DDA221E3F5D8D00BC9C52 /* 606Tom.wav */,
+				ED3DDA181E3F5D8300BC9C52 /* TechnoKick.wav */,
+				ED3DDA191E3F5D8300BC9C52 /* TechnoSnare.wav */,
+				ED3DDA1A1E3F5D8300BC9C52 /* TechnoTom.wav */,
 				EDF800AC1E2CF0670080241B /* FunkKick.wav */,
 				EDF800AD1E2CF0670080241B /* FunkTom.wav */,
 				ED26414F1E2CE17400A790FB /* 808Hat.wav */,
@@ -400,6 +424,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAB94021E23B62D00464F65 /* LaunchScreen.storyboard in Resources */,
+				ED3DDA241E3F5D8D00BC9C52 /* 606Kick.wav in Resources */,
 				ED26413D1E2CDF9400A790FB /* 808Tom.wav in Resources */,
 				EDF800AE1E2CF0670080241B /* FunkKick.wav in Resources */,
 				ED2641431E2CDFA400A790FB /* 909Kick.wav in Resources */,
@@ -410,14 +435,21 @@
 				ED065DDB1E2CF6E400D30D9B /* 808Kick.wav in Resources */,
 				EDD4BF551E2CEE5D002494B6 /* FunkSnare.wav in Resources */,
 				EDD4BF531E2CEE5D002494B6 /* FunkHat.wav in Resources */,
+				ED3DDA261E3F5D8D00BC9C52 /* 606Tom.wav in Resources */,
 				ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */,
 				EDF800AF1E2CF0670080241B /* FunkTom.wav in Resources */,
+				ED3DDA1C1E3F5D8300BC9C52 /* TechnoKick.wav in Resources */,
+				ED3DDA251E3F5D8D00BC9C52 /* 606Snare.wav in Resources */,
 				ED26414D1E2CDFBA00A790FB /* JazzTom.wav in Resources */,
+				ED3DDA231E3F5D8D00BC9C52 /* 606Hat.wav in Resources */,
 				ED2641501E2CE17400A790FB /* 808Hat.wav in Resources */,
 				ED2641451E2CDFA400A790FB /* 909Tom.wav in Resources */,
 				ED26414B1E2CDFBA00A790FB /* JazzKick.wav in Resources */,
 				ED26414C1E2CDFBA00A790FB /* JazzSnare.wav in Resources */,
 				EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */,
+				ED3DDA1B1E3F5D8300BC9C52 /* TechnoHat.wav in Resources */,
+				ED3DDA1E1E3F5D8300BC9C52 /* TechnoTom.wav in Resources */,
+				ED3DDA1D1E3F5D8300BC9C52 /* TechnoSnare.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

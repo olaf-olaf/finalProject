@@ -9,7 +9,7 @@
 import Foundation
 
 class ShowKitLed {
-    let drumKits = ["808", "Funk", "Jazz","909"]
+    let drumKits = ["808", "Funk", "Jazz","909","606","Techno"]
     var index = 0
     var displayKit: String
     

@@ -9,8 +9,8 @@
 import UIKit
 
 class FxController: UIViewController {
+    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
-   
     @IBOutlet weak var setRing: UIButton!
     @IBOutlet weak var setDelay: UIButton!
     @IBOutlet weak var setDistortion: UIButton!
@@ -40,14 +40,13 @@ class FxController: UIViewController {
         }
     }
     
-    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         ringSlider.value = Float(AudioController.sharedInstance.ringModulator.mix)
         reverbSlider.value = Float(AudioController.sharedInstance.reverb.dryWetMix)
         distortionSlider.value = Float(AudioController.sharedInstance.distortion.finalMix)
         delaySlider.value = Float(AudioController.sharedInstance.delay.dryWetMix)
+        
         enterFx.layer.cornerRadius = 5
         setRing.layer.cornerRadius = 5
         setDelay.layer.cornerRadius = 5
@@ -57,7 +56,6 @@ class FxController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func ringPressed(_ sender: UIButton) {

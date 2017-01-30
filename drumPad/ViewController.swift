@@ -41,14 +41,11 @@ class ViewController: UIViewController {
         if AudioController.sharedInstance.generator.isPlaying {
             metronomeButton.backgroundColor = enabledColor
         }
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-               // Dispose of any resources that can be recreated.
     }
-    
     
     @IBAction func touchDownMixer(_ sender: UIButton) {
         mixerButton.backgroundColor = enabledColor
@@ -58,11 +55,11 @@ class ViewController: UIViewController {
         fxButton.backgroundColor = enabledColor
     }
     
-    
     @IBAction func touchDownNext(_ sender: UIButton) {
         
         nextKit.backgroundColor = enabledColor
     }
+    
     @IBAction func setNextDisplay(_ sender: Any) {
         if nextKit.isTouchInside {
             AudioController.sharedInstance.LEDKitSelector.displayNext()
@@ -76,14 +73,12 @@ class ViewController: UIViewController {
         previousKit.backgroundColor = enabledColor
     }
     
-    
     @IBAction func setPreviousDisplay(_ sender: Any) {
         if previousKit.isTouchInside {
             AudioController.sharedInstance.LEDKitSelector.displayPrevious()
             kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
             AudioController.sharedInstance.replaceKit(kitName: kitDisplay.text!)
             previousKit.backgroundColor = disabledColor
-
         }
     }
     
@@ -94,7 +89,6 @@ class ViewController: UIViewController {
                 metronomeButton.backgroundColor = enabledColor
             } else {
                  metronomeButton.backgroundColor = disabledColor
-                
             }
         }
     }
@@ -135,6 +129,7 @@ class ViewController: UIViewController {
         AudioController.sharedInstance.playSample(player: AudioController.sharedInstance.hatPlayer, backupPlayer: AudioController.sharedInstance.backupHatPlayer)
         hiHatPad.backgroundColor = enabledColor
     }
+    
     @IBAction func releaseHatPad(_ sender: Any) {
         if hiHatPad.isTouchInside{
             hiHatPad.backgroundColor = idlePadColor
@@ -154,8 +149,5 @@ class ViewController: UIViewController {
     @IBAction func releasedTempoSlider(_ sender: UISlider) {
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
     }
-    
-    
-        
 }
 

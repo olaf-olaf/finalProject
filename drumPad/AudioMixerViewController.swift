@@ -9,14 +9,12 @@
 import UIKit
 
 class AudioMixerViewController: UIViewController {
-    
     var snareKnob: Knob!
     var hatKnob: Knob!
     var kickKnob: Knob!
     var tomKnob: Knob!
     let ledController = ShowMixerLed()
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
-    
     
     @IBOutlet weak var snareLed: UILabel!
     @IBOutlet weak var kickLed: UILabel!
@@ -27,7 +25,6 @@ class AudioMixerViewController: UIViewController {
     @IBOutlet weak var snareKnobPlaceholder: UIView!
     @IBOutlet weak var kickKnobPlaceholder: UIView!
     @IBOutlet weak var enterMixSettings: UIButton!
-    
     @IBOutlet weak var hatMixer: UISlider! {
         didSet{
             hatMixer.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
@@ -39,11 +36,13 @@ class AudioMixerViewController: UIViewController {
             tomMixer.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
         }
     }
+    
     @IBOutlet weak var snareMixer: UISlider! {
         didSet{
             snareMixer.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
         }
     }
+    
     @IBOutlet weak var kickMixer: UISlider!{
         didSet{
             kickMixer.transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI_2))
@@ -73,8 +72,6 @@ class AudioMixerViewController: UIViewController {
         hatKnobPlaceholder.addSubview(hatKnob)
         hatKnob.value = Float(AudioController.sharedInstance.hatPlayer.pan)
         enterMixSettings.layer.cornerRadius = 5
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,7 +119,6 @@ class AudioMixerViewController: UIViewController {
         snareKnob.roundValue()
         let levelSettings = MixerLevels(kickLevel: kickMixer.value, snareLevel: snareMixer.value, tomLevel: tomMixer.value, hatLevel: hatMixer.value)
         let panningSetting = MixerPanning(kickPan: kickKnob.value, snarePan: snareKnob.value, tomPan: tomKnob.value, hatPan: hatKnob.value)
-        
         if enterMixSettings.isTouchInside{
             AudioController.sharedInstance.mixAudio(levels: levelSettings, panning: panningSetting)
         }

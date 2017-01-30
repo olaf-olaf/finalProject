@@ -9,13 +9,12 @@
 import UIKit
 
 class DelayParameterViewController: UIViewController {
-    
     var TimeKnob: Knob!
     var FeedbackKnob: Knob!
-   
-    @IBOutlet weak var setDelayButton: UIButton!
+    
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
+    @IBOutlet weak var setDelayButton: UIButton!
     @IBOutlet weak var feedbackKnobPlaceholder: UIView!
     @IBOutlet weak var timeKnobPlaceholder: UIView!
 
