@@ -11,8 +11,8 @@
 import UIKit
 
 class DelayParameterViewController: UIViewController {
-    var TimeKnob: Knob!
-    var FeedbackKnob: Knob!
+    var timeKnob: Knob!
+    var feedbackKnob: Knob!
     
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
@@ -24,21 +24,15 @@ class DelayParameterViewController: UIViewController {
         super.viewDidLoad()
         setDelayButton.layer.cornerRadius = 5
         
-        FeedbackKnob = Knob(frame: feedbackKnobPlaceholder.bounds)
-        feedbackKnobPlaceholder.addSubview(FeedbackKnob)
-        FeedbackKnob.lineWidth = 5.0
-        FeedbackKnob.pointerLength = 10.0
-        FeedbackKnob.minimumValue = 0
-        FeedbackKnob.maximumValue = 1
+        feedbackKnob = Knob(frame: feedbackKnobPlaceholder.bounds)
+        feedbackKnobPlaceholder.addSubview(feedbackKnob)
+        feedbackKnob.setKnobDisplay(largeButton: true, minimum: 0, maximum: 1)
+        feedbackKnob.value = Float(AudioController.sharedInstance.delay.feedback)
         
-        FeedbackKnob.value = Float(AudioController.sharedInstance.delay.feedback)
-        TimeKnob = Knob(frame: timeKnobPlaceholder.bounds)
-        timeKnobPlaceholder.addSubview(TimeKnob)
-        TimeKnob.lineWidth = 5.0
-        TimeKnob.pointerLength = 10.0
-        TimeKnob.minimumValue = 0
-        TimeKnob.maximumValue = 1
-        TimeKnob.value = Float(AudioController.sharedInstance.delay.time)
+        timeKnob = Knob(frame: timeKnobPlaceholder.bounds)
+        timeKnobPlaceholder.addSubview(timeKnob)
+        timeKnob.setKnobDisplay(largeButton: true, minimum: 0, maximum: 1)
+        timeKnob.value = Float(AudioController.sharedInstance.delay.time)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,8 +41,8 @@ class DelayParameterViewController: UIViewController {
     
     @IBAction func setDelay(_ sender: UIButton) {
         setDelayButton.backgroundColor = enabledColor
-        let time = Double(TimeKnob.value)
-        let feedback = Double(FeedbackKnob.value)
+        let time = Double(timeKnob.value)
+        let feedback = Double(feedbackKnob.value)
         AudioController.sharedInstance.setDelayParameters(delayTime: time, delayFeedback: feedback)
     }
 }

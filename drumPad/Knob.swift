@@ -127,6 +127,7 @@ class Knob: UIControl {
         knobRenderer.strokeColor = tintColor
     }
 }
+
 /*
  Knobrenderer is a class that animates a rotary knob.
  **/

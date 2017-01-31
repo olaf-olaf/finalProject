@@ -63,15 +63,19 @@ class FxController: UIViewController {
     @IBAction func ringPressed(_ sender: UIButton) {
         setRing.backgroundColor = enabledColor
     }
+    
     @IBAction func delayPressed(_ sender: UIButton) {
         setDelay.backgroundColor = enabledColor
     }
+    
     @IBAction func distortionPressed(_ sender: UIButton) {
         setDistortion.backgroundColor = enabledColor
     }
+    
     @IBAction func reverbPressed(_ sender: UIButton) {
         setReverb.backgroundColor = enabledColor
     }
+    
     @IBAction func setFx(_ sender: Any) {
         if enterFx.isTouchInside {
             enterFx.backgroundColor = enabledColor

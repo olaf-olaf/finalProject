@@ -25,8 +25,7 @@ class ReverbParameterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setReverbButton.layer.cornerRadius = 5
-        
-        
+    
         decayKnob = Knob(frame: decayKnobPlaceHolder.bounds)
         decayKnobPlaceHolder.addSubview(decayKnob)
         decayKnob.setKnobDisplay(largeButton: true, minimum: 0, maximum: 2)
@@ -52,6 +51,5 @@ class ReverbParameterViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

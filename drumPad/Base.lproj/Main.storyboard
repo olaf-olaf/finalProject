@@ -560,21 +560,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-5a-to4">
-                                <rect key="frame" x="-97" y="348" width="284" height="31"/>
+                                <rect key="frame" x="-87" y="348" width="284" height="31"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="rkW-Za-Tht"/>
+                                    <constraint firstAttribute="width" constant="280" id="gXP-tW-pRs"/>
                                 </constraints>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="VTk-Ia-Vdh">
-                                <rect key="frame" x="-2" y="348" width="284" height="31"/>
+                                <rect key="frame" x="3" y="348" width="284" height="31"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="c2U-Pt-yTH">
                                 <rect key="frame" x="178" y="348" width="284" height="31"/>
                                 <color key="tintColor" red="1" green="0.2632701375" blue="0.23594556529999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="Y8Y-2U-jDJ"/>
+                                    <constraint firstAttribute="width" constant="280" id="kWS-2h-wrF"/>
                                 </constraints>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="JcH-nH-6AE">
@@ -634,7 +634,7 @@
                                 <rect key="frame" x="125" y="52" width="125" height="30"/>
                                 <color key="backgroundColor" white="0.96999999999999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="jJB-pw-NYv"/>
+                                    <constraint firstAttribute="width" constant="125" id="OKy-AM-eEB"/>
                                 </constraints>
                                 <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Back"/>
@@ -646,20 +646,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="GGf-h9-I4m" firstAttribute="top" secondItem="3Lk-8u-hk6" secondAttribute="bottom" constant="32" id="4ng-dx-EOa"/>
-                            <constraint firstItem="JcH-nH-6AE" firstAttribute="top" secondItem="c2U-Pt-yTH" secondAttribute="top" id="7aV-U0-r4j"/>
-                            <constraint firstItem="KdC-5a-to4" firstAttribute="top" secondItem="VTk-Ia-Vdh" secondAttribute="top" id="DXW-KY-Rd9"/>
-                            <constraint firstItem="VTk-Ia-Vdh" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leading" id="Fcw-oC-OCR"/>
-                            <constraint firstItem="KdC-5a-to4" firstAttribute="top" secondItem="ugh-HJ-Jxp" secondAttribute="top" constant="348" id="GwG-5V-XQV"/>
-                            <constraint firstItem="dVv-Fc-fNE" firstAttribute="centerX" secondItem="ugh-HJ-Jxp" secondAttribute="centerX" id="LcL-Pp-F03"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="VTk-Ia-Vdh" secondAttribute="trailing" constant="79" id="OSt-Db-OST"/>
-                            <constraint firstItem="mi7-49-wPy" firstAttribute="top" secondItem="dVv-Fc-fNE" secondAttribute="bottom" constant="90" id="Uzs-V5-MXH"/>
-                            <constraint firstItem="c2U-Pt-yTH" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leading" constant="180" id="WFy-aN-5CT"/>
-                            <constraint firstAttribute="trailing" secondItem="JcH-nH-6AE" secondAttribute="trailing" id="bSW-yA-xbV"/>
-                            <constraint firstItem="KdC-5a-to4" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leading" constant="-95" id="f5s-oz-xmh"/>
-                            <constraint firstItem="VTk-Ia-Vdh" firstAttribute="top" secondItem="JcH-nH-6AE" secondAttribute="top" id="i9G-L9-sy9"/>
-                            <constraint firstItem="JcH-nH-6AE" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leadingMargin" constant="79" id="jLq-fs-Afp"/>
-                            <constraint firstItem="GGf-h9-I4m" firstAttribute="centerX" secondItem="dVv-Fc-fNE" secondAttribute="centerX" id="k1l-2d-M0o"/>
+                            <constraint firstItem="dVv-Fc-fNE" firstAttribute="centerX" secondItem="ugh-HJ-Jxp" secondAttribute="centerX" id="2hO-ix-eS7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VTk-Ia-Vdh" secondAttribute="trailing" constant="74" id="4lt-b9-JPZ"/>
+                            <constraint firstAttribute="trailing" secondItem="JcH-nH-6AE" secondAttribute="trailing" id="6V5-Cd-6A7"/>
+                            <constraint firstItem="JcH-nH-6AE" firstAttribute="top" secondItem="c2U-Pt-yTH" secondAttribute="top" id="AX9-IS-Z0c"/>
+                            <constraint firstItem="VTk-Ia-Vdh" firstAttribute="top" secondItem="JcH-nH-6AE" secondAttribute="top" id="M2i-cL-1NL"/>
+                            <constraint firstItem="c2U-Pt-yTH" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leading" constant="180" id="SHJ-76-LkH"/>
+                            <constraint firstItem="GGf-h9-I4m" firstAttribute="centerX" secondItem="dVv-Fc-fNE" secondAttribute="centerX" id="ZuV-3L-dWE"/>
+                            <constraint firstItem="KdC-5a-to4" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leading" constant="-85" id="cYb-oa-Mcs"/>
+                            <constraint firstItem="mi7-49-wPy" firstAttribute="top" secondItem="dVv-Fc-fNE" secondAttribute="bottom" constant="90" id="ckp-pZ-aNx"/>
+                            <constraint firstItem="GGf-h9-I4m" firstAttribute="top" secondItem="3Lk-8u-hk6" secondAttribute="bottom" constant="32" id="g9U-RR-N9h"/>
+                            <constraint firstItem="KdC-5a-to4" firstAttribute="top" secondItem="VTk-Ia-Vdh" secondAttribute="top" id="ifR-hq-adN"/>
+                            <constraint firstItem="VTk-Ia-Vdh" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leadingMargin" constant="-11" id="s0M-9w-8hD"/>
+                            <constraint firstItem="JcH-nH-6AE" firstAttribute="leading" secondItem="ugh-HJ-Jxp" secondAttribute="leadingMargin" constant="79" id="uIt-6T-R7l"/>
+                            <constraint firstItem="KdC-5a-to4" firstAttribute="top" secondItem="ugh-HJ-Jxp" secondAttribute="top" constant="348" id="xrO-wC-Ing"/>
                         </constraints>
                     </view>
                     <connections>
@@ -853,7 +853,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SY9-Uh-moG"/>
         <segue reference="ihj-9r-qpM"/>
+        <segue reference="SY9-Uh-moG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,8 +12,8 @@ import UIKit
 
 class RingParameterViewController: UIViewController {
     
-    var FrequencyAKnob: Knob!
-    var FrequencyBKnob: Knob!
+    var frequencyAKnob: Knob!
+    var frequencyBKnob: Knob!
 
     @IBOutlet weak var frequencyBPKnoblaceholder: UIView!
     @IBOutlet weak var frequencyAKnobPlaceholder: UIView!
@@ -25,21 +25,15 @@ class RingParameterViewController: UIViewController {
         super.viewDidLoad()
         setRingButton.layer.cornerRadius = 5
         
-        FrequencyAKnob = Knob(frame: frequencyAKnobPlaceholder.bounds)
-        frequencyAKnobPlaceholder.addSubview(FrequencyAKnob)
-        FrequencyAKnob.lineWidth = 5.0
-        FrequencyAKnob.pointerLength = 10.0
-        FrequencyAKnob.minimumValue = 0
-        FrequencyAKnob.maximumValue = 800
-        FrequencyAKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency1)
+        frequencyAKnob = Knob(frame: frequencyAKnobPlaceholder.bounds)
+        frequencyAKnobPlaceholder.addSubview(frequencyAKnob)
+        frequencyAKnob.setKnobDisplay(largeButton: true, minimum: 0, maximum: 800)
+        frequencyAKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency1)
         
-        FrequencyBKnob = Knob(frame: frequencyBPKnoblaceholder.bounds)
-        frequencyBPKnoblaceholder.addSubview(FrequencyBKnob)
-        FrequencyBKnob.lineWidth = 5.0
-        FrequencyBKnob.pointerLength = 10.0
-        FrequencyBKnob.minimumValue = 0
-        FrequencyBKnob.maximumValue = 800
-        FrequencyBKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency2)
+        frequencyBKnob = Knob(frame: frequencyBPKnoblaceholder.bounds)
+        frequencyBPKnoblaceholder.addSubview(frequencyBKnob)
+        frequencyBKnob.setKnobDisplay(largeButton: true, minimum: 0, maximum: 800)
+        frequencyBKnob.value = Float(AudioController.sharedInstance.ringModulator.frequency2)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,8 +42,8 @@ class RingParameterViewController: UIViewController {
     
     @IBAction func setRingParameters(_ sender: UIButton) {
         setRingButton.backgroundColor = enabledColor
-        let frequencyA = Double(FrequencyAKnob.value)
-        let frequencyB = Double(FrequencyBKnob.value)
+        let frequencyA = Double(frequencyAKnob.value)
+        let frequencyB = Double(frequencyBKnob.value)
         AudioController.sharedInstance.setRingParameters(ringFrequencyOne: frequencyA, ringFrequencyTwo: frequencyB)
     }
 }

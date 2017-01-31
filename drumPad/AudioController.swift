@@ -42,7 +42,7 @@ class AudioController {
     var ringModulator: AKRingModulator
     var delay: AKDelay
     let finalMixer: AKMixer
-    var currentFrequency = 60.0
+    var currentFrequency = 120.0
     
     let generator = AKOperationGenerator() { parameters in
         let beep = AKOperation.sineWave(frequency: 480)
@@ -102,7 +102,7 @@ class AudioController {
     
     /* 
      replaceKit takes a string and then replaces the audiofiles used by
-     the synthesizer. If files are not found an error will be print.
+     the synthesizer. If files are not found an error will be printed.
      **/
     func replaceKit(kitName: String) {
         let newKickFile = try! AKAudioFile(readFileName: kitName+"Kick.wav")
