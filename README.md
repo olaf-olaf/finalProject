@@ -6,7 +6,7 @@
 
 # DrumPad
 
-Drumpad is a samplepad for your iphone. You can use this app to play drums with 6 different kits. All sounds can be manipulated distortion, reverb, delay and a ring modulator. The user can tweak the effects settings to his own liking. 
+Drumpad is a samplepad for your iphone. You can use this app to play drums with 6 different kits. All sounds can be manipulated with distortion, reverb, delay and a ring modulator. The user can tweak the effects settings to his own liking. 
 
 ### Main view
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/DrumPad.png" width="200px"></br>
@@ -22,7 +22,6 @@ Drumpad is a samplepad for your iphone. You can use this app to play drums with 
 
 ### Audio Mixer
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/AudioMixer.png" width="200px"></br>
-
 - The vertical sliders can be used to set the levels of each drumpad.
 - The knobs beneath the sliders determine the panning of each drumpad.
 - Pressing the 'Back' button wil open the main view and apply the new mix.
@@ -30,6 +29,15 @@ Drumpad is a samplepad for your iphone. You can use this app to play drums with 
 ### Effects Mixer
 
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXMixer.png" width="200px"></br>
+- The vertical sliders determine the wetness of the effects.
+- Pressing any of the buttons beneath the sliders will open a corresponding view where parameters of the effects can be adjusted.
+- Pressing the 'Back' button wil open the main view and apply the new mix.
+
+### Effects Parameter adjuster
+<img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXParameters.png" width="200px"></br>
+- Each knob will adjust a corresponding value of an effect parameter.
+- Pressing the 'Set' button wil open the effects mixer and apply the new effect parameters.
+
 
 
 ## CopyRight statement
