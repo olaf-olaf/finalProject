@@ -45,26 +45,6 @@ class Knob: UIControl {
         set { setValue(value: newValue, animated: false) }
     }
     
-    /* 
-     setValue sets calculates the angle of the knob for a given value
-     and then animates it.
-     **/
-    func setValue(value: Float, animated: Bool) {
-        if value != self.value {
-            self.backingValue = min(self.maximumValue, max(self.minimumValue, value))
-            let angleRange = endAngle - startAngle
-            let valueRange = CGFloat(maximumValue - minimumValue)
-            let angle = CGFloat(value - minimumValue) / valueRange * angleRange + startAngle
-            knobRenderer.setPointerAngle(pointerAngle: angle, animated: animated)
-        }
-    }
-    
-    // RoundValue sets value to 0 if it's current value is close to it.
-    func roundValue() {
-        if value > -0.20 && value < 0.20 {
-            value = 0
-        }
-    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         createSublayers()
@@ -95,8 +75,40 @@ class Knob: UIControl {
         }
     }
     
+    /*
+     setValue sets calculates the angle of the knob for a given value
+     and then animates it.
+     **/
+    func setValue(value: Float, animated: Bool) {
+        if value != self.value {
+            self.backingValue = min(self.maximumValue, max(self.minimumValue, value))
+            let angleRange = endAngle - startAngle
+            let valueRange = CGFloat(maximumValue - minimumValue)
+            let angle = CGFloat(value - minimumValue) / valueRange * angleRange + startAngle
+            knobRenderer.setPointerAngle(pointerAngle: angle, animated: animated)
+        }
+    }
+    
+    // RoundValue sets value to 0 if it's current value is close to it.
+    func roundValue() {
+        if value > -0.20 && value < 0.20 {
+            value = 0
+        }
+        
+    }
+
+    
      required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setKnobDisplay(largeButton: Bool, minimum: Float, maximum: Float){
+        if largeButton == true {
+            lineWidth = 5.0
+            pointerLength = 10.0
+        }
+        minimumValue = minimum
+        maximumValue = maximum
     }
     
     // CreateSublayers sets the values for of the knobrenderer object.
@@ -202,6 +214,7 @@ class KnobRenderer {
         updateTrackLayerPath()
         updatePointerLayerPath()
     }
+    
     /* 
     updateBounds takes a bounds rectangle, resizes the layers to match
     and positions the layers in the center of the bounding rectangle.
@@ -215,6 +228,7 @@ class KnobRenderer {
         update()
     }
 }
+
 /*
  RotationgestureRecognizer is custom gesture recognizer that follows
  the rotating movement of a single touch. It is similar to a
