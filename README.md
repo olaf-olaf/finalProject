@@ -8,7 +8,7 @@
 
 Drumpad is a samplepad for your iphone. You can use this app to play drums with 6 different kits. All sounds can be manipulated distortion, reverb, delay and a ring modulator. The user can tweak the effects settings to his own liking. 
 
-![](doc/DrumPad.png =100*100)
+![](doc/DrumPad.png | width=48)
 
 This is the main view of the app. 
 - The slider can be used to set the tempo of the metronome.
