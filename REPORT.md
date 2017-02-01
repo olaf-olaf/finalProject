@@ -43,5 +43,14 @@ This file contains the ShowKitLed class. This contains an array is strings with 
 
 #### View
 
+### ViewController.swift
+
+<img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/DrumPad.png" width="200px"></br>
+
+This class contains 'ViewController', the main view of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads trigger the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
+
+
+
+
 
 
