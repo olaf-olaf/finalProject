@@ -57,13 +57,40 @@ This file contains a viewcontroller called AudioMixerViewController. This viewco
 ##### FxController.swift
 
 FxController.swift contains a viewController called FxController. FxController consists of 4 sliders and 4 buttons. When 'back' is pressed a Audiocontroller method 'mixFx' will be called. All buttons in this view will show another view when pressed.
- <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXMixer.png" width="200px"></br>
+
+<img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXMixer.png" width="200px"></br>
  
 ##### Reverb / Delay / Distortion / Ring ParameterViewController.Swift
 
 Each of these viewcontrollers contains a set of knobs that represent values of the effect objects in AudioController. Whenever 'back' is pressed by the user an AudioController method that updates the effects object values to the values of the knobs will be called. 
 
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXParameters.png" width="200px"></br>
+
+#### Controller
+
+##### Main.storyboard
+
+This file consists of some segues that are triggered by buttons. 
+
+## Challenges in process
+
+In the proces of making this app i've come across a few moments where I had to change my initial design. These moments will be discussed inchronological order. 
+
+### Figuring out which library to use 11-01-2017
+
+### Getting rid of latency due to initialisation 12-01-2017
+
+### Problems with file formats 16-01-2017
+
+### Implementing custom gestures / controllers 18-01-2017
+
+### Getting rid of clicks 19-01-2017
+
+## Differences in design, then and now. 
+
+
+
+
 
 
 
