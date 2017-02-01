@@ -23,3 +23,9 @@ Every view in the application is a visual representation of certain variables wi
 
 ##### AudioController.swift
 
+This file contains the AudioController class. When initialized an object containt a sample based synthesizer is created. The class contains methods regarding replacing samples, playing samples and the metronome, and setting parameters for mixing and effects. AudioController can only be initialised as a singleton.
+
+#### Knob.swift
+
+This file contains three classes related to a custom reusable knob that can be used to determine values for variables in a way that is similar to a slider. The first class is a subclass from UIControl called Knob. This class handles the values a knob can represent and updates them according to data from a gesture recognizer. To do this the knob needs a visual appearence and a gesture recognizer that can detect and handle a rotating movement from the user. Knob uses instances of the other two classes to achieve this. The second class, KnobRenderer, takes care of the visual appereance of the knob. The third class, RotationGestureRecognizer, is a subclass of UIPanRecognizer that 
+
