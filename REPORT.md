@@ -44,13 +44,26 @@ This file contains the ShowKitLed class. This contains an array is strings with 
 #### View
 
 ##### ViewController.swift
-This file contains 'ViewController', the main view of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads trigger the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
+This file contains 'ViewController', the main view controller of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads trigger the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
 
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/DrumPad.png" width="200px"></br>
 
 ##### AudioMixerViewController.swift
 
+This file contains a viewcontroller called AudioMixerViewController. This viewcontroller consists of 4 sliders and 4 knobs. When 'back' is pressed the values of the sliders and the knob will be bundled in an object and then will be passed on to the AudioController method 'mixAudio' is called. 
 
+<img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/AudioMixer.png" width="200px"></br>
+
+##### FxController.swift
+
+FxController.swift contains a viewController called FxController. FxController consists of 4 sliders and 4 buttons. When 'back' is pressed a Audiocontroller method 'mixFx' will be called. All buttons in this view will show another view when pressed.
+ <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXMixer.png" width="200px"></br>
+ 
+##### Reverb / Delay / Distortion / Ring ParameterViewController.Swift
+
+Each of these viewcontrollers contains a set of knobs that represent values of the effect objects in AudioController. Whenever 'back' is pressed by the user an AudioController method that updates the effects object values to the values of the knobs will be called. 
+
+<img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/FXParameters.png" width="200px"></br>
 
 
 
