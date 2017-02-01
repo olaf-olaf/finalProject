@@ -25,7 +25,23 @@ Every view in the application is a visual representation of certain variables wi
 
 This file contains the AudioController class. When initialized an object containt a sample based synthesizer is created. The class contains methods regarding replacing samples, playing samples and the metronome, and setting parameters for mixing and effects. AudioController can only be initialised as a singleton.
 
-#### Knob.swift
+##### Knob.swift
 
-This file contains three classes related to a custom reusable knob that can be used to determine values for variables in a way that is similar to a slider. The first class is a subclass from UIControl called Knob. This class handles the values a knob can represent and updates them according to data from a gesture recognizer. To do this the knob needs a visual appearence and a gesture recognizer that can detect and handle a rotating movement from the user. Knob uses instances of the other two classes to achieve this. The second class, KnobRenderer, takes care of the visual appereance of the knob. The third class, RotationGestureRecognizer, is a subclass of UIPanRecognizer that 
+This file contains three classes related to a custom reusable knob that can be used to determine values for variables in a way that is similar to a slider. The first class is a subclass from UIControl called Knob. This class handles the values a knob can represent and updates them according to data from a gesture recognizer. To do this the knob needs a visual appearence and a gesture recognizer that can detect and handle a rotating movement from the user. Knob uses instances of the other two classes to achieve this. The second class, KnobRenderer, takes care of the visual appereance of the knob. The third class, RotationGestureRecognizer, is a subclass of UIPanRecognizer that can detect rotating movements of the users finger on a knob. 
+
+##### MixerParameters.Swift
+
+This file contains two classes that are used to bundle related values. By bundling different values together one can keep unit interfaces small.It also prevents methods from just taking any value as long as it is of the same type. The first class is MixerLevels. MixerLevels contains 4 floats representing the levels of different audioplayers. The second class is MixerPanning. Mixerpanning contains 4 floats representing the stereo imaging of different audioplayers. Both classes are used as a paremeter for the AudioController method 'mixAudio'.
+
+##### ShowMixerLed.swift
+
+This file contains a class called ShowMixerLed. This class contains functions that return strings that can be displayed on labels in the AudioMixerViewController.
+
+##### ShowKitLed
+
+This file contains the ShowKitLed class. This contains an array is strings with the names of all drumkits. It also contains 2 methods that allow users to scroll back and forth through each element of the array. AudioController uses an instance of ShowKitLed to keep track of which kit is being used. Viewcontroller uses the instance of ShowKitLed in AudioController to the display the kit that is being used to the user. 
+
+#### View
+
+
 
