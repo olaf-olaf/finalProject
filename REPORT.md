@@ -74,7 +74,7 @@ This file consists of some segues that are triggered by buttons.
 
 ## Challenges in process
 
-In the proces of making this app i've come across a few moments where I had to change my initial design. These moments will be discussed inchronological order. 
+In the proces of making this app i've come across a few moments where I had to change my initial design. These moments will be discussed in chronological order. 
 
 
 ### Getting rid of latency due to initialisation 12-01-2017
@@ -88,6 +88,10 @@ I decided to stick with audiokit because it has so many possibilities and change
 When I implemented switching between kit the app occasionally mysteriously crashed when playing with a new kit. After some research it turned out the audioplayer couldn't handle initially loading a mono file and then switching to a stereo file. I fixed this by converting all the samples to mono using Wave Agent. 
 
 ### Implementing custom gestures / controllers 18-01-2017
+
+One of my goals in creating this app was to make the app feel like a real samplepad as much as possible. Essential to this feeling is having similar controls. Because of this I decided to implement a knob into my project. Since Xcode has no ready made knob available I tried getting one by installing a pod. After trying a few pods they all turned out to be worthless. I ended up following a Ray Wenderlich 
+
+
 
 ### Getting rid of clicks 19-01-2017
 
