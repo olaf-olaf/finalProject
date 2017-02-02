@@ -6,15 +6,16 @@
 //  Student number: 10787321
 //  Course: Programmeerproject
 //
-//  Copyright © 2017 Olaf Kroon. All rights reserved.
+//  ShowKitLed.swift contains the ShowKitLed class that is used to represent the kit that is used.
 //
+//  Copyright © 2017 Olaf Kroon. All rights reserved.
+
 
 import Foundation
 
 /**
- ShowKitLed represents the red square on the main view of this app.
- It can display one of the kits in drumKits. To add a new drumkit simply
- upload the samples and add the name of the kit to drumKits. 
+ ShowKitLed represents the red square on the main view of this app.It displays 
+ one of the kits in drumKits.
  */
 class ShowKitLed {
     let drumKits = ["808","909","606","Funk","Jazz","Techno"]
@@ -25,7 +26,6 @@ class ShowKitLed {
         displayKit = drumKits[0]
     }
     
-    // Updates displayKit with the next element in drumKits.
     func displayNext() {
         if index == drumKits.count - 1 {
             index = 0
@@ -35,7 +35,6 @@ class ShowKitLed {
         displayKit = drumKits[index]
     }
     
-    // Updates displayKit with the previous element in drumKits.
     func displayPrevious() {
         if index == 0 {
             index = drumKits.count - 1

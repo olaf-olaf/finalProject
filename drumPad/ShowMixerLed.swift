@@ -6,6 +6,9 @@
 //  Student number: 10787321
 //  Course: Programmeerproject
 //
+//  ShowMixerLed.swift contains a class called ShowMixerLed. This class contains functions that return
+//  strings that can be displayed on labels in the AudioMixerViewController.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
@@ -20,14 +23,12 @@ class ShowMixerLed {
     init() {
     }
     
-    // Round the current level of a float and return that value in a string.
     func calculateLevel(currentLevel: Float) -> String {
         let level = String(format: "%.2f", (currentLevel - 0.5) * 10)
         let output = "DB:" + String(level)
         return output
     }
     
-    // Check if currentPan is negative and return a string depending on true or false.
     func calculatePan(currentPan: Float) -> String {
         var output: String
         var displayPan = currentPan

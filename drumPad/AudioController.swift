@@ -6,6 +6,8 @@
 //  Student number: 10787321
 //  Course: Programmeerproject
 //
+//  AudioController.swift contains the sample based synthesizer that provides all audio of this application.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 
 import Foundation
@@ -17,6 +19,7 @@ sample based synthesizer.
 **/
 class AudioController {
     
+    // MARK: - Variables.
     // Initialise Audiokit within the initialisation of a singleton to prevent latency and crashes.
     static let sharedInstance = AudioController()
     let LEDKitSelector = ShowKitLed()
@@ -55,7 +58,7 @@ class AudioController {
         return beeps
     }
     
-    // Make the init private so only within AudioController an instance of this class can be created. 
+    // MARK: - Init.
     private init() {
         kickPlayer = try! AKAudioPlayer(file: kickFile)
         kickPlayer.volume = 0.5
@@ -100,10 +103,7 @@ class AudioController {
         setDistortionParameters(distortionDecimation: 0.05, distortionRouding: 0.1)
     }
     
-    /* 
-     replaceKit takes a string and then replaces the audiofiles used by
-     the synthesizer. If files are not found an error will be printed.
-     **/
+    // MARK: - Methods.
     func replaceKit(kitName: String) {
         let newKickFile = try! AKAudioFile(readFileName: kitName+"Kick.wav")
         let newSnareFile = try! AKAudioFile(readFileName: kitName+"Snare.wav")
@@ -123,7 +123,6 @@ class AudioController {
         }
     }
     
-    // mixFx sets the dry / wet levels of the effects used in the synthesizer.
     func mixFx(reverbLevel: Float, distortionLevel: Float, ringLevel: Float, delayLevel: Float){
         reverb.dryWetMix = Double(reverbLevel)
         distortion.finalMix = Double(distortionLevel)
@@ -131,7 +130,6 @@ class AudioController {
         delay.dryWetMix = Double(delayLevel)
     }
     
-    // MixAudio sets the levels of every audioplayer.
     func mixAudio(levels: MixerLevels, panning: MixerPanning){
         kickPlayer.volume = Double(levels.kickLevel)
         backupKickPlayer.volume = Double(levels.kickLevel)
@@ -153,8 +151,7 @@ class AudioController {
         hatPlayer.pan = Double(panning.hatPan)
         backupHatPlayer.pan = Double(panning.hatPan)
     }
-    
-    // setMetronome stops or starts generator depending on its current state.
+
     func setMetronome() {
         if generator.isStarted {
             generator.stop()
@@ -162,16 +159,7 @@ class AudioController {
             generator.start()
         }
     }
-    // setMetronomeTempo updates the frequency of generator in bpm.
-    func setMetronomeTempo(bpm: Float){
-        currentFrequency = Double(bpm)
-        generator.parameters = [currentFrequency]
-    }
     
-    /*
-     playSmaple plays an audioPlayer. If the given audioplayer is playing already
-     then it plays it's backup audioplayer.
-    **/
     func playSample(player: AKAudioPlayer, backupPlayer: AKAudioPlayer){
         if player.isStarted {
             backupPlayer.play()
@@ -179,8 +167,7 @@ class AudioController {
             player.play()
         }
     }
-    
-    // setReverbParameters updates parameters of reverb.
+
     func setReverbParameters(randomInflections: Double, maxDelay: Double, Decay: Double) {
         reverb.gain = 10
         reverb.minDelayTime = 0.009
@@ -189,20 +176,22 @@ class AudioController {
         reverb.decayTimeAtNyquist = Decay
         reverb.randomizeReflections = randomInflections
     }
+
+    func setMetronomeTempo(bpm: Float){
+        currentFrequency = Double(bpm)
+        generator.parameters = [currentFrequency]
+    }
     
-    // setDelayParameters updates parameters of delay.
     func setDelayParameters(delayTime: Double, delayFeedback: Double){
         delay.time = delayTime
         delay.feedback = delayFeedback
     }
     
-    // setRingParameters updates parameters of ringModulator.
     func setRingParameters(ringFrequencyOne: Double, ringFrequencyTwo: Double) {
         ringModulator.frequency1 = ringFrequencyOne
         ringModulator.frequency2 = ringFrequencyTwo
     }
-    
-     // setDistortionParameters updates parameters of distortion.
+
     func setDistortionParameters(distortionDecimation: Double, distortionRouding: Double) {
         distortion.decimation = distortionDecimation
         distortion.rounding = distortionRouding

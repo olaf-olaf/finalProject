@@ -5,14 +5,21 @@
 //  Created by Olaf Kroon on 11/01/17.
 //  Student number: 10787321
 //  Course: Programmeerproject
+//
+//  FXController contains a mixer that is used to set the dry / wet ratio of effects and it
+//  contains button
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
 import UIKit
 
 class FxController: UIViewController {
+    
+    // MARK: - Variables.
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
+    // MARK: - Outlets.
     @IBOutlet weak var setRing: UIButton!
     @IBOutlet weak var setDelay: UIButton!
     @IBOutlet weak var setDistortion: UIButton!
@@ -42,6 +49,7 @@ class FxController: UIViewController {
         }
     }
     
+    // MARK: - UIViewController lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         ringSlider.value = Float(AudioController.sharedInstance.ringModulator.mix)
@@ -60,6 +68,7 @@ class FxController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Outlets.
     @IBAction func ringPressed(_ sender: UIButton) {
         setRing.backgroundColor = enabledColor
     }

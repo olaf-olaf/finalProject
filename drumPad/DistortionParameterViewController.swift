@@ -5,21 +5,28 @@
 //  Created by Olaf Kroon on 25/01/17.
 //  Student number: 10787321
 //  Course: Programmeerproject
+//
+//  DistortionParametersViewController consists of rotary knobs that are used to determine the parameters
+//  of the reverb object in AudioContoller.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
 import UIKit
 
 class distortionParametersViewController: UIViewController {
-    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
+    // MARK: - Variables.
+    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     var decimationKnob: Knob!
     var roundingKnob: Knob!
     
+    // MARK: - Outlets.
     @IBOutlet weak var setDistortion: UIButton!
     @IBOutlet weak var roundingKnobPlaceholder: UIView!
     @IBOutlet weak var decimationKnobPlaceholder: UIView!
     
+    // MARK: - UIViewController lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         setDistortion.layer.cornerRadius = 5
@@ -39,6 +46,7 @@ class distortionParametersViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Actions.
     @IBAction func setDistortionParameters(_ sender: UIButton) {
         setDistortion.backgroundColor = enabledColor
         let decimation = Double(decimationKnob.value)

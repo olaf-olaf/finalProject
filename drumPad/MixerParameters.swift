@@ -6,12 +6,13 @@
 //  Student number: 10787321
 //  Course: Programmeerproject
 //
+//  MixerParameters.swift contains two classes that are used to bundle related values.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
 import Foundation
 
-// MixerLevels is a class that bundles related values in an object.
 class MixerLevels {
     var kickLevel: Float
     var snareLevel: Float
@@ -26,7 +27,6 @@ class MixerLevels {
     }
 }
 
-// MixerPanning is a class that bundles related values in an object.
 class MixerPanning {
     var kickPan: Float
     var snarePan: Float

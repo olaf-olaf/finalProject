@@ -5,13 +5,24 @@
 //  Created by Olaf Kroon on 09/01/17.
 //  Student number: 10787321
 //  Course: Programmeerproject
+//
+//  ViewController contains the main view of the application. It consists of a slider, 
+//  4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, 
+//  ands two buttons that can be used to scroll through different kits.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
-   
+    
+    // MARK: - Variables.
+    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
+    let disabledColor = UIColor(red: (245/255.0), green: (245/255.0), blue: (245/255.0), alpha: 1.0)
+    let idlePadColor = UIColor(red: (102/255.0), green: (102/255.0), blue: (102/255.0), alpha: 1.0)
+    
+    // MARK: - Outlets.
     @IBOutlet weak var mixerButton: UIButton!
     @IBOutlet weak var fxButton: UIButton!
     @IBOutlet weak var metronomeTempoSlider: UISlider!
@@ -24,10 +35,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var hiHatPad: UIButton!
     @IBOutlet weak var snarePad: UIButton!
     
-    let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
-    let disabledColor = UIColor(red: (245/255.0), green: (245/255.0), blue: (245/255.0), alpha: 1.0)
-    let idlePadColor = UIColor(red: (102/255.0), green: (102/255.0), blue: (102/255.0), alpha: 1.0)
-    
+    // MARK: - UIViewController lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         kitDisplay.text = AudioController.sharedInstance.LEDKitSelector.displayKit
@@ -49,6 +57,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Actions.
     @IBAction func touchDownMixer(_ sender: UIButton) {
         mixerButton.backgroundColor = enabledColor
     }

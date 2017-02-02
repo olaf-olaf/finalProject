@@ -5,12 +5,18 @@
 //  Created by Olaf Kroon on 13/01/17.
 //  Student number: 10787321
 //  Course: Programmeerproject
+//
+//  AudioMixerViewController contains a mixer that is used to determine the panning and volume
+//  for all audioplayers in AudioController.
+//
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 //
 
 import UIKit
 
 class AudioMixerViewController: UIViewController {
+    
+    // MARK: - Variables.
     var snareKnob: Knob!
     var hatKnob: Knob!
     var kickKnob: Knob!
@@ -18,6 +24,7 @@ class AudioMixerViewController: UIViewController {
     let ledController = ShowMixerLed()
     let enabledColor = UIColor(red: (246/255.0), green: (124/255.0), blue: (113/255.0), alpha: 1.0)
     
+    // MARK: - Outlets.
     @IBOutlet weak var snareLed: UILabel!
     @IBOutlet weak var kickLed: UILabel!
     @IBOutlet weak var hatLed: UILabel!
@@ -51,6 +58,7 @@ class AudioMixerViewController: UIViewController {
         }
     }
     
+    // MARK: - UIViewController lifecycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         kickMixer.value = Float(AudioController.sharedInstance.kickPlayer.volume)
@@ -80,6 +88,7 @@ class AudioMixerViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // MARK: - Actions.
     @IBAction func changeHatDb(_ sender: Any) {
         if hatMixer.isTracking {
             hatLed.text = ledController.calculateLevel(currentLevel: hatMixer.value)
