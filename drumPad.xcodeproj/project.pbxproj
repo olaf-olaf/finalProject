@@ -14,14 +14,6 @@
 		ED24B5191E38B612000E96FB /* DistortionParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B5181E38B612000E96FB /* DistortionParameterViewController.swift */; };
 		ED24B51B1E38C355000E96FB /* DelayParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B51A1E38C355000E96FB /* DelayParameterViewController.swift */; };
 		ED24B51D1E38CA6F000E96FB /* RingParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED24B51C1E38CA6F000E96FB /* RingParameterViewController.swift */; };
-		ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26413E1E2CDFA400A790FB /* 909Hat.wav */; };
-		ED2641431E2CDFA400A790FB /* 909Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED26413F1E2CDFA400A790FB /* 909Kick.wav */; };
-		ED2641441E2CDFA400A790FB /* 909Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641401E2CDFA400A790FB /* 909Snare.wav */; };
-		ED2641451E2CDFA400A790FB /* 909Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641411E2CDFA400A790FB /* 909Tom.wav */; };
-		ED26414A1E2CDFBA00A790FB /* JazzHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641461E2CDFBA00A790FB /* JazzHat.wav */; };
-		ED26414B1E2CDFBA00A790FB /* JazzKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641471E2CDFBA00A790FB /* JazzKick.wav */; };
-		ED26414C1E2CDFBA00A790FB /* JazzSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641481E2CDFBA00A790FB /* JazzSnare.wav */; };
-		ED26414D1E2CDFBA00A790FB /* JazzTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED2641491E2CDFBA00A790FB /* JazzTom.wav */; };
 		ED2B25AE1E2B9AA000364598 /* ShowKitLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */; };
 		ED367B401E2FAE6B00B0235F /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED367B3F1E2FAE6B00B0235F /* Knob.swift */; };
 		ED44F2CF1E4364780032ECEA /* 606Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2CB1E4364780032ECEA /* 606Hat.wav */; };
@@ -36,6 +28,18 @@
 		ED44F2E01E4364DB0032ECEA /* TechnoKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2DC1E4364DB0032ECEA /* TechnoKick.wav */; };
 		ED44F2E11E4364DB0032ECEA /* TechnoSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2DD1E4364DB0032ECEA /* TechnoSnare.wav */; };
 		ED44F2E21E4364DB0032ECEA /* TechnoTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2DE1E4364DB0032ECEA /* TechnoTom.wav */; };
+		ED44F2E71E4365410032ECEA /* 808Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2E31E4365410032ECEA /* 808Hat.wav */; };
+		ED44F2E81E4365410032ECEA /* 808Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2E41E4365410032ECEA /* 808Kick.wav */; };
+		ED44F2E91E4365410032ECEA /* 808Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2E51E4365410032ECEA /* 808Snare.wav */; };
+		ED44F2EA1E4365410032ECEA /* 808Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2E61E4365410032ECEA /* 808Tom.wav */; };
+		ED44F2EF1E4365640032ECEA /* JazzHat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2EB1E4365640032ECEA /* JazzHat.wav */; };
+		ED44F2F01E4365640032ECEA /* JazzKick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2EC1E4365640032ECEA /* JazzKick.wav */; };
+		ED44F2F11E4365640032ECEA /* JazzSnare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2ED1E4365640032ECEA /* JazzSnare.wav */; };
+		ED44F2F21E4365640032ECEA /* JazzTom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2EE1E4365640032ECEA /* JazzTom.wav */; };
+		ED44F2F71E4365750032ECEA /* 909Hat.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2F31E4365750032ECEA /* 909Hat.wav */; };
+		ED44F2F81E4365750032ECEA /* 909Kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2F41E4365750032ECEA /* 909Kick.wav */; };
+		ED44F2F91E4365750032ECEA /* 909Snare.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2F51E4365750032ECEA /* 909Snare.wav */; };
+		ED44F2FA1E4365750032ECEA /* 909Tom.wav in Resources */ = {isa = PBXBuildFile; fileRef = ED44F2F61E4365750032ECEA /* 909Tom.wav */; };
 		ED6465AE1E28FADF00E046B2 /* AudioMixerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */; };
 		ED92EB3B1E36183F00A720FE /* ShowMixerLed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */; };
 		ED92EB3D1E37801E00A720FE /* ReverbParameterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED92EB3C1E37801E00A720FE /* ReverbParameterViewController.swift */; };
@@ -82,14 +86,6 @@
 		ED24B5181E38B612000E96FB /* DistortionParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistortionParameterViewController.swift; sourceTree = "<group>"; };
 		ED24B51A1E38C355000E96FB /* DelayParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayParameterViewController.swift; sourceTree = "<group>"; };
 		ED24B51C1E38CA6F000E96FB /* RingParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingParameterViewController.swift; sourceTree = "<group>"; };
-		ED26413E1E2CDFA400A790FB /* 909Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Hat.wav; path = ../../../iossamples/909/909Hat.wav; sourceTree = "<group>"; };
-		ED26413F1E2CDFA400A790FB /* 909Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Kick.wav; path = ../../../iossamples/909/909Kick.wav; sourceTree = "<group>"; };
-		ED2641401E2CDFA400A790FB /* 909Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Snare.wav; path = ../../../iossamples/909/909Snare.wav; sourceTree = "<group>"; };
-		ED2641411E2CDFA400A790FB /* 909Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Tom.wav; path = ../../../iossamples/909/909Tom.wav; sourceTree = "<group>"; };
-		ED2641461E2CDFBA00A790FB /* JazzHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzHat.wav; path = ../../../iossamples/jazz/JazzHat.wav; sourceTree = "<group>"; };
-		ED2641471E2CDFBA00A790FB /* JazzKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzKick.wav; path = ../../../iossamples/jazz/JazzKick.wav; sourceTree = "<group>"; };
-		ED2641481E2CDFBA00A790FB /* JazzSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzSnare.wav; path = ../../../iossamples/jazz/JazzSnare.wav; sourceTree = "<group>"; };
-		ED2641491E2CDFBA00A790FB /* JazzTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzTom.wav; path = ../../../iossamples/jazz/JazzTom.wav; sourceTree = "<group>"; };
 		ED2B25AD1E2B9AA000364598 /* ShowKitLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowKitLed.swift; sourceTree = "<group>"; };
 		ED367B3F1E2FAE6B00B0235F /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
 		ED44F2CB1E4364780032ECEA /* 606Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 606Hat.wav; sourceTree = "<group>"; };
@@ -104,6 +100,18 @@
 		ED44F2DC1E4364DB0032ECEA /* TechnoKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TechnoKick.wav; sourceTree = "<group>"; };
 		ED44F2DD1E4364DB0032ECEA /* TechnoSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TechnoSnare.wav; sourceTree = "<group>"; };
 		ED44F2DE1E4364DB0032ECEA /* TechnoTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = TechnoTom.wav; sourceTree = "<group>"; };
+		ED44F2E31E4365410032ECEA /* 808Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Hat.wav; path = audioSamples/808/808Hat.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2E41E4365410032ECEA /* 808Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Kick.wav; path = audioSamples/808/808Kick.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2E51E4365410032ECEA /* 808Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Snare.wav; path = audioSamples/808/808Snare.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2E61E4365410032ECEA /* 808Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 808Tom.wav; path = audioSamples/808/808Tom.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2EB1E4365640032ECEA /* JazzHat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzHat.wav; path = audioSamples/jazz/JazzHat.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2EC1E4365640032ECEA /* JazzKick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzKick.wav; path = audioSamples/jazz/JazzKick.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2ED1E4365640032ECEA /* JazzSnare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzSnare.wav; path = audioSamples/jazz/JazzSnare.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2EE1E4365640032ECEA /* JazzTom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = JazzTom.wav; path = audioSamples/jazz/JazzTom.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2F31E4365750032ECEA /* 909Hat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Hat.wav; path = audioSamples/909/909Hat.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2F41E4365750032ECEA /* 909Kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Kick.wav; path = audioSamples/909/909Kick.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2F51E4365750032ECEA /* 909Snare.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Snare.wav; path = audioSamples/909/909Snare.wav; sourceTree = SOURCE_ROOT; };
+		ED44F2F61E4365750032ECEA /* 909Tom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = 909Tom.wav; path = audioSamples/909/909Tom.wav; sourceTree = SOURCE_ROOT; };
 		ED6465AD1E28FADF00E046B2 /* AudioMixerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioMixerViewController.swift; sourceTree = "<group>"; };
 		ED92EB3A1E36183F00A720FE /* ShowMixerLed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowMixerLed.swift; sourceTree = "<group>"; };
 		ED92EB3C1E37801E00A720FE /* ReverbParameterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverbParameterViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +235,10 @@
 		ED3DDA2A1E3F675900BC9C52 /* 808 */ = {
 			isa = PBXGroup;
 			children = (
+				ED44F2E31E4365410032ECEA /* 808Hat.wav */,
+				ED44F2E41E4365410032ECEA /* 808Kick.wav */,
+				ED44F2E51E4365410032ECEA /* 808Snare.wav */,
+				ED44F2E61E4365410032ECEA /* 808Tom.wav */,
 			);
 			name = 808;
 			sourceTree = "<group>";
@@ -234,10 +246,10 @@
 		ED3DDA2B1E3F676800BC9C52 /* 909 */ = {
 			isa = PBXGroup;
 			children = (
-				ED26413E1E2CDFA400A790FB /* 909Hat.wav */,
-				ED2641411E2CDFA400A790FB /* 909Tom.wav */,
-				ED2641401E2CDFA400A790FB /* 909Snare.wav */,
-				ED26413F1E2CDFA400A790FB /* 909Kick.wav */,
+				ED44F2F31E4365750032ECEA /* 909Hat.wav */,
+				ED44F2F41E4365750032ECEA /* 909Kick.wav */,
+				ED44F2F51E4365750032ECEA /* 909Snare.wav */,
+				ED44F2F61E4365750032ECEA /* 909Tom.wav */,
 			);
 			name = 909;
 			sourceTree = "<group>";
@@ -245,10 +257,10 @@
 		ED3DDA2C1E3F676E00BC9C52 /* Jazz */ = {
 			isa = PBXGroup;
 			children = (
-				ED2641461E2CDFBA00A790FB /* JazzHat.wav */,
-				ED2641491E2CDFBA00A790FB /* JazzTom.wav */,
-				ED2641481E2CDFBA00A790FB /* JazzSnare.wav */,
-				ED2641471E2CDFBA00A790FB /* JazzKick.wav */,
+				ED44F2EB1E4365640032ECEA /* JazzHat.wav */,
+				ED44F2EC1E4365640032ECEA /* JazzKick.wav */,
+				ED44F2ED1E4365640032ECEA /* JazzSnare.wav */,
+				ED44F2EE1E4365640032ECEA /* JazzTom.wav */,
 			);
 			name = Jazz;
 			sourceTree = "<group>";
@@ -461,27 +473,31 @@
 			files = (
 				EDAB94021E23B62D00464F65 /* LaunchScreen.storyboard in Resources */,
 				ED44F2D01E4364780032ECEA /* 606Kick.wav in Resources */,
-				ED2641431E2CDFA400A790FB /* 909Kick.wav in Resources */,
 				EDAB93FF1E23B62D00464F65 /* Assets.xcassets in Resources */,
-				ED2641441E2CDFA400A790FB /* 909Snare.wav in Resources */,
 				ED44F2DA1E43648F0032ECEA /* FunkTom.wav in Resources */,
+				ED44F2E81E4365410032ECEA /* 808Kick.wav in Resources */,
+				ED44F2F71E4365750032ECEA /* 909Hat.wav in Resources */,
+				ED44F2F01E4365640032ECEA /* JazzKick.wav in Resources */,
 				ED44F2E11E4364DB0032ECEA /* TechnoSnare.wav in Resources */,
-				ED26414A1E2CDFBA00A790FB /* JazzHat.wav in Resources */,
+				ED44F2F11E4365640032ECEA /* JazzSnare.wav in Resources */,
 				ED44F2E01E4364DB0032ECEA /* TechnoKick.wav in Resources */,
 				ED44F2D91E43648F0032ECEA /* FunkSnare.wav in Resources */,
-				ED2641421E2CDFA400A790FB /* 909Hat.wav in Resources */,
 				ED44F2D21E4364780032ECEA /* 606Tom.wav in Resources */,
-				ED26414D1E2CDFBA00A790FB /* JazzTom.wav in Resources */,
+				ED44F2EA1E4365410032ECEA /* 808Tom.wav in Resources */,
+				ED44F2F21E4365640032ECEA /* JazzTom.wav in Resources */,
 				ED44F2D11E4364780032ECEA /* 606Snare.wav in Resources */,
 				ED44F2CF1E4364780032ECEA /* 606Hat.wav in Resources */,
 				ED44F2DF1E4364DB0032ECEA /* TechnoHat.wav in Resources */,
 				ED44F2D71E43648F0032ECEA /* FunkHat.wav in Resources */,
 				ED44F2D81E43648F0032ECEA /* FunkKick.wav in Resources */,
-				ED2641451E2CDFA400A790FB /* 909Tom.wav in Resources */,
-				ED26414B1E2CDFBA00A790FB /* JazzKick.wav in Resources */,
-				ED26414C1E2CDFBA00A790FB /* JazzSnare.wav in Resources */,
+				ED44F2F91E4365750032ECEA /* 909Snare.wav in Resources */,
+				ED44F2EF1E4365640032ECEA /* JazzHat.wav in Resources */,
+				ED44F2E71E4365410032ECEA /* 808Hat.wav in Resources */,
+				ED44F2F81E4365750032ECEA /* 909Kick.wav in Resources */,
+				ED44F2E91E4365410032ECEA /* 808Snare.wav in Resources */,
 				ED44F2E21E4364DB0032ECEA /* TechnoTom.wav in Resources */,
 				EDAB93FD1E23B62D00464F65 /* Main.storyboard in Resources */,
+				ED44F2FA1E4365750032ECEA /* 909Tom.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
