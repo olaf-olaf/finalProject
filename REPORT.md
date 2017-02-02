@@ -13,9 +13,9 @@ Drumpad is a samplepad for your iphone. This application allows people to jam wi
 ## Technical Design
 
 ### overview
-The entire application revolves around a singleton of the AudioController class. In this class every aspect of audioprocessing is taken care of. The audioproccesing proces of this application can be seperated into XX parts. The first part of the audioprocessing is to load the samples that belong to a corresponding drumkit into audioplayers. The second part is mixing all the audioplayers together. In this part of the proces the levels of the audioplayers and the stereo imiging (panning) is determined. The third part of the proces is adding effects. The last step is to actually create sound by connecting everything to an output and allowing the user to trigger sound. The entire AudioController class is made using audiokit. This is a library for building instruments on IOS. 
+The entire application revolves around a singleton of the AudioController class. In this class every aspect of audioprocessing is taken care of. The audioproccesing proces of this application can be seperated into 4 parts. The first part of the audioprocessing is to load the samples that belong to a corresponding drumkit into audioplayers. The second part is mixing all the audioplayers together. In this part of the proces the levels of the audioplayers and the stereo imiging (panning) is determined. The third part of the proces is adding effects. The last step is to actually create sound by connecting everything to an output and allowing the user to trigger sound. The entire AudioController class is made using audiokit. This is a library for building instruments on IOS. 
 
-Every view in the application is a visual representation of certain variables within the audio proces. Every visual representation is interactive. Users can alter the visual representation representations of variables to change these variables to their liking. For example, 'Viewcontroller.swift' allows the user to play audio by tapping drumpads, to change drumkits by pressing buttons adjacent to to text informing that informers the user of which drumkit is currently being used, and to set the beats per minute of a metronome with a slider.  
+Every view in the application is a visual representation of certain variables within the audio proces. Each representation is interactive. Users can alter the visual representations of variables to change these variables to their liking. For example, 'Viewcontroller.swift' allows the user to play audio by tapping drumpads, to change drumkits by pressing buttons adjacent to to text that informs the user of which drumkit is currently being used, and to set the beats per minute of a metronome with a slider.  
 
 ### MVC
 
@@ -23,11 +23,11 @@ Every view in the application is a visual representation of certain variables wi
 
 ##### AudioController.swift
 
-This file contains the AudioController class. When initialized an object containt a sample based synthesizer is created. The class contains methods regarding replacing samples, playing samples and the metronome, and setting parameters for mixing and effects. AudioController can only be initialised as a singleton.
+This file contains the AudioController class. When initialized, an instance of this class contains a sample based synthesizer. The class contains methods regarding replacing samples, playing samples and the metronome, and setting parameters for mixing and effects. AudioController can only be initialized as a singleton.
 
 ##### Knob.swift
 
-This file contains three classes related to a custom reusable knob that can be used to determine values for variables in a way that is similar to a slider. The first class is a subclass from UIControl called Knob. This class handles the values a knob can represent and updates them according to data from a gesture recognizer. To do this the knob needs a visual appearence and a gesture recognizer that can detect and handle a rotating movement from the user. Knob uses instances of the other two classes to achieve this. The second class, KnobRenderer, takes care of the visual appereance of the knob. The third class, RotationGestureRecognizer, is a subclass of UIPanRecognizer that can detect rotating movements of the users finger on a knob. 
+This file contains three classes related to a custom reusable knob that can be used to determine values for variables in a way that is similar to a slider. The first class is a subclass from UIControl called Knob. This class handles the values a knob can represent and updates them according to data from a gesture recognizer. To do this the knob needs a visual appearence, and a gesture recognizer that can detect and handle a rotating movement from the user. Knob uses instances of the other two classes to achieve this. The second class, KnobRenderer, takes care of the visual appereance of the knob. The third class, RotationGestureRecognizer, is a subclass of UIPanRecognizer that can detect rotating movements of the users finger on a knob. 
 
 ##### MixerParameters.Swift
 
@@ -39,12 +39,12 @@ This file contains a class called ShowMixerLed. This class contains functions th
 
 ##### ShowKitLed
 
-This file contains the ShowKitLed class. This contains an array is strings with the names of all drumkits. It also contains 2 methods that allow users to scroll back and forth through each element of the array. AudioController uses an instance of ShowKitLed to keep track of which kit is being used. Viewcontroller uses the instance of ShowKitLed in AudioController to the display the kit that is being used to the user. 
+This file contains the ShowKitLed class. This contains an array is strings with the names of all drumkits. It also contains 2 methods that allow users to scroll back and forth through each element of an array containing all the drumkits. AudioController uses an instance of ShowKitLed to keep track of which kit is being used. Viewcontroller uses the instance of ShowKitLed in AudioController to the display the kit that is being used. 
 
 #### View
 ##### ViewController.swift
 
-This file contains 'ViewController', the main view controller of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads trigger the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
+This file contains 'ViewController', the main view controller of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads call the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
 
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/DrumPad.png" width="200px"></br>
 
@@ -78,13 +78,13 @@ In the proces of making this app i've come across a few moments where I had to c
 
 ### Getting rid of latency due to initialisation 12-01-2017
 
-In my initial design I tried to create 4 classes with each one audio player and output. All the effects / mixing related programming would go in between the players and the output. This was possible with the apple library since it initalizes extremely fast and allows you to have multiple outputs. When using this library my initial design would work without any latency. Audiokit however, has quite a slow initialisation. This caused immense latency which basically made the samplepad unplayable. Another problem that occured when using audiokit in my initial design is that audiokit only allows one output. Because of this no samples could be played simultaneously. 
+In my initial design I tried to create 4 classes with each one audio player and output. All the effects / mixing related programming would go in between the players and the outputs. This was possible with the apple library since it initalizes extremely fast and allows you to have multiple outputs. When using this library my initial design would work without any latency. Audiokit however, has quite a slow initialization. This caused immense latency which basically made the samplepad unplayable. Another problem that occured when using audiokit in my initial design is that audiokit only allows one output. Because of this no samples could be played simultaneously. 
 
 I decided to stick with audiokit because it has so many possibilities and change my design. Instead of giving each samplepad a class, I built the entire audio processer in a singleton. I was able to mix different sounds into one output by using a mixer object. 
 
 ### Problems with file formats 16-01-2017
 
-When I implemented switching between kit the app occasionally mysteriously crashed when playing with a new kit. After some research it turned out the audioplayer couldn't handle initially loading a mono file and then switching to a stereo file. I fixed this by converting all the samples to mono using Wave Agent. 
+When I implemented switching between kits the app occasionally mysteriously crashed when playing with a new kit. After some research it turned out the audioplayer couldn't handle initially loading a mono file and then switching to a stereo file. I fixed this by converting all the samples to mono using Wave Agent. 
 
 ### Implementing custom gestures / controllers 18-01-2017
 
