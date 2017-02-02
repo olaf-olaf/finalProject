@@ -6,7 +6,7 @@
 //  Student number: 10787321
 //  Course: Programmeerproject
 //
-//  AudioController.swift contains the sample based synthesizer that provides all audio of this application.
+//  AudioController.swift contains a sample based synthesizer that provides all audio of this application.
 //
 //  Copyright © 2017 Olaf Kroon. All rights reserved.
 
