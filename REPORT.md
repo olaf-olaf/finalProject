@@ -76,17 +76,22 @@ This file consists of some segues that are triggered by buttons.
 
 In the proces of making this app i've come across a few moments where I had to change my initial design. These moments will be discussed inchronological order. 
 
-### Figuring out which library to use 11-01-2017
 
 ### Getting rid of latency due to initialisation 12-01-2017
 
+In my initial design I tried to create 4 classes with each one audio player and output. All the effects / mixing related programming would go in between the players and the output. This was possible with the apple library since it initalizes extremely fast and allows you to have multiple outputs. When using this library my initial design would work without any latency. Audiokit however, has quite a slow initialisation. This caused immense latency which basically made the samplepad unplayable. Another problem that occured when using audiokit in my initial design is that audiokit only allows one output. Because of this no samples could be played simultaneously. 
+
+I decided to stick with audiokit because it has so many possibilities and change my design. Instead of giving each samplepad a class, I built the entire audio processer in a singleton. I was able to mix different sounds into one output by using a mixer object. 
+
 ### Problems with file formats 16-01-2017
+
+When I implemented switching between kit the app occasionally mysteriously crashed when playing with a new kit. After some research it turned out the audioplayer couldn't handle initially loading a mono file and then switching to a stereo file. I fixed this by converting all the samples to mono using Wave Agent. 
 
 ### Implementing custom gestures / controllers 18-01-2017
 
 ### Getting rid of clicks 19-01-2017
 
-## Differences in design, then and now. 
+## Defending these decisions
 
 
 
