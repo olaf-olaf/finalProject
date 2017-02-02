@@ -42,8 +42,8 @@ This file contains a class called ShowMixerLed. This class contains functions th
 This file contains the ShowKitLed class. This contains an array is strings with the names of all drumkits. It also contains 2 methods that allow users to scroll back and forth through each element of the array. AudioController uses an instance of ShowKitLed to keep track of which kit is being used. Viewcontroller uses the instance of ShowKitLed in AudioController to the display the kit that is being used to the user. 
 
 #### View
-
 ##### ViewController.swift
+
 This file contains 'ViewController', the main view controller of this application. It consists of a slider, 4 buttons representing a drumpads, a metronome button, an FX button, a mixer buttons, ands two buttons that can be used to scroll through different kits. Every element of this view except for the FX button and the mixer button calls a method of AudioController when touched. The drumpads trigger the 'playsample' method to generate sound, the slider and the metronome button can be used to trigger the Metronome of AudioController and the two most upper buttons call the 'replaceKit' method to load a new set of samples. 
 
 <img src="https://github.com/olaf-olaf/finalProject/blob/master/doc/DrumPad.png" width="200px"></br>
@@ -89,11 +89,11 @@ When I implemented switching between kit the app occasionally mysteriously crash
 
 ### Implementing custom gestures / controllers 18-01-2017
 
-One of my goals in creating this app was to make the app feel like a real samplepad as much as possible. Essential to this feeling is having similar controls. Because of this I decided to implement a knob into my project. Since Xcode has no ready made knob available I tried getting one by installing a pod. After trying a few pods they all turned out to be worthless. I ended up following a Ray Wenderlich 
-
-
+One of my goals in creating this app was to make the app feel like a real samplepad as much as possible. Essential to this feeling is having similar controls. Because of this I decided to implement a knob into my project. Since Xcode has no ready made knob available I tried getting one by installing a pod. After trying a few pods they all turned out to be worthless. I ended up following a Ray Wenderlich tutorial written in swift 1.2. This turned out to be quite a challenge since syntax has drasticaly changed since then. I have rewritten a lot of the code by browsing through the apple developer documentation. Eventually I got the knob working. It is still pretty basic in it's design, but it does the job.  
 
 ### Getting rid of clicks 19-01-2017
+
+A problem occured when I tried to repeatedly play long samples. It turned out the 
 
 ## Defending these decisions
 
