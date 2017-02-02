@@ -76,7 +76,6 @@ This file consists of some segues that are triggered by buttons.
 
 In the proces of making this app i've come across a few moments where I had to change my initial design. These moments will be discussed in chronological order. 
 
-
 ### Getting rid of latency due to initialisation 12-01-2017
 
 In my initial design I tried to create 4 classes with each one audio player and output. All the effects / mixing related programming would go in between the players and the output. This was possible with the apple library since it initalizes extremely fast and allows you to have multiple outputs. When using this library my initial design would work without any latency. Audiokit however, has quite a slow initialisation. This caused immense latency which basically made the samplepad unplayable. Another problem that occured when using audiokit in my initial design is that audiokit only allows one output. Because of this no samples could be played simultaneously. 
@@ -93,9 +92,16 @@ One of my goals in creating this app was to make the app feel like a real sample
 
 ### Getting rid of clicks 19-01-2017
 
-A problem occured when I tried to repeatedly play long samples. It turned out the 
+A problem occured when I tried to repeatedly play long samples. It turned out the audiokit audioplayer wouldn't replay a sample while it is already playing. My initial fix of this problem was to simply stop the sample and then replay it. This caused excessive clicking and popping. This noise was caused because an audio wave was abruptly ended at a high amplitude. After several other failing attempts I masked to problem by giving creating a backup audio player for every existing audioplayer. Whenever the main audioplayer is already playing the backup player is used to play audio. Backup players in combination with shorter samples almosts completely masks this problem. 
 
 ## Defending these decisions
+
+Taking care of audio Processing in a singleton has several benefits. Firstly, it ensures that no latency occurs when playing the samplepads after segueing between views because the synthesizer is initialized only once and then stays active as long as the app is running. Secondly, since everything in this app refers to some part of the synthesizer it makes sense to have the data regarding this synthesizer in global scope. The alternative would be segueing loads of data between views, which would be incredebly inconvenient. Taking care of audio files outside of Xcode has both pro's and cons. The biggest pro is that the best code is no code. Keeping up a consistent sample database saves a lot of code. The con is that the application is less adaptable since samples in stereo have to be converted first. Getting rid of clicks by creating a backup player is an easy fix for a major problem. It unfortunately only masks the problem. If the user repeatedly triggers a kick drum really fast the app won't respond to every other tap. 
+
+If I would have more time to work on this application I wouldn't make any major changes to the functionality. My final product is a playable instrument, but looks really basic. Since looks are incredibly important in the musical instruments industry I would spend time creating custom images and controllers to make the application that is not only sonically appealing, but vissually appealing as well. 
+
+
+
 
 
 
